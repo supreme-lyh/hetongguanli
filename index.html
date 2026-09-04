@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-page-node-id="BKtBVFrf5BsgK3IscK9UBv">
-<head data-page-node-id="VnurRtbGC8spOWiZGlDQoN">
-<meta charset="UTF-8" data-page-node-id="IWEdFVGxzDlIiVL5tPZReE">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" data-page-node-id="lsMrWkKhpbTAiW2l1fEpoa">
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>合同管理平台 · Contract Hub</title>
-<meta name="description" content="合同管理平台：合同、发票、资金、客户与供应商一站式管理" data-page-node-id="nv1XDdyp4pWFUzr2tOrWQD">
+<meta name="description" content="合同管理平台：合同、发票、资金、客户与供应商一站式管理">
 <style>:root{
   --bg:#f4f6fa; --card:#ffffff; --line:#e7eaf2; --line2:#d7dce8;
   --ink:#1c2433; --ink2:#5a6478; --ink3:#9aa3b5;
@@ -12,18 +12,18 @@
   --ok:#129b5a; --ok-bg:#e6f7ef; --bad:#d4382e; --bad-bg:#fdeeec;
   --warn:#c47b0a; --warn-bg:#fdf3e0; --info:#2f6fdb; --info-bg:#e9f1fc;
   --gray:#6b7280;
-  --r:10px; --rs:8px;
+  --r:14px; --rs:12px;
   --shadow:0 1px 2px rgba(20,30,60,.04),0 4px 14px rgba(20,30,60,.05);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);font-size:21px;line-height:1.55;-webkit-font-smoothing:antialiased}
 button{font-family:inherit}
-input,select,textarea{font-family:inherit;font-size:14px}
+input,select,textarea{font-family:inherit;font-size:19px}
 a{color:var(--brand);text-decoration:none}
 svg{display:block}
-::-webkit-scrollbar{width:8px;height:8px}
-::-webkit-scrollbar-thumb{background:#ccd3e2;border-radius:8px}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:#ccd3e2;border-radius:10px}
 ::-webkit-scrollbar-track{background:transparent}
 
 #app{display:none}
@@ -35,18 +35,18 @@ body.ready #app{display:flex;height:100vh;overflow:hidden}
   radial-gradient(900px 420px at -10% 110%,#e9f7f1 0%,transparent 50%),var(--bg)}
 #authCard{width:100%;max-width:392px;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:34px 32px 26px}
 .auth-logo{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,#4c6ff0,#2f48c8);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;color:#fff}
-.auth-name{text-align:center;font-size:20px;font-weight:600}
-.auth-sub{text-align:center;font-size:12.5px;color:var(--ink3);margin:4px 0 22px}
+.auth-name{text-align:center;font-size:24px;font-weight:600}
+.auth-sub{text-align:center;font-size:15px;color:var(--ink3);margin:4px 0 22px}
 .tabs{display:flex;background:var(--bg);border-radius:9px;padding:3px;margin-bottom:18px}
-.tabs button{flex:1;border:none;background:transparent;padding:7px 0;border-radius:7px;font-size:13px;color:var(--ink2);cursor:pointer}
+.tabs button{flex:1;border:none;background:transparent;padding:7px 0;border-radius:7px;font-size:16px;color:var(--ink2);cursor:pointer}
 .tabs button.on{background:#fff;color:var(--brand);font-weight:500;box-shadow:0 1px 3px rgba(20,30,60,.08)}
-.f-label{font-size:12.5px;color:var(--ink2);margin:14px 0 6px;display:block}
+.f-label{font-size:15px;color:var(--ink2);margin:14px 0 6px;display:block}
 .f-label:first-child{margin-top:0}
-.inp{width:100%;border:1px solid var(--line2);border-radius:var(--rs);padding:9px 12px;background:#fff;color:var(--ink);outline:none;transition:border .15s,box-shadow .15s}
+.inp{width:100%;border:1px solid var(--line2);border-radius:var(--rs);padding:10px 13px;background:#fff;color:var(--ink);outline:none;transition:border .15s,box-shadow .15s;font-size:15px}
 .inp:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(61,94,232,.12)}
 textarea.inp{resize:vertical;min-height:72px;line-height:1.6}
-select.inp{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ink3) 50%),linear-gradient(135deg,var(--ink3) 50%,transparent 50%);background-position:calc(100% - 16px) 55%,calc(100% - 11px) 55%;background-size:5px 5px;background-repeat:no-repeat;padding-right:26px}
-.btn{border:1px solid var(--line2);background:#fff;color:var(--ink);border-radius:var(--rs);padding:7px 13px;font-size:13px;cursor:pointer;transition:all .15s;white-space:nowrap}
+select.inp{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ink3) 50%),linear-gradient(135deg,var(--ink3) 50%,transparent 50%);background-position:calc(100% - 16px) 55%,calc(100% - 11px) 55%;background-size:5px 5px;background-repeat:no-repeat;padding-right:30px}
+.btn{border:1px solid var(--line2);background:#fff;color:var(--ink);border-radius:var(--rs);padding:9px 18px;font-size:16px;cursor:pointer;transition:all .15s;white-space:nowrap}
 .btn:hover{border-color:#b9c2d6;background:#f7f9fd}
 .btn:disabled{opacity:.55;cursor:not-allowed}
 .btn.pri{background:var(--brand);border-color:var(--brand);color:#fff}
@@ -59,75 +59,82 @@ select.inp{appearance:none;background-image:linear-gradient(45deg,transparent 50
 .btn.warn:hover{background:var(--warn-bg)}
 .btn.ghost{border-color:transparent;background:transparent;color:var(--ink2)}
 .btn.ghost:hover{background:var(--bg);color:var(--ink)}
-.btn.sm{padding:3px 9px;font-size:12.5px;border-radius:6px}
-.btn.block{width:100%;padding:10px}
-.hint{font-size:12px;color:var(--ink3);line-height:1.7}
-.msg{font-size:13px;line-height:1.6;margin-top:8px}
+.btn.sm{padding:4px 13px;font-size:15px;border-radius:7px}
+.btn.block{width:100%;padding:12px}
+.hint{font-size:17px;color:var(--ink3);line-height:1.7}
+.msg{font-size:15px;line-height:1.6;margin-top:8px}
 .msg.err{color:var(--bad)} .msg.ok{color:var(--ok)}
 
 /* ============ 主框架 ============ */
-#aside{width:224px;flex:none;background:var(--card);border-right:1px solid var(--line);display:flex;flex-direction:column}
+#aside{width:264px;flex:none;background:var(--card);border-right:1px solid var(--line);display:flex;flex-direction:column}
 .aside-logo{display:flex;align-items:center;gap:10px;padding:15px 16px;border-bottom:1px solid var(--line)}
-.aside-logo .lg{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#4c6ff0,#2f48c8);color:#fff;display:flex;align-items:center;justify-content:center;flex:none}
-.aside-logo .nm{font-size:14.5px;font-weight:600;line-height:1.25}
-.aside-logo .vn{font-size:10.5px;color:var(--ink3)}
+.aside-logo .lg{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#4c6ff0,#2f48c8);color:#fff;display:flex;align-items:center;justify-content:center;flex:none}
+.aside-logo .nm{font-size:17px;font-weight:600;line-height:1.25}
+.aside-logo .vn{font-size:17px;color:var(--ink3)}
 #nav{flex:1;overflow-y:auto;padding:8px 10px 12px}
-.nav-group{font-size:11px;color:var(--ink3);padding:12px 8px 5px;letter-spacing:1px}
-.nav-item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;color:var(--ink2);cursor:pointer;font-size:13.5px;margin-bottom:1px;user-select:none}
+.nav-group{font-size:17px;color:var(--ink3);padding:12px 8px 5px;letter-spacing:1px}
+.nav-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;color:var(--ink2);cursor:pointer;font-size:16px;margin-bottom:1px;user-select:none}
 .nav-item:hover{background:var(--bg);color:var(--ink)}
 .nav-item.on{background:var(--brand-bg);color:var(--brand);font-weight:500}
 .nav-item svg{flex:none}
-.nav-item .cnt{margin-left:auto;font-size:11px;background:#eef1f6;color:var(--ink2);border-radius:99px;padding:0 7px;min-width:20px;text-align:center}
+.nav-item .cnt{margin-left:auto;font-size:17px;background:#eef1f6;color:var(--ink2);border-radius:99px;padding:1px 9px;min-width:22px;text-align:center}
 .nav-item.on .cnt{background:#dbe3fb;color:var(--brand)}
-.nav-item .nv-arr{font-style:normal;margin-left:auto;font-size:10px;color:var(--ink3);transition:transform .15s}
+.nav-item .nv-arr{font-style:normal;margin-left:auto;font-size:17px;color:var(--ink3);transition:transform .15s}
 .nav-item .nv-arr.up{transform:rotate(180deg)}
-.nav-sub{display:none;margin:2px 0 6px;padding-left:10px;border-left:2px solid var(--line)}
+.nav-sub{display:none;margin:2px 0 6px;padding-left:14px;border-left:2px solid var(--line)}
 .nav-sub.open{display:block}
-.nav-sub .nav-item{padding:5px 10px;font-size:12.8px;color:var(--ink2)}
+.nav-sub .nav-item{padding:7px 12px;font-size:15px;color:var(--ink2)}
 .nav-sub .nav-item.on{background:var(--brand-bg);color:var(--brand)}
 .nav-sub .nav-item:not(.on):hover{background:var(--bg)}
 #main{flex:1;display:flex;flex-direction:column;min-width:0}
-#topbar{height:56px;flex:none;background:var(--card);border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 20px;gap:12px}
-.ttl{font-size:16px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-#topbar .crumb{color:var(--ink3);font-size:12px}
+#topbar{height:64px;flex:none;background:var(--card);border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 20px;gap:12px}
+.ttl{font-size:20px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#topbar .crumb{color:var(--ink3);font-size:17px}
 #content{flex:1;overflow-y:auto;padding:20px 22px 60px}
 #menuBtn{display:none}
 
 /* ============ 卡片/区块 ============ */
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-bottom:14px}
-.stat-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;box-shadow:var(--shadow)}
-.stat-card .lb{font-size:12.5px;color:var(--ink2);display:flex;align-items:center;gap:6px}
-.stat-card .val{font-size:24px;font-weight:600;margin-top:6px;letter-spacing:-.3px}
-.stat-card .val small{font-size:12px;color:var(--ink3);font-weight:400}
-.stat-card .ex{font-size:11.5px;color:var(--ink3);margin-top:2px}
-.stat-card .ico{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-left:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin-bottom:14px}
+.stat-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;box-shadow:var(--shadow)}
+.stat-card .lb{font-size:15px;color:var(--ink2);display:flex;align-items:center;gap:8px}
+.stat-card .val{font-size:28px;font-weight:600;margin-top:6px;letter-spacing:-.3px}
+.stat-card .val small{font-size:17px;color:var(--ink3);font-weight:400}
+.stat-card .ex{font-size:17px;color:var(--ink3);margin-top:3px}
+.stat-card .ico{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-left:auto}
+.stat-card:hover{box-shadow:0 4px 14px rgba(61,94,232,.08),0 2px 6px rgba(20,30,60,.06);border-color:#d6defc}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);margin-bottom:14px}
-.card .ch{padding:13px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;font-size:14.5px;font-weight:500}
+.card .ch{padding:15px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;font-size:17px;font-weight:500}
 .card .ch .r{margin-left:auto;display:flex;gap:8px;align-items:center}
-.card .bd{padding:14px 16px}
-.seg{display:flex;gap:6px;background:var(--bg);padding:3px;border-radius:9px;width:max-content;flex-wrap:wrap;max-width:100%}
-.seg button{border:none;background:transparent;padding:5px 14px;border-radius:7px;font-size:13px;color:var(--ink2);cursor:pointer}
+.card .bd{padding:16px 18px}
+.seg{display:flex;gap:6px;background:var(--bg);padding:4px;border-radius:10px;width:max-content;flex-wrap:wrap;max-width:100%}
+.seg button{border:none;background:transparent;padding:7px 16px;border-radius:8px;font-size:15px;color:var(--ink2);cursor:pointer}
 .seg button.on{background:#fff;color:var(--brand);font-weight:500;box-shadow:0 1px 3px rgba(20,30,60,.1)}
 
 /* ============ 表格 ============ */
 .tbl-wrap{overflow-x:auto}
-table.tbl{width:100%;border-collapse:collapse;font-size:13px;white-space:nowrap}
-.tbl th{background:#f7f9fc;color:var(--ink2);font-weight:500;text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:1}
-.tbl td{padding:9px 12px;border-bottom:1px solid #eef1f6;color:var(--ink)}
+table.tbl{width:100%;border-collapse:collapse;font-size:15px;white-space:nowrap}
+.tbl th{background:#f7f9fc;color:var(--ink2);font-weight:500;text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:1}
+.tbl td{padding:11px 14px;border-bottom:1px solid #eef1f6;color:var(--ink)}
 .tbl tr:hover td{background:#fafbfe}
 .tbl .num{font-variant-numeric:tabular-nums;text-align:right}
 .tbl th.num{text-align:right}
 .tbl .tac{text-align:center}
 .tbl th.tac{text-align:center}
+.tbl .hide-col{display:none}
+/* 列设置抽屉按钮组 */
+.colset-panel{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px}
+.colset-panel label{display:flex;align-items:center;gap:8px;border:1px solid #e7eaf2;border-radius:9px;padding:9px 12px;font-size:17px;cursor:pointer;background:#fbfcfe}
+.colset-panel label:hover{border-color:var(--brand);background:var(--brand-bg)}
+.colset-panel input{width:16px;height:16px;accent-color:var(--brand);flex:none}
 .muted{color:var(--ink3)}
 .strong{font-weight:500}
 .money{font-variant-numeric:tabular-nums;font-weight:500}
-.blank{padding:40px 0;text-align:center;color:var(--ink3);font-size:13px}
+.blank{padding:40px 0;text-align:center;color:var(--ink3);font-size:15px}
 .blank svg{margin:0 auto 10px;opacity:.4}
 .ops button{margin-right:0}
 
 /* ============ 标签 ============ */
-.tag{display:inline-flex;align-items:center;gap:4px;font-size:12px;padding:1px 9px;border-radius:99px;white-space:nowrap}
+.tag{display:inline-flex;align-items:center;gap:4px;font-size:17px;padding:2px 12px;border-radius:99px;white-space:nowrap}
 .tag.ok{background:var(--ok-bg);color:var(--ok)}
 .tag.bad{background:var(--bad-bg);color:var(--bad)}
 .tag.warn{background:var(--warn-bg);color:var(--warn)}
@@ -135,150 +142,169 @@ table.tbl{width:100%;border-collapse:collapse;font-size:13px;white-space:nowrap}
 .tag.gray{background:#f0f2f6;color:var(--gray)}
 .tag.brand{background:var(--brand-bg);color:var(--brand)}
 .tag.plain{background:transparent;border:1px solid var(--line2);color:var(--ink2)}
-.dot{width:6px;height:6px;border-radius:50%;display:inline-block}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block}
 .money-pos{color:var(--ok);font-weight:500}
 .money-neg{color:var(--bad);font-weight:500}
 
 /* ============ 筛选条 ============ */
-.filter{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line)}
-.filter .inp{width:auto;min-width:120px;padding:6px 10px;font-size:13px}
+.filter{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
+.filter .inp{width:auto;min-width:150px;padding:8px 12px;font-size:15px}
 .filter .sp{flex:1}
-.toolbar{display:flex;gap:8px;align-items:center;padding:12px 14px;flex-wrap:wrap}
+.toolbar{display:flex;gap:8px;align-items:center;padding:14px 16px;flex-wrap:wrap}
 .toolbar .sp{flex:1}
 
 /* ============ 弹窗 ============ */
 #mask{position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:90;display:none;align-items:flex-start;justify-content:center;padding:5vh 14px 20px;overflow-y:auto}
 body.modal-open #mask{display:flex}
-.modal{background:#fff;border-radius:14px;width:100%;max-width:760px;box-shadow:0 18px 60px rgba(10,20,50,.22);animation:pop .16s ease}
-.modal.sm{max-width:440px}.modal.lg{max-width:980px}.modal.xl{max-width:1120px}
+.modal{background:#fff;border-radius:16px;width:100%;max-width:820px;box-shadow:0 18px 60px rgba(10,20,50,.22);animation:pop .16s ease}
+.modal.sm{max-width:520px}.modal.lg{max-width:1100px}.modal.xl{max-width:1280px}
 @keyframes pop{from{transform:translateY(8px);opacity:0}to{transform:none;opacity:1}}
-.modal .mh{display:flex;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line);font-size:15px;font-weight:600;cursor:default}
-.modal .mh .x{margin-left:auto;border:none;background:var(--bg);width:26px;height:26px;border-radius:7px;color:var(--ink2);cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center}
+.modal .mh{display:flex;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line);font-size:18px;font-weight:600;cursor:default}
+.modal .mh .x{margin-left:auto;border:none;background:var(--bg);width:30px;height:30px;border-radius:8px;color:var(--ink2);cursor:pointer;font-size:17px;display:flex;align-items:center;justify-content:center}
 .modal .mh .x:hover{background:#fbe6e4;color:var(--bad)}
-.modal .mb{padding:16px 18px;max-height:calc(100vh - 160px);overflow-y:auto}
-.modal .mf{display:flex;gap:8px;justify-content:flex-end;padding:12px 18px;border-top:1px solid var(--line)}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+.modal .mb{padding:18px 20px;max-height:calc(100vh - 160px);overflow-y:auto}
+.modal .mf{display:flex;gap:8px;justify-content:flex-end;padding:14px 20px;border-top:1px solid var(--line)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
 .form-grid .full{grid-column:1/-1}
-.fg{margin-bottom:10px}
-.fg label{display:block;font-size:12.5px;color:var(--ink2);margin-bottom:4px}
+.fg{margin-bottom:12px}
+.fg label{display:block;font-size:15px;color:var(--ink2);margin-bottom:6px}
 .fg label i{color:var(--bad);font-style:normal;margin-left:2px}
 .fg .inp{width:100%}
 .two{display:flex;gap:8px}
 .two .inp{flex:1}
 
 /* 详情抽屉 */
-#drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:#fff;z-index:95;box-shadow:-8px 0 30px rgba(10,20,50,.16);transform:translateX(105%);transition:transform .2s ease;display:flex;flex-direction:column}
+#maskDw{position:fixed;inset:0;background:rgba(15,23,42,.18);z-index:94;display:none}
+body.drawer-open #maskDw{display:block}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:min(680px,100vw);background:#fff;z-index:95;box-shadow:-8px 0 30px rgba(10,20,50,.16);transform:translateX(105%);transition:transform .2s ease;display:flex;flex-direction:column}
 body.drawer-open #drawer{transform:none}
-#drawer .mh{display:flex;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line);font-weight:600}
-#drawer .mb{flex:1;overflow-y:auto;padding:16px 18px}
-.kv{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 18px;font-size:13px}
-.kv .it{display:flex;padding:6px 0;border-bottom:1px dashed #f0f2f7}
-.kv .k{color:var(--ink3);width:92px;flex:none}
+#dwResize{position:absolute;left:-3px;top:0;bottom:0;width:7px;cursor:ew-resize;z-index:2}
+#dwResize::after{content:'';position:absolute;left:2px;top:0;bottom:0;width:3px;background:transparent;border-radius:3px}
+#dwResize:hover::after{background:var(--brand);opacity:.35}
+#dwResize.drag::after{background:var(--brand);opacity:.6}
+#drawer .mh{display:flex;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:18px;user-select:none}
+#drawer .mb{flex:1;overflow-y:auto;padding:18px 20px;-webkit-overflow-scrolling:touch}
+.kv{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 22px;font-size:16px}
+.kv .it{display:flex;padding:8px 0;border-bottom:1px dashed #f0f2f7}
+.kv .k{color:var(--ink3);width:120px;flex:none}
 .kv .v{flex:1;word-break:break-all}
 
 /* ============ Toast ============ */
-#toast{position:fixed;top:18px;left:50%;transform:translateX(-50%) translateY(-80px);z-index:200;background:#232c3d;color:#fff;font-size:13px;padding:9px 18px;border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.18);opacity:0;transition:all .25s;pointer-events:none;max-width:88vw}
+#toast{position:fixed;top:18px;left:50%;transform:translateX(-50%) translateY(-80px);z-index:200;background:#232c3d;color:#fff;font-size:16px;padding:11px 22px;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.18);opacity:0;transition:all .25s;pointer-events:none;max-width:88vw}
 #toast.show{transform:translateX(-50%) translateY(0);opacity:1}
 #toast.ok{background:#0e8a52}#toast.err{background:#c73a2f}#toast.warn{background:#b06b08}
 
 /* ============ 明细行编辑器 ============ */
-.items-editor td .inp{padding:5px 8px;font-size:13px}
-.items-editor .rm{color:var(--bad);background:none;border:none;cursor:pointer;font-size:15px}
+.items-editor td .inp{padding:7px 10px;font-size:15px}
+.items-editor .rm{color:var(--bad);background:none;border:none;cursor:pointer;font-size:18px}
 .mini-tbl{width:100%;border-collapse:collapse}
-.mini-tbl th{font-size:12px;color:var(--ink2);background:var(--bg);padding:6px 8px;border:1px solid var(--line)}
+.mini-tbl th{font-size:17px;color:var(--ink2);background:var(--bg);padding:8px 10px;border:1px solid var(--line)}
 .mini-tbl td{border:1px solid var(--line);padding:0}
-.mini-tbl td .inp{border:none;border-radius:0;box-shadow:none;padding:6px 8px;background:transparent}
+.mini-tbl td .inp{border:none;border-radius:0;box-shadow:none;padding:8px 10px;background:transparent;font-size:15px}
 .mini-tbl td .inp:focus{background:#fff}
+.mini-tbl td select.inp{appearance:none;border:none;border-radius:0;background:transparent;padding:8px 4px;font-size:15px}
 
 /* ============ 进度条 ============ */
-.pbar{height:6px;border-radius:6px;background:#eef1f6;overflow:hidden;min-width:70px}
-.pbar i{display:block;height:100%;background:var(--brand);border-radius:6px}
+.pbar{height:8px;border-radius:8px;background:#eef1f6;overflow:hidden;min-width:90px}
+.pbar i{display:block;height:100%;background:var(--brand);border-radius:8px}
 .pbar i.green{background:var(--ok)}.pbar i.amber{background:var(--warn)}.pbar i.red{background:var(--bad)}
-.pct{font-size:11.5px;color:var(--ink3);white-space:nowrap}
+.pct{font-size:17px;color:var(--ink3);white-space:nowrap}
 
 /* ============ 附件 ============ */
-.att{display:inline-flex;align-items:center;gap:6px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:4px 10px;font-size:12.5px;color:var(--ink);margin:0 6px 6px 0}
-.att .rm{color:var(--bad);background:none;border:none;cursor:pointer;font-size:13px}
+.att{display:inline-flex;align-items:center;gap:6px;background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:5px 12px;font-size:15px;color:var(--ink);margin:0 6px 6px 0}
+.att .rm{color:var(--bad);background:none;border:none;cursor:pointer;font-size:15px}
 
 /* ============ 图表/进度等 ============ */
 .chart-box{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .chart-box .card{min-width:0;overflow-x:auto}
+.ch-dot{display:inline-block;width:12px;height:12px;border-radius:4px;flex:none;vertical-align:-1px}
 .dash-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:14px;margin-bottom:14px}
 .dash-grid .card{min-width:0}
+.dash-grid .card .bd svg{display:block;margin:0 auto}
 @media(max-width:960px){.dash-grid{grid-template-columns:1fr}}
 .st3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
 @media(max-width:820px){.chart-box{grid-template-columns:1fr}}
 @media(max-width:640px){.st3{grid-template-columns:1fr}}
 
 /* ============ 数据导入 ============ */
-.dropzone{border:1.5px dashed var(--line2);border-radius:var(--r);padding:26px;text-align:center;color:var(--ink2);cursor:pointer;transition:all .15s;background:#fbfcfe}
+.dropzone{border:1.5px dashed var(--line2);border-radius:var(--r);padding:30px;text-align:center;color:var(--ink2);cursor:pointer;transition:all .15s;background:#fbfcfe}
 .dropzone:hover{border-color:var(--brand);background:var(--brand-bg)}
 .dropzone.on{border-color:var(--brand);background:var(--brand-bg)}
 
 /* ============ 用户/角色 ============ */
 .role-row{display:flex;gap:14px;flex-wrap:wrap}
-.role-row .rr{flex:1;min-width:230px;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;background:#fff}
-.role-row .rr h4{font-size:14px;margin-bottom:4px;display:flex;align-items:center;gap:8px}
-.perm-line{font-size:12px;color:var(--ink2)}
+.role-row .rr{flex:1;min-width:230px;border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;background:#fff}
+.role-row .rr h4{font-size:16px;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.perm-line{font-size:17px;color:var(--ink2)}
 
 /* ============ 响应式 ============ */
 @media(max-width:920px){
-  #aside{position:fixed;left:0;top:0;bottom:0;z-index:80;transform:translateX(-105%);transition:transform .2s;box-shadow:6px 0 24px rgba(10,20,50,.12)}
+  #aside{position:fixed;left:0;top:0;bottom:0;z-index:80;transform:translateX(-105%);transition:transform .2s;box-shadow:6px 0 24px rgba(10,20,50,.12);width:280px}
   body.menu-open #aside{transform:none}
-  #menuBtn{display:flex;border:none;background:var(--bg);width:34px;height:34px;border-radius:8px;align-items:center;justify-content:center;color:var(--ink2);cursor:pointer}
+  #menuBtn{display:flex;border:none;background:var(--bg);width:40px;height:40px;border-radius:9px;align-items:center;justify-content:center;color:var(--ink2);cursor:pointer}
   #content{padding:14px 12px 70px}
   #topbar{padding:0 12px}
   .form-grid{grid-template-columns:1fr}
   .kv{grid-template-columns:1fr}
+  /* 移动端字号适度回缩，避免大屏放大值在小屏溢出 */
+  body{font-size:18px}
+  .inp{font-size:16px}
+  .btn{font-size:15px}
+  .btn.sm{font-size:15px}
+  table.tbl{font-size:15px}
+  .ttl{font-size:18px}
+  .stat-card .val{font-size:24px}
 }
 </style>
 </head>
-<body data-page-node-id="NRPpGWzIKV6BOmz5efwUjU">
-<div id="authWrap" style="display:none" data-page-node-id="XYbkKHTTgbJnq8ywWcupMX"></div>
+<body>
+<div id="authWrap" style="display:none"></div>
 
-<div id="app" data-page-node-id="3UZTaa1fCmaLi5IVIG2Nox">
-  <aside id="aside" data-page-node-id="EEYHFqCRWmZNrD0QqyolRN">
-    <div class="aside-logo" data-page-node-id="5FpBVl8q8HTPdVeAefGjzG">
-      <div class="lg" data-page-node-id="HJx4klG59kmTrz6pIQnwOx"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-page-node-id="1f4AS42BRDZDVRDu8S4G7G"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-page-node-id="zb4CvhGeauH2ZrzCtxMDXh"/><path d="M14 2v6h6" data-page-node-id="wzzZKxWKuMu3F6BTrF5vwN"/><path d="M8 13h8M8 17h5" data-page-node-id="M5z2PrVrnufj4eYMktfCH1"/></svg></div>
-      <div data-page-node-id="YCE0DM2FBaOQraXpN5eSFa"><div class="nm" data-page-node-id="wKdVjrRV0yk191W5Sn5JTR">合同管理平台</div><div class="vn" id="verTag" data-page-node-id="4MHQFqx1eb6CV3LMXET1cV"></div></div>
+<div id="app">
+  <aside id="aside">
+    <div class="aside-logo">
+      <div class="lg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></div>
+      <div><div class="nm">合同管理平台</div><div class="vn" id="verTag"></div></div>
     </div>
-    <div id="nav" data-page-node-id="3F6RdNojHp4EZTGdNZF3HQ"></div>
-    <div class="aside-logo" style="border-top:1px solid var(--line);border-bottom:none" data-page-node-id="BLMbNy4fFOEn8arw9UnW7E">
-      <div style="flex:1;min-width:0" data-page-node-id="FjNb4uNiLZuxGHvWe6DO8A">
-        <div style="font-size:12px;color:var(--ink2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap" id="companyTag" data-page-node-id="8XFs5t4U0GFKJTcc1Zgb8G">未选择公司</div>
-        <div style="font-size:11px;color:var(--ink3)" id="userTag" data-page-node-id="ZIGPHjp9gxKxaAqUfgSolv"></div>
+    <div id="nav"></div>
+    <div class="aside-logo" style="border-top:1px solid var(--line);border-bottom:none">
+      <div style="flex:1;min-width:0">
+        <div style="font-size:15px;color:var(--ink2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap" id="companyTag">未选择公司</div>
+        <div style="font-size:15px;color:var(--ink3)" id="userTag"></div>
       </div>
-      <button class="btn sm ghost" onclick="openCompanySwitch()" title="切换公司/档案" data-page-node-id="2I9Xu2yo6nxa3olrIMU2OR">切换</button>
+      <button class="btn sm ghost" onclick="openCompanySwitch()" title="切换公司/档案">切换</button>
     </div>
   </aside>
 
-  <div id="main" data-page-node-id="u4KqZJSWncophjVK8A8qXK">
-    <div id="topbar" data-page-node-id="tjDH1SbBNKLDLVCfkb0Lb1">
-      <button id="menuBtn" onclick="toggleMenu()" data-page-node-id="OofHQm8HMYEfPvo6xsHX2v"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="lRypG7IV0KB4M7DXqKVmYh"><path d="M3 6h18M3 12h18M3 18h18" data-page-node-id="YVZHFueXT9TXtvEKiDKTAe"/></svg></button>
-      <div data-page-node-id="DQUWwljiYc9OKAaBtQx1Pz">
-        <div class="ttl" id="pageTitle" data-page-node-id="CQB77aqkcwfB687haB0Wtj">工作台</div>
-        <div class="crumb" id="pageCrumb" data-page-node-id="u0zNkXbyoj1lx7gR0dAiBV"></div>
+  <div id="main">
+    <div id="topbar">
+      <button id="menuBtn" onclick="toggleMenu()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <div>
+        <div class="ttl" id="pageTitle">工作台</div>
+        <div class="crumb" id="pageCrumb"></div>
       </div>
-      <div style="flex:1" data-page-node-id="ACCKfFWVE2YuNJYM157K1B"></div>
-      <button class="btn sm" onclick="goPage('reminder')" data-page-node-id="tm4d7QQmueOxJhs9HXU8HG"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:inline-block;vertical-align:-2px;margin-right:4px" data-page-node-id="bB45j409P8aRNdwpPFVedc"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" data-page-node-id="DiclLegY1Y7lMOjc6Bzzo9"/><path d="M13.73 21a2 2 0 0 1-3.46 0" data-page-node-id="pZn6HvNP8COyuvTKecD0mF"/></svg>提醒<span id="remCnt" style="display:none" data-page-node-id="afbJ4V6VHek4OL7GdW98en"></span></button>
-      <button class="btn sm" onclick="openAbout()" data-page-node-id="BuhxO34yaTlCCqJBSEctMR"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:inline-block;vertical-align:-2px;margin-right:4px" data-page-node-id="Su1gxuDLk0mlWrdf6TtjMT"><circle cx="12" cy="12" r="10" data-page-node-id="D9LIu0ZZR4hl8JIN3FBkEg"/><path d="M12 16v-4M12 8h.01" data-page-node-id="6Ti2eGeFUMEA138JkZzNbT"/></svg>关于</button>
+      <div style="flex:1"></div>
+      <button class="btn sm" onclick="goPage('reminder')"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:inline-block;vertical-align:-2px;margin-right:4px"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>提醒<span id="remCnt" style="display:none"></span></button>
+      <button class="btn sm" onclick="openAbout()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:inline-block;vertical-align:-2px;margin-right:4px"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>关于</button>
     </div>
-    <div id="content" data-page-node-id="A5Ah27AxIdia1icGadjjOP"></div>
+    <div id="content"></div>
   </div>
 </div>
 
-<div id="mask" data-page-node-id="yMmRdKtwpXsUofGu1Wkm99"><div class="modal" id="modalBox" data-page-node-id="fsbLSA8ereD9LlDvPE6r75"></div></div>
-<div id="drawer" data-page-node-id="IIvbGJj6dO1z2jPf4zH86c">
-  <div class="mh" data-page-node-id="PcZESpSfp49xCVpKdlKSNn"><span id="drawerTitle" data-page-node-id="jAmLSU9N4hAu0AueR9TQC9"></span><button class="x" style="margin-left:auto;border:none;background:var(--bg);width:26px;height:26px;border-radius:7px;color:var(--ink2);cursor:pointer" onclick="closeDrawer()" data-page-node-id="DF6n3NSznIKj5xPmqxwKxC">✕</button></div>
-  <div class="mb" id="drawerBody" data-page-node-id="6uhca4CYQKTdtqMDwthDKj"></div>
+<div id="mask"><div class="modal" id="modalBox"></div></div>
+<div id="maskDw" onclick="closeDrawer()"></div>
+<div id="drawer">
+  <div id="dwResize" title="← 拖拽调整宽度"></div>
+  <div class="mh"><span id="drawerTitle"></span><button class="x" style="margin-left:auto;border:none;background:var(--bg);width:30px;height:30px;border-radius:8px;color:var(--ink2);cursor:pointer;font-size:17px" onclick="closeDrawer()">✕</button></div>
+  <div class="mb" id="drawerBody"></div>
 </div>
-<div id="toast" data-page-node-id="md9HexmrYWyVCTGlPF6aGH"></div>
+<div id="toast"></div>
 
 <script>
 /* ==== 01_util.js ==== */
 /* ================= 01 基础：常量 / 工具 / 图标 ================= */
 const APP_NAME='合同管理平台';
-const APP_VER='v1.1.0';
+const APP_VER='v1.2.0';
 const APP_SLOGAN='合同、发票、资金与往来单位 一站式管理';
 const LICENSE_CONTACT=''; // 卖家联系方式，售卖前填入，如 '微信：xxx'
 const STORE_KEY='wb_contract_';
@@ -336,7 +362,7 @@ function daysAgo(n){const d=new Date();d.setDate(d.getDate()+n);return d.getFull
 function diffDays(a,b){const A=new Date(a).getTime(),B=new Date(b).getTime();if(isNaN(A)||isNaN(B))return NaN;return Math.round((B-A)/86400000)}
 let _toastTimer=null;
 function toast(msg,type){const t=document.getElementById('toast');t.textContent=msg;t.className='show '+(type||'');clearTimeout(_toastTimer);_toastTimer=setTimeout(()=>t.className='',2200)}
-function confirmDlg(msg,cb,okText){openModal('<div style="text-align:center"><div style="font-size:15px;font-weight:600;margin:8px 0 6px">请确认</div><p class="hint" style="margin-bottom:6px">'+esc(msg)+'</p></div>',{footer:[{t:'取消',c:'ghost',x:closeModal},{t:okText||'确认',c:'bad',x:()=>{closeModal();cb&&cb()}}],sm:true})}
+function confirmDlg(msg,cb,okText){openModal('<div style="text-align:center"><div style="font-size:22px;font-weight:600;margin:8px 0 6px">请确认</div><p class="hint" style="margin-bottom:6px">'+esc(msg)+'</p></div>',{footer:[{t:'取消',c:'ghost',x:closeModal},{t:okText||'确认',c:'bad',x:()=>{closeModal();cb&&cb()}}],sm:true})}
 function debounce(fn,ms){let t;return function(){clearTimeout(t);const a=arguments;t=setTimeout(()=>fn.apply(null,a),ms||250)}}
 function downloadFile(name,content,mime){const blob=new Blob([content],{type:mime||'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(url);a.remove()},300)}
 function readFileText(file,cb){const r=new FileReader();r.onload=e=>cb(e.target.result);r.readAsText(file)}
@@ -383,6 +409,7 @@ function initIfNeeded(){
   const companies=dbList('companies');
   if(!companies.length)companies.push({id:uid(),name:'示例科技有限公司',short:'示例科技',contact:'张经理',phone:'13800138000',address:'上海市浦东新区示例路 88 号',remark:'演示数据，可在系统设置-公司管理中修改',createdAt:now()});
   saveList('companies',companies);
+  if(!Store.get('curCompanyId'))Store.set('curCompanyId',companies[0].id);
   if(!dictGet('contractType').length){
     dictSet('contractType',[{name:'销售合同',direction:'应收'},{name:'采购合同',direction:'应付'},{name:'服务合同',direction:'应收'},{name:'租赁合同',direction:'应付'}]);
     dictSet('payMethod',['银行转账','微信','支付宝','现金','承兑汇票']);
@@ -474,8 +501,8 @@ function licPanelHtml(){
   return `
   <div style="text-align:center;padding:6px 0 2px">
     <div style="width:56px;height:56px;border-radius:50%;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;background:${licensed?'#e6f7ef':'#fdf3e0'};color:${licensed?'#129b5a':'#c47b0a'}">${licensed?ICO.ok:ICO.warn}</div>
-    <div style="font-size:16px;font-weight:600;margin-bottom:6px">${licensed?'已激活 · 全部功能可用':'未激活 · 试用模式'}</div>
-    <div style="font-size:12.5px;color:#5a6478;line-height:1.9;margin-bottom:14px">
+    <div style="font-size:24px;font-weight:600;margin-bottom:6px">${licensed?'已激活 · 全部功能可用':'未激活 · 试用模式'}</div>
+    <div style="font-size:19px;color:#5a6478;line-height:1.9;margin-bottom:14px">
       ${licensed?('授权人：'+esc(lic.owner||'—')+'<br>激活码：'+esc(lic.code)):'试用模式可查看全部功能与示例数据，无法新增 / 编辑 / 导出；<br>购买激活码后解锁全部功能，一次付费 · 永久使用'}
     </div>
     ${licensed?`<div style="display:flex;gap:8px;justify-content:center">
@@ -487,9 +514,9 @@ function licPanelHtml(){
          <button class="btn pri block" onclick="doActivate()" style="padding:10px">立 即 激 活</button>
          <div class="msg" id="licMsg"></div>
          <button class="btn block" onclick="enterApp()" style="margin-top:10px;border-style:dashed">先进入试用（仅浏览示例数据）</button>
-         ${contact?`<div style="font-size:12.5px;color:#92400e;background:#fdf3e0;border-radius:8px;padding:9px 12px;margin-top:12px">购买激活码请联系：<strong>${esc(contact)}</strong></div>`:'<div class="hint" style="margin-top:12px">如需购买激活码，请联系卖家获取</div>'}`}
+         ${contact?`<div style="font-size:19px;color:#92400e;background:#fdf3e0;border-radius:8px;padding:9px 12px;margin-top:12px">购买激活码请联系：<strong>${esc(contact)}</strong></div>`:'<div class="hint" style="margin-top:12px">如需购买激活码，请联系卖家获取</div>'}`}
   </div>
-  <div style="margin-top:16px;padding-top:14px;border-top:1px solid #eef1f6;font-size:12px;color:#9aa3b5;line-height:1.9">
+  <div style="margin-top:16px;padding-top:14px;border-top:1px solid #eef1f6;font-size:18px;color:#9aa3b5;line-height:1.9">
     <div>${APP_NAME} ${APP_VER} · 单机授权版 · 无需账号登录</div>
     <div>适用：中小企业合同 / 发票 / 收付款 / 客户供应商台账管理</div>
     <div>授权：购买激活码输入即激活 · 离线校验无需联网 · 数据保存在本机浏览器，可随时导出备份</div>
@@ -511,9 +538,9 @@ function openAbout(){
   const contact=LICENSE_CONTACT;
   openModal(`<div style="text-align:center;padding:4px 0 2px">
     <div class="auth-logo" style="margin:0 auto 12px">${ICO.contract.replace('width="16"','width="24"').replace('height="16"','height="24"')}</div>
-    <div style="font-size:16px;font-weight:600">${APP_NAME} ${APP_VER}</div>
+    <div style="font-size:24px;font-weight:600">${APP_NAME} ${APP_VER}</div>
     <div class="hint" style="margin-top:4px">${APP_SLOGAN}</div>
-    <div style="text-align:left;font-size:12.5px;color:#5a6478;line-height:2;margin-top:14px;background:#f7f9fc;border-radius:10px;padding:10px 14px">
+    <div style="text-align:left;font-size:19px;color:#5a6478;line-height:2;margin-top:14px;background:#f7f9fc;border-radius:10px;padding:10px 14px">
       <div>· 模块：工作台 / 统计 / 合同 / 发票 / 资金 / 客户 / 供应商 / 提醒 / 系统设置</div>
       <div>· 数据保存在本机浏览器，可在系统设置中导出 JSON 备份</div>
       <div>· 激活状态：${lic.activated?'<span style="color:#129b5a">已激活</span>（'+esc(lic.code)+'）':'<span style="color:#c47b0a">试用模式</span>'}　<a href="javascript:showAuth(\'license\')" style="color:#3d5ee8">管理授权</a></div>
@@ -636,9 +663,9 @@ function autoSampleData(){
     C('0003','办公场所租赁合同（三年）','应付',sups[1],540000,0.09,'signed',-10,-1085,-15,'按季支付租金，押三付三。','上海市静安区示例路200号'),
     C('0004','技术服务框架合同','应收',custs[1],200000,0.06,'unsigned',-0,-300,-5,'待法务审核后签订。'),
     C('0005','软件订阅年度合同','应收',custs[2],156000,0.06,'signed',-200,-160,-210,'年付，含运维服务。'),
-    C('0006','原材料补货采购合同','应付',sups[0],88000,0.13,'signed',-60,-40,-70,'一次性交货，到货验收后30天付清。'),
+    C('0006','原材料补货采购合同','应付',sups[0],88000,0.13,'signed',-60,-12,-70,'一次性交货，到货验收后 12 天内付清。'),
     C('0007','展厅多媒体集成项目','应收',custs[0],680000,0.13,'signed',-45,-220,-60,'预付40%，验收55%，质保5%。'),
-    C('0008','工位租赁合同','应付',custs[1],42000,0.09,'done',-400,-30,-420,'已到期结算完毕。')
+    C('0008','设备维保合同','应付',sups[1],42000,0.09,'signed',-0,-8,-3,'供应商开票后 8 日内需付款，逾期影响维保服务。')
   ];
   /* 发票（销项/进项各3-4 张）*/
   const invoices=[
@@ -680,7 +707,7 @@ const NAV_HASH={dash:'dash',reminder:'reminder',contract:'contract',invoice:'inv
 function renderNav(){
   const el=$('nav');if(!el)return;
   const cur=navById(STATE.nav)||navById('dash');
-  const curP=cur._p||cur.id;               /* 当前逻辑菜单：若是子项，取其父 */
+  const curP=cur._p||cur.id;
   let h='';
   NAV.forEach(g=>{
     h+='<div class="nav-group">'+g.g+'</div>';
@@ -688,15 +715,15 @@ function renderNav(){
       let badge='';
       if(it.badge){const n=unreadReminderCount();if(n>0)badge='<span class="cnt" style="background:#fdecec;color:#d4382e">'+n+'</span>'}
       const kids=it.children||[];
-      const open=kids.length&&curP===it.id;
-      const onP=!kids.length&&curP===it.id;
+      const isCurGroup=curP===it.id;
+      const open=kids.length&&(STATE.openNav===it.id||(STATE.openNav==null&&isCurGroup));
+      const onP=!kids.length&&isCurGroup;
       h+='<div class="nav-parent"><div class="nav-item'+(onP?' on':'')+'" data-nav="'+it.id+'" onclick="navClick(\''+it.id+'\')">'+it.icon+'<span>'+it.name+'</span>'+(kids.length?'<em class="nv-arr'+(open?' up':'')+'">▾</em>':'')+badge+'</div>';
       if(kids.length){
         h+='<div class="nav-sub'+(open?' open':'')+'">';
-        const first=kids[0];
         kids.forEach(c=>{
-          const on=cur.id===c.id||(cur.id===it.id&&c===first);
-          h+='<div class="nav-item sub'+(on?' on':'')+'" data-nav="'+c.id+'" onclick="navClick(\''+c.id+'\')"><span>'+c.name+'</span></div>';
+          const onSub=cur.id===c.id;
+          h+='<div class="nav-item sub'+(onSub?' on':'')+'" data-nav="'+c.id+'" onclick="navClick(\''+c.id+'\')"><span>'+c.name+'</span></div>';
         });
         h+='</div>';
       }
@@ -710,12 +737,18 @@ function renderNav(){
 }
 function navClick(id){
   const it=navById(id);if(!it)return;
+  const isGroup=!it._p&&it.children&&it.children.length;
+  if(isGroup){
+    if(STATE.openNav===it.id){STATE.openNav=null;renderNav();return}  /* 再次点击：收起 */
+    STATE.openNav=it.id;renderNav();                                  /* 展开（互斥：单值覆盖） */
+    return;
+  }
   STATE.nav=id;
-  const target=it._p||it.id;               /* 子项 => 父页面 */
+  if(!it._p&&!(it.children&&it.children.length))STATE.openNav=null;    /* 点无子菜单项：收起展开分组 */
+  const target=it._p||it.id;
   const needReload=STATE.page!==target;
   if(needReload){goPage(target);STATE.nav=id;renderNav()}
   if(it._p)setTimeout(()=>applyMenuParam(id),needReload?30:0);
-  else if(it.children&&it.children.length)setTimeout(()=>{applyMenuParam(it.children[0].id)},needReload?30:0);
 }
 /* 页面内 seg/方向切换后同步侧栏高亮：parentId=所在父菜单，param=子菜单参数 */
 function syncNavState(parentId,param){
@@ -759,6 +792,21 @@ function openModal(html,opts){
 function closeModal(){document.body.classList.remove('modal-open');$('modalBox').innerHTML=''}
 function openDrawer(title,html){$('drawerTitle').textContent=title;$('drawerBody').innerHTML=html;document.body.classList.add('drawer-open')}
 function closeDrawer(){document.body.classList.remove('drawer-open');$('drawerBody').innerHTML=''}
+/* 抽屉左缘拖拽调宽（桌面端） */
+function initDrawerDrag(){
+  const rz=document.getElementById('dwResize');if(!rz)return;
+  const drawer=document.getElementById('drawer');
+  let sx=0,sw=0,drag=false;
+  const start=e=>{drag=true;sx=e.clientX;sw=drawer.getBoundingClientRect().width;rz.classList.add('drag');document.body.style.userSelect='none';document.body.style.cursor='ew-resize';e.preventDefault&&e.preventDefault()};
+  const move=e=>{if(!drag)return;const vw=Math.max(360,Math.min(window.innerWidth*0.96,sw-(e.clientX-sx)));drawer.style.width=vw+'px'};
+  const end=()=>{if(!drag)return;drag=false;rz.classList.remove('drag');document.body.style.userSelect='';document.body.style.cursor='';if(window.innerWidth<820)drawer.style.width=''};
+  rz.addEventListener('mousedown',start);
+  document.addEventListener('mousemove',move);
+  document.addEventListener('mouseup',end);
+  rz.addEventListener('touchstart',e=>start(e.touches[0]),{passive:false});
+  document.addEventListener('touchmove',e=>{if(drag)move(e.touches[0])},{passive:false});
+  document.addEventListener('touchend',end);
+}
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeDrawer()}});
 document.addEventListener('click',e=>{if(e.target.id==='mask')closeModal()});
 
@@ -767,10 +815,10 @@ function openCompanySwitch(){
   const list=dbList('companies');
   if(!list.length){openCompanyForm();return}
   const cur=curCompany();
-  openModal(`<div style="font-size:13px">${list.map(c=>`
+  openModal(`<div style="font-size:19px">${list.map(c=>`
     <div onclick="switchCompany('${c.id}')" style="display:flex;align-items:center;gap:10px;border:1px solid ${cur&&cur.id===c.id?'#3d5ee8':'#e7eaf2'};background:${cur&&cur.id===c.id?'#eef1fd':'#fff'};border-radius:10px;padding:11px 14px;margin-bottom:8px;cursor:pointer">
       <div style="width:34px;height:34px;border-radius:9px;background:${cur&&cur.id===c.id?'#3d5ee8':'#f0f3f9'};color:${cur&&cur.id===c.id?'#fff':'#5a6478'};display:flex;align-items:center;justify-content:center;font-weight:600;flex:none">${esc((c.shortName||c.name||'?').slice(0,1))}</div>
-      <div style="flex:1;min-width:0"><div style="font-weight:500">${esc(c.name)}</div><div style="font-size:12px;color:#9aa3b5">${esc(c.shortName||'')} ${cur&&cur.id===c.id?'· 当前使用':''}</div></div>
+      <div style="flex:1;min-width:0"><div style="font-weight:500">${esc(c.name)}</div><div style="font-size:18px;color:#9aa3b5">${esc(c.shortName||'')} ${cur&&cur.id===c.id?'· 当前使用':''}</div></div>
       ${cur&&cur.id===c.id?'<span class="tag brand">当前</span>':''}
     </div>`).join('')}
     <button class="btn" style="width:100%;margin-top:4px;border-style:dashed" onclick="closeModal();openCompanyForm()">+ 新增公司档案</button>
@@ -843,6 +891,7 @@ function partnerPage(kind){
       <input class="inp" id="ptKw_${kind}" placeholder="搜索名称 / 联系人 / 电话 / 编码" value="${esc(st[kind+'Kw']||'')}" style="min-width:220px">
       <select class="inp" id="ptCat_${kind}">${cats.map(c=>`<option value="${esc(c)}" ${(st[kind+'Cat']||cats[0])===c?'selected':''}>${esc(c)}</option>`).join('')}</select>
       <span class="sp"></span>
+      <button class="btn" onclick="openColSet('ptList_${kind}','${kind}','${title}列设置')" title="显示/隐藏列">${ICO.gear.replace('16','14')} 列</button>
       <button class="btn" onclick="exportPartner('${kind}')">${ICO.xls} 导出</button>
       <button class="btn" onclick="openPartnerImport('${kind}')">${ICO.upload} 导入</button>
       <button class="btn pri" onclick="openPartnerForm('${kind}')">${ICO.plus} 新增${title}</button>
@@ -865,19 +914,19 @@ function renderPartnerTable(kind){
   const list=partnerListData(kind);
   if(!list.length){el.innerHTML='<div class="blank">暂无'+title+'数据，点击右上角「新增'+title+'」开始录入</div>';return}
   el.innerHTML=`<table class="tbl"><thead><tr>
-    <th style="width:28px"><input type="checkbox" onchange="toggleAllPt(this,'${kind}')"></th>
-    <th>编码</th><th>${title}名称</th><th>分类</th><th>联系人</th><th>电话</th><th>地址</th><th class="num">关联合同</th><th>跟进</th><th>创建时间</th><th style="width:210px">操作</th></tr></thead><tbody>
+    <th style="width:34px"><input type="checkbox" onchange="toggleAllPt(this,'${kind}')"></th>
+    <th data-c="code">编码</th><th data-c="name">${title}名称</th><th data-c="category">分类</th><th data-c="contact">联系人</th><th data-c="phone">电话</th><th data-c="address">地址</th><th data-c="con" class="num">关联合同</th><th data-c="follow">跟进</th><th data-c="createdAt">创建时间</th><th style="width:210px">操作</th></tr></thead><tbody>
     ${list.map(p=>{const cons=scopeList('contracts').filter(c=>c.partnerId===p.id);const conAmt=cons.reduce((s,c)=>s+moneyIn(c.amount),0);return `<tr>
       <td><input type="checkbox" class="ptchk" data-id="${p.id}"></td>
-      <td class="muted">${esc(p.code)}</td>
-      <td class="strong" style="cursor:pointer;color:var(--brand)" onclick="openPartnerDetail('${kind}','${p.id}')">${esc(p.name)}</td>
-      <td>${p.category?'<span class="tag info">'+esc(p.category)+'</span>':'<span class="tag gray">未分类</span>'}</td>
-      <td>${esc(p.contact||'—')}</td>
-      <td>${esc(p.phone||'—')}</td>
-      <td class="muted" style="max-width:150px;overflow:hidden;text-overflow:ellipsis" title="${esc(p.address||'')}">${esc(p.address||'')}</td>
-      <td class="num" title="合同金额 ${fmtMoneyFull(conAmt)}">${cons.length?'<span class="strong" style="color:var(--brand)">'+cons.length+'</span><span class="muted" style="font-size:11px"> 份</span>':'<span class="tag gray">—</span>'}</td>
-      <td>${(p.followUps||[]).length?('<span class="tag brand">'+p.followUps.length+' 条</span>'):'<span class="tag gray">无</span>'}</td>
-      <td class="muted">${fmtDate(p.createdAt)}</td>
+      <td data-c="code" class="muted">${esc(p.code)}</td>
+      <td data-c="name" class="strong" style="cursor:pointer;color:var(--brand)" onclick="openPartnerDetail('${kind}','${p.id}')">${esc(p.name)}</td>
+      <td data-c="category">${p.category?'<span class="tag info">'+esc(p.category)+'</span>':'<span class="tag gray">未分类</span>'}</td>
+      <td data-c="contact">${esc(p.contact||'—')}</td>
+      <td data-c="phone">${esc(p.phone||'—')}</td>
+      <td data-c="address" class="muted" style="max-width:150px;overflow:hidden;text-overflow:ellipsis" title="${esc(p.address||'')}">${esc(p.address||'')}</td>
+      <td data-c="con" class="num" title="合同金额 ${fmtMoneyFull(conAmt)}">${cons.length?'<span class="strong" style="color:var(--brand)">'+cons.length+'</span><span class="muted" style="font-size:19px"> 份</span>':'<span class="tag gray">—</span>'}</td>
+      <td data-c="follow">${(p.followUps||[]).length?('<span class="tag brand">'+p.followUps.length+' 条</span>'):'<span class="tag gray">无</span>'}</td>
+      <td data-c="createdAt" class="muted">${fmtDate(p.createdAt)}</td>
       <td class="ops">
         <button class="btn sm ghost" onclick="openPartnerDetail('${kind}','${p.id}')" title="查看档案/关联合同/往来">${ICO.eye}详情</button>
         <button class="btn sm ghost" onclick="openPartnerFollow('${kind}','${p.id}')" title="跟进记录">${ICO.bell.replace('16','14')}跟进</button>
@@ -885,11 +934,12 @@ function renderPartnerTable(kind){
         <button class="btn sm ghost" onclick="delPartner('${kind}','${p.id}')" style="color:#d4382e" title="删除">${ICO.del}删除</button>
       </td></tr>`}).join('')}
   </tbody></table>
-  <div style="padding:10px 14px;display:flex;align-items:center;gap:10px;font-size:12.5px;color:#5a6478">
+  <div style="padding:10px 14px;display:flex;align-items:center;gap:10px;font-size:19px;color:#5a6478">
     已选 <span id="ptSel_${kind}">0</span> 项
     <button class="btn sm bad" onclick="batchDelPartner('${kind}')">批量删除</button>
     <span class="sp"></span><span class="muted">共 ${list.length} 条</span>
   </div>`;
+  applyColPrefs('ptList_'+kind,kind);
 }
 /* 客户/供应商详情：档案 + 关联合同 + 收付款往来 */
 function partnerStats(kind,id){
@@ -922,9 +972,9 @@ function openPartnerDetail(kind,id){
     <div class="it"><div class="k">开户行</div><div class="v">${esc(p.bank||'—')}</div></div>
     <div class="it"><div class="k">账号</div><div class="v">${esc(p.bankAccount||'—')}</div></div>
   </div>`;
-  const followHtml=(p.followUps||[]).length?`<div style="font-weight:500;margin:12px 0 6px">最近跟进</div>${(p.followUps||[]).slice(0,3).map(f=>`<div style="border:1px solid #eef1f6;border-radius:8px;padding:8px 10px;margin-bottom:6px;font-size:12.5px"><span class="tag info">${esc(f.type||'')}</span><span class="muted" style="margin-left:6px">${esc(f.date||'')}</span><div style="margin-top:3px">${esc(f.content)}</div></div>`).join('')}`:'';
-  const consHtml=cons.length?`<div style="font-weight:500;margin:12px 0 6px">关联合同（${cons.length} 份 · 金额 ${fmtMoneyFull(s.conAmt)}）</div><div class="tbl-wrap"><table class="tbl" style="font-size:12.5px"><thead><tr><th>编号</th><th>名称</th><th>方向</th><th class="num">金额</th><th class="num">${isC?'已收':'已付'}</th><th>状态</th></tr></thead><tbody>${cons.map(c=>{const m=conMoney(c);return `<tr style="cursor:pointer" onclick="closeDrawer();openConDetail('${c.id}')"><td class="muted">${esc(c.number)}</td><td>${esc(c.name)}</td><td>${dirTag(c.direction)}</td><td class="num">${fmtMoneyFull(c.amount)}</td><td class="num">${fmtMoneyFull(isRecvCon(c)?m.got:m.paid)}</td><td>${stTag(c.status)}</td></tr>`}).join('')}</tbody></table></div>`:'';
-  const billsHtml=bills.length?`<div style="font-weight:500;margin:12px 0 6px">收付款往来（${bills.length} 笔）</div><div class="tbl-wrap"><table class="tbl" style="font-size:12.5px"><thead><tr><th>单号</th><th>类型</th><th>日期</th><th class="num">金额</th><th>方式</th><th>账户</th></tr></thead><tbody>${bills.map(b=>`<tr><td class="muted">${esc(b.number)}</td><td>${b.kind==='收款'?'<span class="tag brand">收款</span>':'<span class="tag warn">付款</span>'}</td><td>${fmtDate(b.date)}</td><td class="num">${fmtMoneyFull(b.amount)}</td><td>${esc(b.method||'—')}</td><td>${esc(b.accountName||'—')}</td></tr>`).join('')}</tbody></table></div>`:'';
+  const followHtml=(p.followUps||[]).length?`<div style="font-weight:500;margin:12px 0 6px">最近跟进</div>${(p.followUps||[]).slice(0,3).map(f=>`<div style="border:1px solid #eef1f6;border-radius:8px;padding:8px 10px;margin-bottom:6px;font-size:19px"><span class="tag info">${esc(f.type||'')}</span><span class="muted" style="margin-left:6px">${esc(f.date||'')}</span><div style="margin-top:3px">${esc(f.content)}</div></div>`).join('')}`:'';
+  const consHtml=cons.length?`<div style="font-weight:500;margin:12px 0 6px">关联合同（${cons.length} 份 · 金额 ${fmtMoneyFull(s.conAmt)}）</div><div class="tbl-wrap"><table class="tbl" style="font-size:19px"><thead><tr><th>编号</th><th>名称</th><th>方向</th><th class="num">金额</th><th class="num">${isC?'已收':'已付'}</th><th>状态</th></tr></thead><tbody>${cons.map(c=>{const m=conMoney(c);return `<tr style="cursor:pointer" onclick="closeDrawer();openConDetail('${c.id}')"><td class="muted">${esc(c.number)}</td><td>${esc(c.name)}</td><td>${dirTag(c.direction)}</td><td class="num">${fmtMoneyFull(c.amount)}</td><td class="num">${fmtMoneyFull(isRecvCon(c)?m.got:m.paid)}</td><td>${stTag(c.status)}</td></tr>`}).join('')}</tbody></table></div>`:'';
+  const billsHtml=bills.length?`<div style="font-weight:500;margin:12px 0 6px">收付款往来（${bills.length} 笔）</div><div class="tbl-wrap"><table class="tbl" style="font-size:19px"><thead><tr><th>单号</th><th>类型</th><th>日期</th><th class="num">金额</th><th>方式</th><th>账户</th></tr></thead><tbody>${bills.map(b=>`<tr><td class="muted">${esc(b.number)}</td><td>${b.kind==='收款'?'<span class="tag brand">收款</span>':'<span class="tag warn">付款</span>'}</td><td>${fmtDate(b.date)}</td><td class="num">${fmtMoneyFull(b.amount)}</td><td>${esc(b.method||'—')}</td><td>${esc(b.accountName||'—')}</td></tr>`).join('')}</tbody></table></div>`:'';
   openDrawer(title+'档案 · '+p.name,`
     <div class="st3">
       ${statCard('关联合同',cons.length+' 份',fmtMoneyFull(s.conAmt),'#3d5ee8',ICO.contract)}
@@ -1008,9 +1058,9 @@ function openPartnerFollow(kind,id){
       <div style="display:flex;gap:8px;margin-top:8px"><button class="btn pri" onclick="saveFollow('${kind}','${id}')">${ICO.plus} 添加跟进</button></div>
     </div></div>`:''}
     <div id="fuList">${follows.length?follows.map(f=>`<div style="border:1px solid #e7eaf2;border-radius:10px;padding:10px 12px;margin-bottom:8px">
-      <div style="display:flex;gap:8px;align-items:center"><span class="tag info">${esc(f.type||'其他')}</span><span class="tag ${f.state==='已成交'?'ok':f.state==='流失'?'bad':f.state==='暂缓'?'warn':'gray'}">${esc(f.state||'正常跟进')}</span><span style="margin-left:auto;font-size:12px;color:#9aa3b5">${esc(f.date||'')} · ${esc(f.user||'')}</span></div>
-      <div style="font-size:13px;margin-top:6px">${esc(f.content)}</div>
-      ${f.next?'<div style="font-size:12px;color:#5a6478;margin-top:4px">下次跟进：'+esc(f.next)+'</div>':''}</div>`).join(''):'<div class="blank">暂无跟进记录</div>'}</div>`);
+      <div style="display:flex;gap:8px;align-items:center"><span class="tag info">${esc(f.type||'其他')}</span><span class="tag ${f.state==='已成交'?'ok':f.state==='流失'?'bad':f.state==='暂缓'?'warn':'gray'}">${esc(f.state||'正常跟进')}</span><span style="margin-left:auto;font-size:18px;color:#9aa3b5">${esc(f.date||'')} · ${esc(f.user||'')}</span></div>
+      <div style="font-size:19px;margin-top:6px">${esc(f.content)}</div>
+      ${f.next?'<div style="font-size:18px;color:#5a6478;margin-top:4px">下次跟进：'+esc(f.next)+'</div>':''}</div>`).join(''):'<div class="blank">暂无跟进记录</div>'}</div>`);
 }
 function saveFollow(kind,id){
   const isC=kind==='customer';const key=isC?'customers':'suppliers';
@@ -1031,7 +1081,7 @@ function exportPartner(kind){
 function openPartnerImport(kind){
   if(!requireLic())return;
   const isC=kind==='customer';const title=isC?'客户':'供应商';
-  openModal(`<div style="font-size:13px">
+  openModal(`<div style="font-size:19px">
     <div class="dropzone" onclick="$('piFile').click()">${ICO.upload} 点击选择 CSV 文件（或拖拽到窗口）<div class="hint">表头：名称,联系人,电话,地址,分类,税号,备注（首列必填名称）</div></div>
     <input type="file" id="piFile" accept=".csv,text/csv" style="display:none" onchange="importPartnerFile(this,'${kind}')">
     <div class="hint" style="margin-top:10px">也可先在列表页「导出」获得模板，按模板填写后导入。</div>
@@ -1073,7 +1123,7 @@ PAGES.contract=function(){
         <button class="${st.dir==='应收'?'on':''}" onclick="setConDir('应收')">应收合同</button>
         <button class="${st.dir==='应付'?'on':''}" onclick="setConDir('应付')">应付合同</button>
       </div>
-      <span style="font-size:12.5px;color:#9aa3b5" id="conSub"></span>
+      <span style="font-size:19px;color:#9aa3b5" id="conSub"></span>
     </div>
     <div class="filter">
       <input class="inp" id="conKw" placeholder="搜索合同编号 / 名称 / 往来单位 / 负责人" value="${esc(st.kw||'')}" style="min-width:230px">
@@ -1081,6 +1131,7 @@ PAGES.contract=function(){
       <select class="inp" id="conArch"><option value="">归档：全部</option><option value="0" ${st.arch==='0'?'selected':''}>未归档</option><option value="1" ${st.arch==='1'?'selected':''}>已归档</option></select>
       <select class="inp" id="conType"><option value="">全部类型</option>${contractTypesOf(st.dir).map(t=>`<option value="${esc(t.name)}">${esc(t.name)}</option>`).join('')}</select>
       <span class="sp"></span>
+      <button class="btn" onclick="openColSet('conList',st.dir,'合同列设置')" title="显示/隐藏列">${ICO.gear.replace('16','14')} 列</button>
       <button class="btn" onclick="openConImport()" title="按 CSV 模板批量导入">${ICO.upload} 导入</button>
       <button class="btn" onclick="exportContract()">${ICO.xls} 导出</button>
       <button class="btn pri" onclick="openConForm()">${ICO.plus} 新增${st.dir}合同</button>
@@ -1137,19 +1188,19 @@ function renderConList(){
   if(!list.length){el.innerHTML='<div class="blank">暂无'+st.dir+'合同</div>';return}
   const recv=st.dir==='应收';
   el.innerHTML=`<table class="tbl"><thead><tr>
-    <th>合同编号</th><th>合同名称</th><th>${recv?'客户':'供应商'}</th><th>类型</th><th>负责人</th><th>签订日期</th><th>到期日</th><th class="num">合同金额</th><th class="num">不含税</th><th>收付进度</th><th>状态</th><th style="width:190px">操作</th></tr></thead><tbody>
+    <th data-c="number">合同编号</th><th data-c="name">合同名称</th><th data-c="partner">${recv?'客户':'供应商'}</th><th data-c="type">类型</th><th data-c="manager">负责人</th><th data-c="signDate">签订日期</th><th data-c="endDate">到期日</th><th data-c="amount" class="num">合同金额</th><th data-c="taxexcl" class="num">不含税</th><th data-c="progress">收付进度</th><th data-c="status">状态</th><th style="width:200px">操作</th></tr></thead><tbody>
     ${list.map(c=>{const m=conMoney(c);return `<tr>
-      <td class="muted">${esc(c.number)}</td>
-      <td class="strong" style="max-width:220px;overflow:hidden;text-overflow:ellipsis" title="${esc(c.name)}">${esc(c.name)}${c.archive?'<span style="margin-left:4px">'+archTag(1)+'</span>':''}</td>
-      <td>${esc(c.partnerName||'—')}</td>
-      <td>${esc(c.typeName||'—')}</td>
-      <td>${esc(c.manager||'—')}</td>
-      <td class="muted">${fmtDate(c.signDate)}</td>
-      <td class="muted">${c.endDate?fmtDate(c.endDate)+(conExpireTag(c.endDate)):'—'}</td>
-      <td class="num money">${fmtMoneyFull(c.amount)}</td>
-      <td class="num muted">${fmtMoneyFull(c.taxExcl)}</td>
-      <td style="min-width:120px">${isRecvCon(c)?progressBar(m.rate)+'<div class="muted" style="font-size:11px">已收 '+fmtMoneyFull(m.got)+'</div>':progressBar(c.amount?m.paid/moneyIn(c.amount)*100:0)+'<div class="muted" style="font-size:11px">已付 '+fmtMoneyFull(m.paid)+'</div>'}</td>
-      <td>${stTag(c.status)}</td>
+      <td data-c="number" class="muted">${esc(c.number)}</td>
+      <td data-c="name" class="strong" style="max-width:200px;overflow:hidden;text-overflow:ellipsis" title="${esc(c.name)}">${esc(c.name)}${c.archive?'<span style="margin-left:4px">'+archTag(1)+'</span>':''}</td>
+      <td data-c="partner">${esc(c.partnerName||'—')}</td>
+      <td data-c="type">${esc(c.typeName||'—')}</td>
+      <td data-c="manager">${esc(c.manager||'—')}</td>
+      <td data-c="signDate" class="muted">${fmtDate(c.signDate)}</td>
+      <td data-c="endDate" class="muted">${c.endDate?fmtDate(c.endDate)+(conExpireTag(c.endDate)):'—'}</td>
+      <td data-c="amount" class="num money">${fmtMoneyFull(c.amount)}</td>
+      <td data-c="taxexcl" class="num muted">${fmtMoneyFull(c.taxExcl)}</td>
+      <td data-c="progress" style="min-width:130px">${isRecvCon(c)?progressBar(m.rate)+'<div class="muted" style="font-size:19px">已收 '+fmtMoneyFull(m.got)+'</div>':progressBar(c.amount?m.paid/moneyIn(c.amount)*100:0)+'<div class="muted" style="font-size:19px">已付 '+fmtMoneyFull(m.paid)+'</div>'}</td>
+      <td data-c="status">${stTag(c.status)}</td>
       <td class="ops">
         <button class="btn sm ghost" onclick="openConDetail('${c.id}')" title="详情">${ICO.eye}详情</button>
         <button class="btn sm ghost" onclick="openConBill('${c.id}')" title="登记收付款">${ICO.money.replace('16','13')}${isRecvCon(c)?'收':'付'}</button>
@@ -1157,6 +1208,7 @@ function renderConList(){
         <button class="btn sm ghost" onclick="delCon('${c.id}')" style="color:#d4382e" title="删除">${ICO.del}删除</button>
       </td></tr>`}).join('')}
   </tbody></table>`;
+  applyColPrefs('conList',st.dir);
 }
 function conExpireTag(end){const left=diffDays(today(),end);if(!isFinite(left))return '';if(left>=0&&left<=30)return ' <span class="tag warn">剩'+left+'天</span>';if(left<0)return ' <span class="tag bad">已过期</span>';return ''}
 function openConForm(id){
@@ -1199,8 +1251,9 @@ function openConForm(id){
     <div class="fg full"><label>合同条款 / 付款约定</label><textarea class="inp" id="co_terms" placeholder="主要条款、付款比例、质保等">${fv(c&&c.terms)}</textarea></div>
     <div class="fg full"><label>备注</label><input class="inp" id="co_remark" value="${fv(c&&c.remark)}"></div>
     <div class="fg full"><label>合同明细（可选）</label>
-      <table class="mini-tbl" id="ciTbl"><thead><tr><th style="width:26px"></th><th>名称</th><th style="width:70px">数量</th><th style="width:90px">单价</th><th style="width:90px">税率</th><th style="width:120px">金额</th></tr></thead><tbody id="ciBody"></tbody></table>
+      <table class="mini-tbl" id="ciTbl"><thead><tr><th style="width:26px"></th><th>名称</th><th style="width:80px">数量</th><th style="width:110px">单价</th><th style="width:90px">税率</th><th style="width:130px">金额</th></tr></thead><tbody id="ciBody"></tbody></table>
       <button class="btn sm ghost" style="margin-top:6px" onclick="addCiRow()">+ 添加明细行</button>
+      <div class="hint" style="margin-top:4px">改数量 / 单价 / 税率会自动计算金额；金额也可直接手动修改。</div>
     </div>
   </div>`,{title:(id?'编辑':'新增')+(dir==='应收'?'应收':'应付')+'合同',lg:true,
     footer:[{t:'取消',c:'ghost',x:closeModal},{t:'保存',c:'pri',x:function(){saveConForm(id)}}]});
@@ -1212,16 +1265,30 @@ function coDirChange(){const d=$('co_dir').value;const ps=scopeList(d==='应收'
 function addCiRow(it){
   const body=$('ciBody');if(!body)return;
   const tr=document.createElement('tr');
-  tr.innerHTML=`<td><button class="rm" onclick="this.closest('tr').remove();coSumItems()">✕</button></td>
+  const rt=it&&it.taxRate!=null?it.taxRate:0.13;
+  const rateOpts=[0,0.03,0.06,0.09,0.13,0.16].map(r=>`<option value="${r}" ${rt===r?'selected':''}>${(r*100)}%</option>`).join('');
+  tr.innerHTML=`<td><button class="rm" type="button" onclick="this.closest('tr').remove();coSumItems()">✕</button></td>
     <td><input class="inp" placeholder="名称" value="${esc(it?it.name:'')}"></td>
     <td><input class="inp num" type="number" min="0" value="${it?it.qty:1}" oninput="ciCalc(this)"></td>
-    <td><input class="inp num" type="number" min="0" step="0.01" value="${it?it.price:''}" oninput="ciCalc(this)"></td>
-    <td><input class="inp num" type="number" min="0" step="0.01" value="${it?it.taxRate||0:''}" oninput="ciCalc(this)"></td>
-    <td><input class="inp num" readonly value="${it?moneyStr(it.amount||0):''}"></td>`;
+    <td><input class="inp num" type="number" min="0" step="0.01" value="${it?it.price:''}" placeholder="0.00" oninput="ciCalc(this)"></td>
+    <td><select class="inp" onchange="ciCalc(this)">${rateOpts}</select></td>
+    <td><input class="inp num" type="number" min="0" step="0.01" value="${it&&it.amount!=null?it.amount:''}" placeholder="0.00" oninput="ciCalc(this)" title="可手动改，改数量/单价/税率后自动重算"></td>`;
   body.appendChild(tr);
+  if(!it)ciCalc(tr.querySelector('input[type=number]'));
 }
-function ciCalc(inp){const tr=inp.closest('tr');const qs=tr.children[1].querySelector('input').value,ps=tr.children[2].querySelector('input').value,rs=tr.children[3].querySelector('input').value;const q=parseFloat(qs)||0,p=parseFloat(ps)||0,r=parseFloat(rs)||0;tr.children[4].querySelector('input').value=moneyStr(q*p*(1+r));}
-function coSumItems(){let sum=0;document.querySelectorAll('#ciBody tr').forEach(tr=>{sum+=parseFloat(tr.children[4].querySelector('input').value)||0});$('co_amount').value=sum?sum.toFixed(2):'';coTaxSync()}
+/* 明细行联动：数量/单价/税率任一变化则自动算金额；金额手动改动时保留 */
+function ciCalc(inp){
+  const tr=inp.closest('tr');if(!tr)return;
+  const fields=tr.querySelectorAll('input,select');
+  const q=parseFloat(fields[1].value)||0;   /* 数量 */
+  const p=parseFloat(fields[2].value)||0;   /* 单价 */
+  const r=parseFloat(fields[3].value)||0;   /* 税率 select */
+  const amt=fields[4];                       /* 金额 */
+  if(inp!==amt)amt.value=(q*p*(1+r)).toFixed(2);
+  else if(inp.value==='')amt.value=(q*p*(1+r)).toFixed(2);
+  coSumItems();
+}
+function coSumItems(){let sum=0;document.querySelectorAll('#ciBody tr').forEach(tr=>{const f=tr.querySelectorAll('input,select');sum+=parseFloat(f[4].value)||0});$('co_amount').value=sum?sum.toFixed(2):'';coTaxSync()}
 function coTaxSync(){const a=parseFloat($('co_amount').value)||0;const r=parseFloat($('co_tax').value)||0;const t=taxCalc(a,r);$('co_taxexcl').value=moneyStr(t.taxExcl);$('co_taxv').value=moneyStr(t.tax)}
 function saveConForm(id){
   if(!requireLic())return;
@@ -1231,7 +1298,7 @@ function saveConForm(id){
   const amount=moneyIn($('co_amount').value);if(amount<=0&&!confirmDlg2('金额为 0','合同金额为 0，是否继续保存？'))return;
   const r=parseFloat($('co_tax').value)||0;
   const t=taxCalc(amount,r);
-  const items=[];document.querySelectorAll('#ciBody tr').forEach(tr=>{const c=tr.children;const nm=c[1].querySelector('input').value.trim();const q=parseFloat(c[2].querySelector('input').value)||0,p=parseFloat(c[3].querySelector('input').value)||0,rt=parseFloat(c[4].querySelector('input').value)||0;const amt=parseFloat(c[5].querySelector('input').value)||0;if(nm)items.push({name:nm,qty:q,price:p,taxRate:rt,amount:amt})});
+  const items=[];document.querySelectorAll('#ciBody tr').forEach(tr=>{const cs=tr.querySelectorAll('input,select');const nm=cs[0].value.trim();const q=parseFloat(cs[1].value)||0,p=parseFloat(cs[2].value)||0,rt=parseFloat(cs[3].value)||0;const amt=parseFloat(cs[4].value)||0;if(nm)items.push({name:nm,qty:q,price:p,taxRate:rt,amount:amt})});
   const data={number:$('co_num').value.trim(),name,direction:dir,typeName:$('co_type').value,status:$('co_status').value,partnerId,partnerName:partnerName.name||'',manager:$('co_manager').value.trim(),salesman:$('co_salesman').value.trim(),dept:$('co_dept').value.trim(),partyA:$('co_partyA').value.trim(),partyB:$('co_partyB').value.trim(),region:$('co_region').value.trim(),address:$('co_address').value.trim(),deliverDate:$('co_deliver').value,signDate:$('co_signd').value,startDate:$('co_start').value,endDate:$('co_end').value,amount,taxRate:r,taxExcl:t.taxExcl,tax:t.tax,pricingType:$('co_price').value,payPercent:parseFloat($('co_paypct').value)||0,terms:$('co_terms').value.trim(),remark:$('co_remark').value.trim(),items};
   const list=scopeList('contracts');
   if(id){list.forEach(x=>{if(x.id===id)Object.assign(x,data)})}
@@ -1364,7 +1431,7 @@ function exportContract(){
 /* 合同 CSV 导入（模板与「导出」一致：编号,名称,方向,往来单位,类型,负责人,签订,开始,结束,金额,税率,状态,归档,条款,备注） */
 function openConImport(){
   if(!requireLic())return;
-  openModal(`<div style="font-size:13px">
+  openModal(`<div style="font-size:19px">
     <div class="dropzone" onclick="$('ciFile').click()">${ICO.upload} 点击选择 CSV 文件<div class="hint">表头：编号,名称,方向,往来单位,类型,负责人,签订日期,开始日期,结束日期,金额,税率,状态,备注</div></div>
     <input type="file" id="ciFile" accept=".csv,text/csv" style="display:none" onchange="importConFile(this)">
     <div class="hint" style="margin-top:10px">方向填「应收/应付」；往来单位需与客户/供应商档案名称一致；税率如 0.13；状态填 未签订/已签订/已完成/已终止。也可先列表页「导出」获得模板再填写。</div>
@@ -1412,12 +1479,13 @@ PAGES.invoice=function(){
         <button class="${st.dir==='销项'?'on':''}" onclick="setInvDir('销项')">销项发票（开给客户）</button>
         <button class="${st.dir==='进项'?'on':''}" onclick="setInvDir('进项')">进项发票（供应商开给我方）</button>
       </div>
-      <span style="font-size:12.5px;color:#9aa3b5">共 <span id="invCnt"></span> 张</span>
+      <span style="font-size:19px;color:#9aa3b5">共 <span id="invCnt"></span> 张</span>
     </div>
     <div class="filter">
       <input class="inp" id="invKw" placeholder="搜索号码 / 往来单位 / 合同 / 代码" value="${esc(st.kw||'')}" style="min-width:210px">
       <select class="inp" id="invTypeF"><option value="">全部种类</option>${dictGet('invoiceType').map(t=>`<option ${st.type===t?'selected':''}>${esc(t)}</option>`).join('')}</select>
       <span class="sp"></span>
+      <button class="btn" onclick="openColSet('invList',invState().dir,'发票列设置')" title="显示/隐藏列">${ICO.gear.replace('16','14')} 列</button>
       <button class="btn" onclick="openInvImport()" title="按 CSV 模板批量导入">${ICO.upload} 导入</button>
       <button class="btn" onclick="exportInvoice()">${ICO.xls} 导出</button>
       <button class="btn pri" onclick="openInvoiceForm({})">${ICO.plus} 登记${st.dir}发票</button>
@@ -1458,22 +1526,27 @@ function renderInvList(){
     </div>`;
   }
   if(!list.length){el.innerHTML='<div class="blank">暂无'+st.dir+'发票记录</div>';return}
-  el.innerHTML=`<table class="tbl"><thead><tr><th>发票号码</th><th>类型</th><th>标识</th><th>日期</th><th>往来单位</th><th>关联合同</th><th class="num">价税合计</th><th class="num">金额</th><th class="num">税额</th><th>税率</th><th style="width:120px">操作</th></tr></thead><tbody>
+  el.innerHTML=`<table class="tbl"><thead><tr>
+    <th data-c="number">发票号码</th><th data-c="type">类型</th><th data-c="rz">标识</th><th data-c="date">日期</th>
+    <th data-c="partner">往来单位</th><th data-c="con">关联合同</th><th data-c="amount" class="num">价税合计</th>
+    <th data-c="taxexcl" class="num">金额</th><th data-c="tax" class="num">税额</th><th data-c="rate">税率</th>
+    <th style="width:120px">操作</th></tr></thead><tbody>
     ${list.map(i=>`<tr>
-      <td class="strong">${esc(i.number)}<div class="muted" style="font-size:11.5px">${esc(i.code||'')}</div></td>
-      <td>${i.type?esc(i.type):'—'}</td>
-      <td>${i.rz==='红字'?'<span class="tag bad">红字</span>':'<span class="tag info">蓝字</span>'}</td>
-      <td class="muted">${fmtDate(i.date)}</td>
-      <td>${esc(i.partnerName||'—')}</td>
-      <td class="muted">${esc(i.contractNumber||'—')}</td>
-      <td class="num money">${fmtMoneyFull(i.amount)}</td>
-      <td class="num muted">${fmtMoneyFull(i.taxExcl)}</td>
-      <td class="num">${fmtMoneyFull(i.tax)}</td>
-      <td class="muted">${Number(i.taxRate)*100||0}%</td>
+      <td data-c="number" class="strong">${esc(i.number)}<div class="muted" style="font-size:19px">${esc(i.code||'')}</div></td>
+      <td data-c="type">${i.type?esc(i.type):'—'}</td>
+      <td data-c="rz">${i.rz==='红字'?'<span class="tag bad">红字</span>':'<span class="tag info">蓝字</span>'}</td>
+      <td data-c="date" class="muted">${fmtDate(i.date)}</td>
+      <td data-c="partner">${esc(i.partnerName||'—')}</td>
+      <td data-c="con" class="muted">${esc(i.contractNumber||'—')}</td>
+      <td data-c="amount" class="num money">${fmtMoneyFull(i.amount)}</td>
+      <td data-c="taxexcl" class="num muted">${fmtMoneyFull(i.taxExcl)}</td>
+      <td data-c="tax" class="num">${fmtMoneyFull(i.tax)}</td>
+      <td data-c="rate" class="muted">${Number(i.taxRate)*100||0}%</td>
       <td class="ops"><button class="btn sm ghost" onclick="openInvoiceDetail('${i.id}')">${ICO.eye}详情</button><button class="btn sm ghost" onclick="openInvoiceForm({id:'${i.id}'})">${ICO.edit}编辑</button><button class="btn sm ghost" style="color:#d4382e" onclick="delInvoice('${i.id}')">${ICO.del}</button></td>
     </tr>`).join('')}
   </tbody></table>
-  <div style="padding:10px 14px;font-size:12.5px;color:#5a6478">价税合计 <span class="money">${fmtMoneyFull(sum)}</span> · 税额 <span class="money">${fmtMoneyFull(tax)}</span>（共 ${list.length} 张）</div>`;
+  <div style="padding:10px 14px;font-size:19px;color:#5a6478">价税合计 <span class="money">${fmtMoneyFull(sum)}</span> · 税额 <span class="money">${fmtMoneyFull(tax)}</span>（共 ${list.length} 张）</div>`;
+  applyColPrefs('invList',invState().dir);
 }
 function delInvoice(id){
   if(!requireLic())return;
@@ -1506,12 +1579,12 @@ function openInvoiceForm(def){
     <div class="fg"><label>税率</label><select class="inp" id="iv_tax" onchange="invTaxSync()"><option value="0">0%</option><option value="0.03" ${r===0.03?'selected':''}>3%</option><option value="0.06" ${r===0.06?'selected':''}>6%</option><option value="0.09" ${r===0.09?'selected':''}>9%</option><option value="0.13" ${r===0.13?'selected':''}>13%</option></select></div>
     <div class="fg"><label>金额（不含税）</label><input class="inp num" id="iv_tex" readonly value="${i?moneyStr(i.taxExcl||0):'0.00'}"></div>
     <div class="fg"><label>税额</label><input class="inp num" id="iv_taxv" readonly value="${i?moneyStr(i.tax||0):'0.00'}"></div>
-    <div class="fg full"><div style="display:flex;align-items:center;gap:8px;margin:6px 0 2px"><span style="font-size:12.5px;color:var(--ink2);font-weight:500">购方（购买方抬头）</span><button class="btn sm ghost" onclick="ivSwap()" title="与我方公司抬头互换">⇅ 用我方公司</button></div></div>
+    <div class="fg full"><div style="display:flex;align-items:center;gap:8px;margin:6px 0 2px"><span style="font-size:19px;color:var(--ink2);font-weight:500">购方（购买方抬头）</span><button class="btn sm ghost" onclick="ivSwap()" title="与我方公司抬头互换">⇅ 用我方公司</button></div></div>
     <div class="fg"><label>购方名称</label><input class="inp" id="iv_bname" value="${esc(sv(i,'buyerName',defBuyer,'name'))}"></div>
     <div class="fg"><label>购方税号</label><input class="inp" id="iv_btax" value="${esc(sv(i,'buyerTaxNo',defBuyer,'taxNo'))}"></div>
     <div class="fg"><label>购方地址电话</label><input class="inp" id="iv_baddr" value="${esc(i?i.buyerAddress:'')}" placeholder="地址、电话"></div>
     <div class="fg"><label>购方开户行及账号</label><input class="inp" id="iv_bbank" value="${esc(i?i.buyerBank:'')}" placeholder="开户行 账号"></div>
-    <div class="fg full"><div style="display:flex;align-items:center;gap:8px;margin:6px 0 2px"><span style="font-size:12.5px;color:var(--ink2);font-weight:500">销方（销售方抬头）</span><button class="btn sm ghost" onclick="ivSwap()">⇅ 用我方公司</button></div></div>
+    <div class="fg full"><div style="display:flex;align-items:center;gap:8px;margin:6px 0 2px"><span style="font-size:19px;color:var(--ink2);font-weight:500">销方（销售方抬头）</span><button class="btn sm ghost" onclick="ivSwap()">⇅ 用我方公司</button></div></div>
     <div class="fg"><label>销方名称</label><input class="inp" id="iv_sname" value="${esc(sv(i,'sellerName',defSeller,'name'))}"></div>
     <div class="fg"><label>销方税号</label><input class="inp" id="iv_stax" value="${esc(sv(i,'sellerTaxNo',defSeller,'taxNo'))}"></div>
     <div class="fg"><label>销方地址电话</label><input class="inp" id="iv_saddr" value="${esc(i?i.sellerAddress:'')}" placeholder="地址、电话"></div>
@@ -1586,11 +1659,11 @@ function openInvoiceDetail(id){
     </div>
     <div class="card" style="margin:12px 0 0"><div class="bd" style="padding:12px 14px">
       <div style="font-weight:500;margin-bottom:8px">购方抬头</div>
-      <div style="font-size:12.5px;color:#5a6478;line-height:2">名称：${esc(i.buyerName||'—')}<br>税号：${esc(i.buyerTaxNo||'—')}<br>地址电话：${esc(i.buyerAddress||'—')}<br>开户行账号：${esc(i.buyerBank||'—')}</div>
+      <div style="font-size:19px;color:#5a6478;line-height:2">名称：${esc(i.buyerName||'—')}<br>税号：${esc(i.buyerTaxNo||'—')}<br>地址电话：${esc(i.buyerAddress||'—')}<br>开户行账号：${esc(i.buyerBank||'—')}</div>
     </div></div>
     <div class="card" style="margin:10px 0 0"><div class="bd" style="padding:12px 14px">
       <div style="font-weight:500;margin-bottom:8px">销方抬头</div>
-      <div style="font-size:12.5px;color:#5a6478;line-height:2">名称：${esc(i.sellerName||'—')}<br>税号：${esc(i.sellerTaxNo||'—')}<br>地址电话：${esc(i.sellerAddress||'—')}<br>开户行账号：${esc(i.sellerBank||'—')}</div>
+      <div style="font-size:19px;color:#5a6478;line-height:2">名称：${esc(i.sellerName||'—')}<br>税号：${esc(i.sellerTaxNo||'—')}<br>地址电话：${esc(i.sellerAddress||'—')}<br>开户行账号：${esc(i.sellerBank||'—')}</div>
     </div></div>
     ${i.remark?`<div class="hint" style="margin-top:10px">备注：${esc(i.remark)}</div>`:''}
   `);
@@ -1599,7 +1672,7 @@ function exportInvoice(){const list=invFiltered2();exportCsv((invState().dir||'�
 /* 发票 CSV 导入：号码,代码,种类,方向,日期,往来单位,价税合计,税率,备注（种类如 增值税专用发票）*/
 function openInvImport(){
   if(!requireLic())return;
-  openModal(`<div style="font-size:13px">
+  openModal(`<div style="font-size:19px">
     <div class="dropzone" onclick="$('ivFile').click()">${ICO.upload} 点击选择 CSV 文件<div class="hint">表头：发票号码,代码,种类,方向,日期,往来单位,价税合计,税率,备注</div></div>
     <input type="file" id="ivFile" accept=".csv,text/csv" style="display:none" onchange="importInvFile(this)">
     <div class="hint" style="margin-top:10px">方向填「销项/进项」；种类如「增值税专用发票」；税率如 0.13；往来单位需与档案名称一致。也可先「导出」获得模板。</div>
@@ -1663,9 +1736,10 @@ function renderFundPage(){
   const isAcc=st.seg==='账户';
   const filter=$('fdFilter');
   filter.innerHTML=isAcc
-    ?`<span style="font-size:13px;color:#5a6478;line-height:1.8">资金账户用于登记收付款的资金去向与结余；<b>期初余额</b>可在下方录入。</span><span class="sp"></span><button class="btn pri" onclick="openAccountMgr()">${ICO.plus} 管理资金账户</button>`
+    ?`<span style="font-size:19px;color:#5a6478;line-height:1.8">资金账户用于登记收付款的资金去向与结余；<b>期初余额</b>可在下方录入。</span><span class="sp"></span><button class="btn pri" onclick="openAccountMgr()">${ICO.plus} 管理资金账户</button>`
     :`<input class="inp" id="fdKw" placeholder="搜索单号 / 往来单位 / 合同 / 备注" value="${esc(st.kw||'')}" style="min-width:210px">
       <span class="sp"></span>
+      <button class="btn" onclick="openColSet('fdList',st.seg,'资金列设置')" title="显示/隐藏列">${ICO.gear.replace('16','14')} 列</button>
       ${(st.seg==='收'||st.seg==='付')?'<button class="btn" onclick="openFundImport()">'+ICO.upload+' 导入</button>':''}
       <button class="btn" onclick="exportFund()">${ICO.xls} 导出</button>
       <button class="btn pri" id="fdAddBtn" onclick="openFundAdd()">${ICO.plus} 新增</button>`;
@@ -1720,20 +1794,23 @@ function renderFundList(){
   if(!list.length){el.innerHTML='<div class="blank">暂无记录</div>';return}
   if(st.seg==='收'||st.seg==='付'){
     const tot=list.reduce((s,x)=>s+moneyIn(x.amount),0);
-    el.innerHTML=`<table class="tbl"><thead><tr><th>单号</th><th>日期</th><th>往来单位</th><th>关联合同</th><th class="num">金额</th><th>方式</th><th>资金账户</th><th>备注</th><th style="width:90px">操作</th></tr></thead><tbody>
-      ${list.map(b=>`<tr><td class="muted">${esc(b.number)}</td><td>${fmtDate(b.date)}</td><td>${esc(b.partnerName||'—')}</td><td class="muted">${esc(b.contractNumber||'—')}</td><td class="num money ${st.seg==='收'?'money-pos':'money-neg'}">${fmtMoneyFull(b.amount)}</td><td>${esc(b.method||'—')}</td><td>${esc(b.accountName||'—')}</td><td class="muted" style="max-width:160px;overflow:hidden;text-overflow:ellipsis">${esc(b.remark||'')}</td><td><button class="btn sm ghost" onclick="delFundBill('${b.id}')">${ICO.del}</button></td></tr>`).join('')}
+    el.innerHTML=`<table class="tbl"><thead><tr><th data-c="number">单号</th><th data-c="date">日期</th><th data-c="partner">往来单位</th><th data-c="con">关联合同</th><th data-c="amount" class="num">金额</th><th data-c="method">方式</th><th data-c="account">资金账户</th><th data-c="remark">备注</th><th style="width:90px">操作</th></tr></thead><tbody>
+      ${list.map(b=>`<tr><td data-c="number" class="muted">${esc(b.number)}</td><td data-c="date">${fmtDate(b.date)}</td><td data-c="partner">${esc(b.partnerName||'—')}</td><td data-c="con" class="muted">${esc(b.contractNumber||'—')}</td><td data-c="amount" class="num money ${st.seg==='收'?'money-pos':'money-neg'}">${fmtMoneyFull(b.amount)}</td><td data-c="method">${esc(b.method||'—')}</td><td data-c="account">${esc(b.accountName||'—')}</td><td data-c="remark" class="muted" style="max-width:160px;overflow:hidden;text-overflow:ellipsis">${esc(b.remark||'')}</td><td><button class="btn sm ghost" onclick="delFundBill('${b.id}')">${ICO.del}</button></td></tr>`).join('')}
     </tbody></table>
-    <div style="padding:10px 14px;font-size:12.5px;color:#5a6478">合计 ${list.length} 笔 · <span class="money ${st.seg==='收'?'money-pos':'money-neg'}">${fmtMoneyFull(tot)}</span></div>`;
+    <div style="padding:10px 14px;font-size:19px;color:#5a6478">合计 ${list.length} 笔 · <span class="money ${st.seg==='收'?'money-pos':'money-neg'}">${fmtMoneyFull(tot)}</span></div>`;
+    applyColPrefs('fdList',st.seg);
   }else if(st.seg==='收他'||st.seg==='付他'){
     const tot=list.reduce((s,x)=>s+moneyIn(x.amount),0);
-    el.innerHTML=`<table class="tbl"><thead><tr><th>单号</th><th>日期</th><th>类别</th><th class="num">金额</th><th>资金账户</th><th>备注</th><th style="width:90px">操作</th></tr></thead><tbody>
-      ${list.map(b=>`<tr><td class="muted">${esc(b.number)}</td><td>${fmtDate(b.date)}</td><td>${b.category?'<span class="tag info">'+esc(b.category)+'</span>':'—'}</td><td class="num money ${st.seg==='收他'?'money-pos':'money-neg'}">${fmtMoneyFull(b.amount)}</td><td>${esc(b.accountName||'—')}</td><td class="muted" style="max-width:200px">${esc(b.remark||'')}</td><td><button class="btn sm ghost" onclick="delOtherBill('${b.id}')">${ICO.del}</button></td></tr>`).join('')}
+    el.innerHTML=`<table class="tbl"><thead><tr><th data-c="number">单号</th><th data-c="date">日期</th><th data-c="category">类别</th><th data-c="amount" class="num">金额</th><th data-c="account">资金账户</th><th data-c="remark">备注</th><th style="width:90px">操作</th></tr></thead><tbody>
+      ${list.map(b=>`<tr><td data-c="number" class="muted">${esc(b.number)}</td><td data-c="date">${fmtDate(b.date)}</td><td data-c="category">${b.category?'<span class="tag info">'+esc(b.category)+'</span>':'—'}</td><td data-c="amount" class="num money ${st.seg==='收他'?'money-pos':'money-neg'}">${fmtMoneyFull(b.amount)}</td><td data-c="account">${esc(b.accountName||'—')}</td><td data-c="remark" class="muted" style="max-width:200px">${esc(b.remark||'')}</td><td><button class="btn sm ghost" onclick="delOtherBill('${b.id}')">${ICO.del}</button></td></tr>`).join('')}
     </tbody></table>
-    <div style="padding:10px 14px;font-size:12.5px;color:#5a6478">合计 ${list.length} 笔 · <span class="money ${st.seg==='收他'?'money-pos':'money-neg'}">${fmtMoneyFull(tot)}</span></div>`;
+    <div style="padding:10px 14px;font-size:19px;color:#5a6478">合计 ${list.length} 笔 · <span class="money ${st.seg==='收他'?'money-pos':'money-neg'}">${fmtMoneyFull(tot)}</span></div>`;
+    applyColPrefs('fdList',st.seg);
   }else{
-    el.innerHTML=`<table class="tbl"><thead><tr><th>单号</th><th>日期</th><th>转出账户</th><th>转入账户</th><th class="num">金额</th><th>备注</th><th style="width:90px">操作</th></tr></thead><tbody>
-      ${list.map(b=>`<tr><td class="muted">${esc(b.number)}</td><td>${fmtDate(b.date)}</td><td>${esc(b.fromAccount||'—')}</td><td>${esc(b.toAccount||'—')}</td><td class="num money">${fmtMoneyFull(b.amount)}</td><td class="muted">${esc(b.remark||'')}</td><td><button class="btn sm ghost" onclick="delTransfer('${b.id}')">${ICO.del}</button></td></tr>`).join('')}
+    el.innerHTML=`<table class="tbl"><thead><tr><th data-c="number">单号</th><th data-c="date">日期</th><th data-c="from">转出账户</th><th data-c="to">转入账户</th><th data-c="amount" class="num">金额</th><th data-c="remark">备注</th><th style="width:90px">操作</th></tr></thead><tbody>
+      ${list.map(b=>`<tr><td data-c="number" class="muted">${esc(b.number)}</td><td data-c="date">${fmtDate(b.date)}</td><td data-c="from">${esc(b.fromAccount||'—')}</td><td data-c="to">${esc(b.toAccount||'—')}</td><td data-c="amount" class="num money">${fmtMoneyFull(b.amount)}</td><td data-c="remark" class="muted">${esc(b.remark||'')}</td><td><button class="btn sm ghost" onclick="delTransfer('${b.id}')">${ICO.del}</button></td></tr>`).join('')}
     </tbody></table>`;
+    applyColPrefs('fdList',st.seg);
   }
 }
 function openFundAdd(){
@@ -1828,7 +1905,7 @@ function exportFund(){
 /* 资金流水 CSV 导入（适用于收/付款记录）：单号,日期,往来单位,关联合同编号,金额,方式,账户,备注 */
 function openFundImport(){
   if(!requireLic())return;
-  openModal(`<div style="font-size:13px">
+  openModal(`<div style="font-size:19px">
     <div class="dropzone" onclick="$('fbFile').click()">${ICO.upload} 点击选择 CSV 文件<div class="hint">表头：单号,日期,往来单位,关联合同编号,金额,方式,账户,备注</div></div>
     <input type="file" id="fbFile" accept=".csv,text/csv" style="display:none" onchange="importFundFile(this)">
     <div class="hint" style="margin-top:10px">导入为「${fundState().seg==='付'?'付款':'收款'}」记录；金额必填；往来单位/关联合同按名称自动匹配。</div>
@@ -1880,15 +1957,17 @@ function renderAccountList(){
     ${statCard('账户资金结存',fmtMoneyFull(totalBalance),'期初合计 '+fmtMoneyFull(totalOpen),'#129b5a',ICO.ok)}
   </div>`;
   if(!list.length){h+='<div class="blank">暂无资金账户，点击右上角「管理资金账户」添加</div>'}
-  else{h+=`<div class="tbl-wrap"><table class="tbl"><thead><tr><th>账户名称</th><th>类型</th><th>开户行</th><th>账号</th><th class="num">期初余额</th><th class="num">累计收入</th><th class="num">累计支出</th><th class="num">当前结存</th><th style="width:70px">操作</th></tr></thead><tbody>
+  else{h+=`<div class="tbl-wrap"><table class="tbl"><thead><tr>
+    <th data-c="name">账户名称</th><th data-c="type">类型</th><th data-c="bank">开户行</th><th data-c="no">账号</th><th data-c="opening" class="num">期初余额</th><th data-c="in" class="num">累计收入</th><th data-c="out" class="num">累计支出</th><th data-c="bal" class="num">当前结存</th><th style="width:70px">操作</th></tr></thead><tbody>
     ${list.map(a=>{const b=accountBalance(a.name);return `<tr>
-      <td class="strong">${esc(a.name)}</td><td>${esc(a.type||'—')}</td><td class="muted">${esc(a.bank||'—')}</td><td class="muted">${esc(a.accountNo||'—')}</td>
-      <td class="num">${fmtMoneyFull(a.opening||0)}</td><td class="num money-pos">${fmtMoneyFull(b.in)}</td><td class="num money-neg">${fmtMoneyFull(b.out)}</td>
-      <td class="num money" style="color:${b.balance<0?'#d4382e':'#1c2433'}">${fmtMoneyFull(b.balance)}</td>
+      <td data-c="name" class="strong">${esc(a.name)}</td><td data-c="type">${esc(a.type||'—')}</td><td data-c="bank" class="muted">${esc(a.bank||'—')}</td><td data-c="no" class="muted">${esc(a.accountNo||'—')}</td>
+      <td data-c="opening" class="num">${fmtMoneyFull(a.opening||0)}</td><td data-c="in" class="num money-pos">${fmtMoneyFull(b.in)}</td><td data-c="out" class="num money-neg">${fmtMoneyFull(b.out)}</td>
+      <td data-c="bal" class="num money" style="color:${b.balance<0?'#d4382e':'#1c2433'}">${fmtMoneyFull(b.balance)}</td>
       <td><button class="btn sm ghost" style="color:#d4382e" onclick="delAccount('${a.id}')">${ICO.del}</button></td></tr>`}).join('')}
   </tbody></table></div>
   <div class="hint" style="padding:10px 14px">结存 = 期初余额 + 累计收入（收款+其他收入+转入）− 累计支出（付款+其他支出+转出）。</div>`;}
   el.innerHTML=h;
+  applyColPrefs('fdList','账户');
 }
 function openAccountMgr(){
   const list=scopeList('accounts');
@@ -1903,7 +1982,7 @@ function openAccountMgr(){
       <div class="fg" style="align-self:end">${id&&a?'<button class="btn sm bad" onclick="delAccount(\''+a.id+'\')">'+ICO.del+' 删除</button>':''}</div>
     </div>`;
   };
-  openModal(`<div style="font-size:13px">${row('new')}${list.map(a=>row(a.id)).join('')}
+  openModal(`<div style="font-size:19px">${row('new')}${list.map(a=>row(a.id)).join('')}
     <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:6px">
       <button class="btn" onclick="closeModal()">取消</button>
       <button class="btn pri" onclick="saveAccounts()">保存全部账户</button>
@@ -1968,7 +2047,7 @@ PAGES.dash=function(){
   const recentCons=cons.slice().sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||'')).slice(0,5);
   return `
   <div style="margin:2px 0 14px">
-    <div style="font-size:17px;font-weight:600">${esc(curC?(curC.shortName||curC.name)+' · ':'' )}${greet}，${esc(uname||'朋友')}</div>
+    <div style="font-size:26px;font-weight:600">${esc(curC?(curC.shortName||curC.name)+' · ':'' )}${greet}，${esc(uname||'朋友')}</div>
     <div class="hint">今天 ${todayCN()} · ${APP_NAME} ${APP_VER}</div>
   </div>
   <div class="cards">
@@ -1980,21 +2059,18 @@ PAGES.dash=function(){
     ${statCard('本月新增',monthCon+' 份合同 · '+monthInv+' 张发票','','#2f6fdb',ICO.doc)}
   </div>
   <div class="dash-grid">
-    <div class="card" style="margin:0"><div class="ch">${ICO.chart} 近 12 个月收付款趋势</div><div class="bd">${trend.length?svgTrend(trend):'<div class="blank">暂无数据</div>'}</div></div>
-    <div class="card" style="margin:0"><div class="ch">${ICO.chart} 资金收支概览</div><div class="bd" style="padding:6px 16px 12px">
+    <div class="card" style="margin:0"><div class="ch"><span class="ch-dot" style="background:linear-gradient(135deg,#3d5ee8,#8ab0ff)"></span>近 12 个月收付款趋势</div><div class="bd">${trend.length?svgTrend(trend):'<div class="blank">暂无数据</div>'}</div></div>
+    <div class="card" style="margin:0"><div class="ch"><span class="ch-dot" style="background:linear-gradient(135deg,#0f6e56,#5ad8a6)"></span>资金收支概览</div><div class="bd" style="padding:8px 16px 14px">
       ${dashGauge('净现金流',net,got+oIn,paid+oOut)}
       ${dashBarRow('合同回款进度',got,recvAmt,unpaid,unpaid>=0)}
       ${dashBarRow('合同付款进度',paid,payAmt,unpaidPay,true)}
       ${dashBarRow('销项开票进度',invOut,recvAmt,Math.max(0,recvAmt-invOut),true)}
       ${dashBarRow('进项收票进度',invIn,payAmt,Math.max(0,payAmt-invIn),true)}
     </div></div>
-    <div class="card" style="margin:0"><div class="ch">${ICO.contract} 合同状态分布（${cons.length} 份）</div><div class="bd">
-      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
-        ${svgDonut([{k:'未签订',v:statusCount.unsigned,c:'#c47b0a'},{k:'已签订',v:statusCount.signed,c:'#3d5ee8'},{k:'已完成',v:statusCount.done,c:'#129b5a'},{k:'已终止',v:statusCount.stopped,c:'#9aa3b5'}],'份')}
-        <div style="flex:1;min-width:150px">${Object.entries(statusCount).map(([k,v])=>{const p=v/statusTotal*100;const c=k==='signed'?'#3d5ee8':k==='done'?'#129b5a':k==='stopped'?'#9aa3b5':'#c47b0a';return `<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span class="dot" style="background:${c}"></span><span style="width:52px;font-size:12.5px;color:#5a6478">${fmtStatus(k)}</span><span style="font-size:12px;color:#9aa3b5">${v} 份</span><div class="pbar" style="flex:1;min-width:50px"><i style="background:${c};width:${p}%"></i></div></div>`}).join('')}</div>
-      </div>
+    <div class="card" style="margin:0"><div class="ch"><span class="ch-dot" style="background:linear-gradient(135deg,#e8684a,#ff9d4d)"></span>合同状态分布（${cons.length} 份）</div><div class="bd">
+      ${svgDonut([{k:'未签订',v:statusCount.unsigned,c:'#c47b0a'},{k:'已签订',v:statusCount.signed,c:'#3d5ee8'},{k:'已完成',v:statusCount.done,c:'#129b5a'},{k:'已终止',v:statusCount.stopped,c:'#9aa3b5'}],'份')}
     </div></div>
-    <div class="card" style="margin:0"><div class="ch">${ICO.info} 经营快览</div><div class="bd" style="font-size:13px;line-height:2.2;color:#5a6478">
+    <div class="card" style="margin:0"><div class="ch"><span class="ch-dot" style="background:linear-gradient(135deg,#5d7092,#9aa3b5)"></span>经营快览</div><div class="bd" style="font-size:21px;line-height:2.4;color:#5a6478">
       <div>客户 <b style="color:#1c2433">${scopeList('customers').length}</b> 家 · 供应商 <b style="color:#1c2433">${scopeList('suppliers').length}</b> 家</div>
       <div>应收合同 <b style="color:#1c2433">${recvs.length}</b> 份 · 应付合同 <b style="color:#1c2433">${pays.length}</b> 份</div>
       <div>已开票（销项）${fmtMoneyFull(invOut)} · 已收票（进项）${fmtMoneyFull(invIn)}</div>
@@ -2005,7 +2081,7 @@ PAGES.dash=function(){
   ${recentCons.length?`<div class="card"><div class="ch">${ICO.contract} 最近合同<span style="margin-left:auto"><button class="btn sm ghost" onclick="goPage('contract')">查看全部 →</button></span></div><div class="tbl-wrap"><table class="tbl"><thead><tr><th>合同编号</th><th>合同名称</th><th>方向</th><th>往来单位</th><th class="num">合同金额</th><th>收付进度</th><th>状态</th></tr></thead><tbody>
     ${recentCons.map(c=>{const m=conMoney(c);const recv=isRecvCon(c);return `<tr style="cursor:pointer" onclick="openConDetail('${c.id}')"><td class="muted">${esc(c.number)}</td><td class="strong" style="max-width:220px;overflow:hidden;text-overflow:ellipsis">${esc(c.name)}</td><td>${dirTag(c.direction)}</td><td>${esc(c.partnerName||'—')}</td><td class="num money">${fmtMoneyFull(c.amount)}</td><td>${progressBar(c.amount?((recv?m.got:m.paid)/moneyIn(c.amount))*100:0)}</td><td>${stTag(c.status)}</td></tr>`}).join('')}
   </tbody></table></div></div>`:''}
-  ${expSoon.length?`<div class="card"><div class="ch">${ICO.bell} 即将到期合同<span style="margin-left:auto;font-size:12px;font-weight:400" class="hint">30 天内到期，请及时安排结算</span></div><div class="tbl-wrap"><table class="tbl"><thead><tr><th>合同编号</th><th>合同名称</th><th>方向</th><th>往来单位</th><th>到期日</th><th>剩余</th><th class="num">合同金额</th><th>状态</th></tr></thead><tbody>
+  ${expSoon.length?`<div class="card"><div class="ch">${ICO.bell} 即将到期合同<span style="margin-left:auto;font-size:18px;font-weight:400" class="hint">30 天内到期，请及时安排结算</span></div><div class="tbl-wrap"><table class="tbl"><thead><tr><th>合同编号</th><th>合同名称</th><th>方向</th><th>往来单位</th><th>到期日</th><th>剩余</th><th class="num">合同金额</th><th>状态</th></tr></thead><tbody>
     ${expSoon.map(x=>{const c=x.c;return `<tr><td class="muted">${esc(c.number)}</td><td class="strong">${esc(c.name)}</td><td>${dirTag(c.direction)}</td><td>${esc(c.partnerName||'—')}</td><td>${fmtDate(c.endDate)}</td><td>${x.left<0?'<span class="tag bad">已过期 '+Math.abs(x.left)+'天</span>':'<span class="tag warn">剩'+x.left+'天</span>'}</td><td class="num money">${fmtMoneyFull(c.amount)}</td><td>${stTag(c.status)}</td></tr>`}).join('')}
   </tbody></table></div></div>`:''}
   <div class="card"><div class="ch">${ICO.gear} 快捷操作</div><div class="bd" style="display:flex;flex-wrap:wrap;gap:10px">
@@ -2023,43 +2099,76 @@ PAGES.dash=function(){
 /* 仪表盘小部件：现金流/进度条/环形图 */
 function dashGauge(title,val,inAmt,outAmt){
   const pos=val>=0;
-  return `<div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px dashed #eef1f6;padding:10px 0"><span style="font-size:13px;color:#5a6478">${esc(title)}</span><span style="font-size:24px;font-weight:600;color:${pos?'#129b5a':'#d4382e'}">${fmtMoneyFull(val)}</span><span class="hint" style="margin-left:auto">收入 ${fmtMoneyFull(inAmt)} − 支出 ${fmtMoneyFull(outAmt)}</span></div>`;
+  const c=pos?'#129b5a':'#e5484d';
+  return `<div style="display:flex;align-items:center;gap:12px;border:1px solid #eef1f6;border-radius:12px;padding:12px 14px;margin:10px 0;background:#fbfcfe"><div style="width:6px;height:38px;border-radius:4px;background:linear-gradient(180deg,${c},${pos?'#5ad8a6':'#ff9b9e'})"></div><div><div style="font-size:19px;color:#5a6478">${esc(title)}</div><div style="font-size:39px;font-weight:700;color:${c};line-height:1.2">${fmtMoneyFull(val)}</div></div><div class="hint" style="margin-left:auto;text-align:right">收入 ${fmtMoneyFull(inAmt)}<br>支出 ${fmtMoneyFull(outAmt)}</div></div>`;
 }
 function dashBarRow(txt,cur,total,left,positive){
   const p=total>0?Math.max(0,Math.min(100,cur/total*100)):0;
   const col=positive?'#3d5ee8':'#7c3aed';
-  return `<div style="margin-top:10px"><div style="display:flex;font-size:12.5px;color:#5a6478;margin-bottom:4px"><span>${esc(txt)}</span><span style="margin-left:auto">${fmtMoneyFull(cur)} / ${fmtMoneyFull(total)}</span></div><div class="pbar" style="height:8px"><i style="background:${col};width:${p}%"></i></div><div class="hint" style="font-size:11px;margin-top:2px">${p.toFixed(1)}%${left>=0?' · 剩余 '+fmtMoneyFull(left):''}</div></div>`;
+  return `<div style="margin-top:12px"><div style="display:flex;font-size:21px;color:#3a4460;margin-bottom:5px"><span>${esc(txt)}</span><span style="margin-left:auto" class="money">${fmtMoneyFull(cur)}<span style="color:#9aa3b5;font-weight:400"> / ${fmtMoneyFull(total)}</span></span></div><div class="pbar" style="height:10px;background:#f2f4f9"><i style="background:linear-gradient(90deg,${col},${positive?'#8ab0ff':'#c084fc'});width:${p}%"></i></div><div style="display:flex;font-size:19px;color:#7a8499;margin-top:3px"><span>${p.toFixed(1)}%</span><span style="margin-left:auto">${left>=0?'剩余 '+fmtMoneyFull(left):'已结清'}</span></div></div>`;
+}
+/* ============ 可视化工具：渐变柱状趋势图 / 多色环形图 / 圆环饼图 ============ */
+function pal(n){const P=['#5b8ff9','#5ad8a6','#f6bd16','#e8684a','#6dc8ec','#9270ca','#ff9d4d','#269a99','#ff99c3','#5d7092'];return P[n%P.length]}
+function svgTrend(series,opt){
+  /* 双系列渐变柱 + 水平网格 + 数据峰值标签，深色标题行 */
+  const W=460,H=230,padL=12,padB=30,padT=26;
+  const max=Math.max(1,...series.map(s=>Math.max(moneyIn(s.in),moneyIn(s.out))))*1.08;
+  const plotH=H-padB-padT;
+  const grid=[.25,.5,.75,1].map(f=>{const y=padT+plotH*(1-f);return `<line x1="${padL}" y1="${y}" x2="${W-8}" y2="${y}" stroke="#eef1f6" stroke-width="1"/><text x="${padL-5}" y="${y+3}" font-size="10" fill="#b6bfd0" text-anchor="end">${fmtMoneyShort(max*f)}</text>`}).join('');
+  const barW=(W-padL-8)/series.length,bw=Math.min(26,(barW-2)*0.40);
+  const bars=series.map((s,i)=>{
+    const x=padL+i*barW,cx=x+barW/2;
+    const h1=max?(moneyIn(s.in)/max)*plotH:0,h2=max?(moneyIn(s.out)/max)*plotH:0;
+    const y1=padT+plotH-h1,y2=padT+plotH-h2;
+    const peak = moneyIn(s.in)>moneyIn(s.out)?moneyIn(s.in):moneyIn(s.out);
+    const pkY = moneyIn(s.in)>=moneyIn(s.out)?y1:y2;
+    const lbl = peak>0 && i===series.length-1;
+    return `<defs><linearGradient id="gIn" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#2f54eb" stop-opacity=".92"/><stop offset="1" stop-color="#7aa5ff" stop-opacity=".95"/></linearGradient><linearGradient id="gOut" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#e5484d" stop-opacity=".92"/><stop offset="1" stop-color="#ff9b9e" stop-opacity=".95"/></linearGradient></defs>
+      <rect x="${cx-bw-2}" y="${y1}" width="${bw}" height="${h1||0.6}" rx="4" fill="url(#gIn)" opacity=".97"><title>收款 ${fmtMoneyFull(s.in)}</title></rect>
+      <rect x="${cx+2}" y="${y2}" width="${bw}" height="${h2||0.6}" rx="4" fill="url(#gOut)" opacity=".97"><title>付款 ${fmtMoneyFull(s.out)}</title></rect>
+      ${lbl?`<text x="${pkY>plotH/2?cx-bw-2:cx+2}" y="${pkY-6}" font-size="11" font-weight="600" fill="${moneyIn(s.in)>=moneyIn(s.out)?'#2f54eb':'#e5484d'}" text-anchor="${moneyIn(s.in)>=moneyIn(s.out)?'end':'start'}">${fmtMoneyShort(peak)}</text>`:''}
+      <text x="${cx}" y="${H-10}" font-size="11" fill="#7a8499" text-anchor="middle">${s.k.slice(5)}</text>`;
+  }).join('');
+  const hint=`<text x="${padL}" y="15" font-size="12" font-weight="600" fill="#3a4460">收付款趋势<tspan dx="8" fill="#7a8499" font-weight="400">单位：元</tspan></text><rect x="${W-150}" y="7" width="9" height="9" rx="2" fill="#3d5ee8"/><text x="${W-136}" y="15" font-size="11" fill="#7a8499">收款</text><rect x="${W-96}" y="7" width="9" height="9" rx="2" fill="#e5484d"/><text x="${W-82}" y="15" font-size="11" fill="#7a8499">付款</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:300px" role="img" aria-label="近12个月收付款趋势">${hint}${grid}${bars}</svg>`;
+}
+function fmtMoneyShort(n){
+  if(n==null)return '0';n=Math.abs(Number(n));
+  if(n>=1e8)return (n/1e8).toFixed(1).replace(/\.0$/,'')+'亿';
+  if(n>=1e4)return (n/1e4).toFixed(1).replace(/\.0$/,'')+'万';
+  if(n>=1e3)return (n/1e3).toFixed(1).replace(/\.0$/,'')+'k';
+  return Math.round(n)+'';
 }
 function svgDonut(items,totalUnit){
+  /* 环形图：分段圆头 + 中心总数 + 右侧彩色图例卡 */
   const total=items.reduce((s,x)=>s+x.v,0);
-  if(!total)return '<div class="blank">暂无数据</div>';
-  const R=44,CX=56,CY=56,STROKE=20;let ang=-90;
+  if(!total)return '<div class="blank" style="min-height:120px">暂无数据</div>';
+  const R=52,CX=72,CY=72,STROKE=26,pad=2.5;let ang=-90;
   const segs=items.filter(x=>x.v>0).map(x=>{
-    const a1=ang,a2=ang+x.v/total*360;ang=a2;
-    const large=(a2-a1)>180?1:0;
-    const r=(Math.PI/180);
-    const x1=CX+R*Math.cos(a1*r),y1=CY+R*Math.sin(a1*r),x2=CX+R*Math.cos(a2*r),y2=CY+R*Math.sin(a2*r);
-    const outer=Math.abs(a2-a1)>=360;
-    if(outer)return `<circle cx="${CX}" cy="${CY}" r="${R}" fill="none" stroke="${x.c}" stroke-width="${STROKE}"/>`;
-    return `<path d="M ${x1} ${y1} A ${R} ${R} 0 ${large} 1 ${x2} ${y2}" fill="none" stroke="${x.c}" stroke-width="${STROKE}" stroke-linecap="butt"/>`;
-  }).join('');
-  const legend=items.filter(x=>x.v>0).map(x=>`<span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;color:#5a6478"><span class="dot" style="background:${x.c}"></span>${esc(x.k)} ${x.v}${totalUnit||''}</span>`).join('<span style="width:10px"></span>');
-  return `<div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px"><svg width="112" height="112" viewBox="0 0 112 112" role="img" aria-label="占比环形图"><circle cx="56" cy="56" r="${R}" fill="none" stroke="#f0f2f6" stroke-width="${STROKE}"/>${segs}<text x="56" y="52" text-anchor="middle" font-size="11" fill="#9aa3b5">共</text><text x="56" y="68" text-anchor="middle" font-size="15" font-weight="600" fill="#1c2433">${total}</text></svg><div style="display:flex;flex-direction:column;gap:4px">${legend}</div></div>`;
-}
-function svgDonutPie(items){
-  const total=items.reduce((s,x)=>s+x.v,0);
-  if(!total)return '<div class="blank">暂无数据</div>';
-  const CX=100,CY=70,R=58;
-  let acc=-90;const paths=[];
-  items.forEach(x=>{
-    if(!x.v)return;
-    const a1=acc*Math.PI/180,a2=(acc+x.v/total*360)*Math.PI/180;
+    const sweep=x.v/total*360;
+    const a1=ang*Math.PI/180+pad*Math.PI/180,a2=(ang+sweep-pad)*Math.PI/180;ang+=sweep;
     const x1=CX+R*Math.cos(a1),y1=CY+R*Math.sin(a1),x2=CX+R*Math.cos(a2),y2=CY+R*Math.sin(a2);
     const large=(a2-a1)>Math.PI?1:0;
-    paths.push(`<path d="M ${CX} ${CY} L ${x1} ${y1} A ${R} ${R} 0 ${large} 1 ${x2} ${y2} Z" fill="${x.c}"/>`);
-    acc+=x.v/total*360;
+    return `<path d="M ${x1} ${y1} A ${R} ${R} 0 ${large} 1 ${x2} ${y2}" fill="none" stroke="${x.c}" stroke-width="${STROKE}" stroke-linecap="round"/>`;
+  }).join('');
+  const legend=items.filter(x=>x.v>0).map(x=>`<div style="display:flex;align-items:center;gap:8px;padding:5px 10px;border:1px solid #eef1f6;border-radius:9px;margin-bottom:5px;background:#fff"><span class="dot" style="width:10px;height:10px;border-radius:3px;background:${x.c};flex:none"></span><span style="font-size:21px;color:#3a4460">${esc(x.k)}</span><b style="margin-left:auto;font-size:22px;color:#1c2433">${x.v}</b><span class="hint" style="font-size:18px">${total?(x.v/total*100).toFixed(1):0}%</span></div>`).join('');
+  return `<div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px"><svg width="150" height="150" viewBox="0 0 144 144" role="img" aria-label="占比环形图"><circle cx="72" cy="72" r="${R}" fill="none" stroke="#f0f2f6" stroke-width="${STROKE}"/>${segs}<text x="72" y="66" text-anchor="middle" font-size="13" fill="#9aa3b5">合计</text><text x="72" y="88" text-anchor="middle" font-size="22" font-weight="700" fill="#1c2433">${total}</text></svg><div style="flex:1;min-width:170px">${legend}</div></div>`;
+}
+function svgDonutPie(items){
+  /* 圆环占比图：用白描边分割 + 彩色图例 */
+  const total=items.reduce((s,x)=>s+x.v,0);
+  if(!total)return '<div class="blank" style="min-height:120px">暂无数据</div>';
+  const CX=90,CY=80,R=56,STROKE=24;let acc=-90;const paths=[];
+  items.forEach(x=>{
+    if(!x.v)return;
+    const sweep=x.v/total*360;
+    const a1=(acc+0.8)*Math.PI/180,a2=(acc+sweep-0.8)*Math.PI/180;acc+=sweep;
+    const x1=CX+R*Math.cos(a1),y1=CY+R*Math.sin(a1),x2=CX+R*Math.cos(a2),y2=CY+R*Math.sin(a2);
+    const large=(a2-a1)>Math.PI?1:0;
+    paths.push(`<path d="M ${x1} ${y1} A ${R} ${R} 0 ${large} 1 ${x2} ${y2}" fill="none" stroke="${x.c}" stroke-width="${STROKE}" stroke-linecap="round"/>`);
   });
-  return `<div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap"><svg width="200" height="140" viewBox="0 0 200 140" role="img" aria-label="分布图">${paths.join('')}</svg><div>${items.map(x=>`<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;font-size:12.5px;color:#5a6478"><span class="dot" style="background:${x.c}"></span>${esc(x.k)} <b style="color:#1c2433">${x.v}</b>（${total?(x.v/total*100).toFixed(1):0}%）</div>`).join('')}</div></div>`;
+  const legend=items.map(x=>`<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span class="dot" style="width:10px;height:10px;border-radius:3px;background:${x.c}"></span><span style="font-size:19px;color:#3a4460">${esc(x.k)}</span><b style="margin-left:auto;font-size:21px;color:#1c2433">${fmtMoneyShort(x.v)}</b><span style="width:44px;text-align:right;font-size:18px;color:#9aa3b5">${total?(x.v/total*100).toFixed(1):0}%</span></div>`).join('');
+  return `<div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap"><svg width="190" height="170" viewBox="0 0 180 160" role="img" aria-label="占比分布图"><circle cx="90" cy="80" r="${R}" fill="none" stroke="#f0f2f6" stroke-width="${STROKE}"/>${paths.join('')}</svg><div style="flex:1;min-width:170px">${legend}</div></div>`;
 }
 
 /* ============ 数据统计 ============ */
@@ -2105,7 +2214,7 @@ function statDetailHtml(){
   const monthGot=moneyAgg(bills.filter(b=>b.kind==='收款'&&(b.date||'').startsWith(ym)),b=>b.amount);
   const monthPaid=moneyAgg(bills.filter(b=>b.kind==='付款'&&(b.date||'').startsWith(ym)),b=>b.amount);
   return `
-  <div style="padding:4px 16px 0;font-size:12.5px;color:#9aa3b5">统计口径：当前公司「${esc((curCompany()||{}).name||'')}」全部业务数据，金额均为含税价。</div>
+  <div style="padding:4px 16px 0;font-size:19px;color:#9aa3b5">统计口径：当前公司「${esc((curCompany()||{}).name||'')}」全部业务数据，金额均为含税价。</div>
   <div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(170px,1fr))">
     ${statCard('合同总数',cons.length+' 份',signedCnt+' 已签订 / '+unsignedCnt+' 未签订','#3d5ee8',ICO.contract)}
     ${statCard('合同总金额',fmtMoneyFull(recvAmt+payAmt),'应收 '+fmtMoneyFull(recvAmt)+' / 应付 '+fmtMoneyFull(payAmt),'#2f6fdb',ICO.contract)}
@@ -2118,20 +2227,20 @@ function statDetailHtml(){
     ${statCard('已完成 / 已终止',doneCnt+' / '+stoppedCnt+' 份','已归档 '+archivedCnt+' 份','#5a6478',ICO.info)}
   </div>
   <div class="chart-box">
-    <div class="card" style="margin:0"><div class="ch">应收汇总（合同口径）</div><div class="bd" style="padding:6px 16px 12px">
+    <div class="card" style="margin:0"><div class="ch"><span class="ch-dot" style="background:linear-gradient(135deg,#3d5ee8,#8ab0ff)"></span>应收汇总（合同口径）</div><div class="bd" style="padding:8px 16px 14px">
       ${dashBarRow('合同金额',recvAmt,recvAmt,0,true)}
       ${dashBarRow('累计已收',got,recvAmt,Math.max(0,recvAmt-got),true)}
       ${dashBarRow('已开票销项',invOut,recvAmt,Math.max(0,recvAmt-invOut),true)}
       <div class="hint" style="margin-top:8px">应收余额 ${fmtMoneyFull(Math.max(0,recvAmt-got))} · 开票未收款 ${fmtMoneyFull(Math.max(0,invOut-got))}</div>
     </div></div>
-    <div class="card" style="margin:0"><div class="ch">应付汇总（合同口径）</div><div class="bd" style="padding:6px 16px 12px">
+    <div class="card" style="margin:0"><div class="ch"><span class="ch-dot" style="background:linear-gradient(135deg,#7c3aed,#c084fc)"></span>应付汇总（合同口径）</div><div class="bd" style="padding:8px 16px 14px">
       ${dashBarRow('合同金额',payAmt,payAmt,0,false)}
       ${dashBarRow('累计已付',paid,payAmt,Math.max(0,payAmt-paid),false)}
       ${dashBarRow('已收票进项',invIn,payAmt,Math.max(0,payAmt-invIn),false)}
       <div class="hint" style="margin-top:8px">应付余额 ${fmtMoneyFull(Math.max(0,payAmt-paid))} · 收票未付款 ${fmtMoneyFull(Math.max(0,invIn-paid))}</div>
     </div></div>
   </div>
-  <div class="card"><div class="ch">${ICO.chart} 合同台账（应收 / 应付 明细）</div><div class="tbl-wrap">
+  <div class="card"><div class="ch"><span class="ch-dot" style="background:linear-gradient(135deg,#0e7490,#38bdf8)"></span>合同台账（应收 / 应付 明细）</div><div class="tbl-wrap">
     ${cons.length?`<table class="tbl"><thead><tr><th>编号</th><th>名称</th><th>方向</th><th>往来单位</th><th>负责人</th><th class="num">合同金额</th><th class="num">已收/付</th><th class="num">未收/付</th><th>收付进度</th><th>状态</th></tr></thead><tbody>
     ${cons.map(c=>{const m=conMoney(c);const recv=isRecvCon(c);return `<tr style="cursor:pointer" onclick="openConDetail('${c.id}')"><td class="muted">${esc(c.number)}</td><td>${esc(c.name)}</td><td>${dirTag(c.direction)}</td><td>${esc(c.partnerName||'—')}</td><td class="muted">${esc(c.manager||'—')}</td><td class="num money">${fmtMoneyFull(c.amount)}</td><td class="num">${fmtMoneyFull(recv?m.got:m.paid)}</td><td class="num">${fmtMoneyFull(recv?m.amt-m.got:m.amt-m.paid)}</td><td>${progressBar(c.amount?((recv?m.got:m.paid)/moneyIn(c.amount))*100:0)}</td><td>${stTag(c.status)}</td></tr>`}).join('')}
     </tbody></table>`:'<div class="blank">暂无合同数据</div>'}
@@ -2160,31 +2269,29 @@ function statChartHtml(){
   const invFlow=[{k:'销项已开票',v:invOut,c:'#0e7490'},{k:'进项已收票',v:invIn,c:'#7c3aed'}];
   /* 月度发票对比 */
   const invSeries=months.map(m=>({k:m.key,a:moneyAgg(invs.filter(i=>i.direction==='销项'&&(i.date||'').startsWith(m.key)),i=>i.amount),b:moneyAgg(invs.filter(i=>i.direction==='进项'&&(i.date||'').startsWith(m.key)),i=>i.amount)}));
-  const invMax=Math.max(1,...invSeries.map(s=>Math.max(s.a,s.b)));
-  const invBar=invSeries.map((s,i)=>{const barW=(430-8)/12,bw=Math.min(16,(barW-2)*0.42),x=4+i*barW,cx=x+barW/2;const hA=invMax?(s.a/invMax)*158:0,hB=invMax?(s.b/invMax)*158:0;return `<rect x="${cx-bw-1}" y="${196-22-hA}" width="${bw}" height="${hA||0.4}" fill="#0e7490" rx="2"/><rect x="${cx+1}" y="${196-22-hB}" width="${bw}" height="${hB||0.4}" fill="#7c3aed" rx="2"/><text x="${cx}" y="${196-6}" font-size="9" fill="#9aa3b5" text-anchor="middle">${s.k.slice(5)}</text>`;}).join('');
   return `<div class="chart-box">
-    <div class="card" style="margin:0"><div class="ch">近 12 个月收付款趋势（元）</div><div class="bd">
+    <div class="card" style="margin:0"><div class="ch"><span class="ch-dot" style="background:linear-gradient(135deg,#3d5ee8,#8ab0ff)"></span>近 12 个月收付款趋势（元）</div><div class="bd">
       ${series.some(s=>s.in||s.out)?svgTrend(series):'<div class="blank">暂无收付款数据</div>'}
     </div></div>
-    <div class="card" style="margin:0"><div class="ch">近 12 个月开票 / 收票趋势（元）</div><div class="bd">
-      ${invSeries.some(s=>s.a||s.b)?`<svg viewBox="0 0 430 196" width="100%" style="min-width:300px"><text x="4" y="10" font-size="10" fill="#5a6478"><tspan fill="#0e7490">■</tspan> 销项开票 <tspan dx="16" fill="#7c3aed">■</tspan> 进项收票</text>${invBar}</svg>`:'<div class="blank">暂无发票数据</div>'}
+    <div class="card" style="margin:0"><div class="ch"><span class="ch-dot" style="background:linear-gradient(135deg,#0e7490,#38bdf8)"></span>近 12 个月开票 / 收票趋势（元）</div><div class="bd">
+      ${invSeries.some(s=>s.a||s.b)?svgInvTrend(invSeries):'<div class="blank">暂无发票数据</div>'}
     </div></div>
-    <div class="card" style="margin:0"><div class="ch">合同类型金额分布</div><div class="bd">
-      ${typeTotal?typeEntries.map(e=>{const p=e[1]/typeTotal*100;return `<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="width:90px;font-size:12.5px;color:#5a6478;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(e[0])}</span><div class="pbar" style="flex:1;min-width:60px"><i class="green" style="width:${p}%"></i></div><span class="pct" style="width:120px">${fmtMoneyFull(e[1])}（${p.toFixed(1)}%）</span></div>`}).join(''):'<div class="blank">暂无合同</div>'}
+    <div class="card" style="margin:0"><div class="ch"><span class="ch-dot" style="background:linear-gradient(135deg,#e8684a,#ff9d4d)"></span>合同类型金额分布</div><div class="bd">
+      ${typeTotal?typeEntries.map((e,i)=>{const p=e[1]/typeTotal*100;return `<div style="display:flex;align-items:center;gap:10px;margin-bottom:9px"><span class="dot" style="width:11px;height:11px;border-radius:3px;background:${pal(i)};flex:none"></span><span style="width:110px;font-size:21px;color:#5a6478;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(e[0])}</span><div class="pbar" style="flex:1;min-width:60px;background:#f2f4f9"><i style="background:linear-gradient(90deg,${pal(i)},${pal(i+2)});width:${p}%"></i></div><span class="pct" style="width:140px">${fmtMoneyFull(e[1])}（${p.toFixed(1)}%）</span></div>`}).join(''):'<div class="blank">暂无合同</div>'}
     </div></div>
-    <div class="card" style="margin:0"><div class="ch">合同状态分布（份）</div><div class="bd">
-      ${Object.entries(statusCount).map(([k,v])=>{const p=v/statusTotal*100;const c=k==='signed'?'#2f6fdb':k==='done'?'#129b5a':k==='stopped'?'#9aa3b5':'#c47b0a';return `<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="width:70px;font-size:12.5px;color:#5a6478">${fmtStatus(k)}</span><div class="pbar" style="flex:1;min-width:60px"><i style="background:${c};width:${p}%"></i></div><span class="pct" style="width:60px">${v} 份</span></div>`}).join('')}
+    <div class="card" style="margin:0"><div class="ch"><span class="ch-dot" style="background:linear-gradient(135deg,#129b5a,#5ad8a6)"></span>合同状态分布（份）</div><div class="bd">
+      ${Object.entries(statusCount).map(([k,v],i)=>{const p=v/statusTotal*100;const c=k==='signed'?'#2f54eb':k==='done'?'#129b5a':k==='stopped'?'#9aa3b5':'#c47b0a';return `<div style="display:flex;align-items:center;gap:10px;margin-bottom:9px"><span class="dot" style="width:11px;height:11px;border-radius:3px;background:${c};flex:none"></span><span style="width:90px;font-size:21px;color:#5a6478">${fmtStatus(k)}</span><div class="pbar" style="flex:1;min-width:60px;background:#f2f4f9"><i style="background:linear-gradient(90deg,${c},${pal(i+1)});width:${p}%"></i></div><span class="pct" style="width:80px">${v} 份</span></div>`}).join('')}
     </div></div>
-    <div class="card" style="margin:0"><div class="ch">应收 / 应付 合同金额构成</div><div class="bd">
+    <div class="card" style="margin:0"><div class="ch"><span class="ch-dot" style="background:linear-gradient(135deg,#7c3aed,#c084fc)"></span>应收 / 应付 合同金额构成</div><div class="bd">
       ${svgDonutPie(dirAmt)}
     </div></div>
-    <div class="card" style="margin:0"><div class="ch">资金流入 / 流出构成</div><div class="bd">
+    <div class="card" style="margin:0"><div class="ch"><span class="ch-dot" style="background:linear-gradient(135deg,#0f6e56,#5ad8a6)"></span>资金流入 / 流出构成</div><div class="bd">
       ${svgDonutPie(dirFlow)}
     </div></div>
-    <div class="card" style="margin:0"><div class="ch">开票 / 收票构成</div><div class="bd">
+    <div class="card" style="margin:0"><div class="ch"><span class="ch-dot" style="background:linear-gradient(135deg,#e5484d,#ff9b9e)"></span>开票 / 收票构成</div><div class="bd">
       ${svgDonutPie(invFlow)}
     </div></div>
-    <div class="card" style="margin:0"><div class="ch">数据概览</div><div class="bd" style="font-size:13px;line-height:2.2;color:#5a6478">
+    <div class="card" style="margin:0"><div class="ch"><span class="ch-dot" style="background:linear-gradient(135deg,#5d7092,#9aa3b5)"></span>数据概览</div><div class="bd" style="font-size:22px;line-height:2.3;color:#5a6478">
       <div>· 客户 <span class="strong" style="color:#1c2433">${scopeList('customers').length}</span> 家 · 供应商 <span class="strong" style="color:#1c2433">${scopeList('suppliers').length}</span> 家</div>
       <div>· 合同共 <span class="strong" style="color:#1c2433">${cons.length}</span> 份（应收 ${recvs.length} / 应付 ${pays.length}）· 金额合计 ${fmtMoneyFull(recvAmt+payAmt)}</div>
       <div>· 已收款 ${fmtMoneyFull(got)} · 已付款 ${fmtMoneyFull(paid)} · 净现金流 ${fmtMoneyFull(got-paid)}</div>
@@ -2193,23 +2300,23 @@ function statChartHtml(){
     </div></div>
   </div>`;
 }
-function svgTrend(series){
-  const W=430,H=196,padL=4,padB=22,padT=16;
-  const max=Math.max(1,...series.map(s=>Math.max(moneyIn(s.in),moneyIn(s.out))));
-  const barW=(W-padL*2)/series.length;
-  const bw=Math.min(20,(barW-2)*0.42);
+function svgInvTrend(series){
+  /* 开票(蓝青) vs 收票(紫) 渐变柱 + 网格 */
+  const W=460,H=230,padL=12,padB=30,padT=26;
+  const max=Math.max(1,...series.map(s=>Math.max(s.a,s.b)))*1.08;
+  const plotH=H-padB-padT;
+  const grid=[.25,.5,.75,1].map(f=>{const y=padT+plotH*(1-f);return `<line x1="${padL}" y1="${y}" x2="${W-8}" y2="${y}" stroke="#eef1f6" stroke-width="1"/><text x="${padL-6}" y="${y+3}" font-size="10" fill="#b6bfd0" text-anchor="end">${fmtMoneyShort(max*f)}</text>`}).join('');
+  const barW=(W-padL-8)/series.length,bw=Math.min(22,(barW-2)*0.4);
   const bars=series.map((s,i)=>{
-    const x=padL+i*barW;
-    const h1=max?(moneyIn(s.in)/max)*(H-padB-padT):0;
-    const h2=max?(moneyIn(s.out)/max)*(H-padB-padT):0;
-    const y1=H-padB-h1,y2=H-padB-h2;
-    const cx=x+barW/2;
-    return `<rect x="${cx-bw-1}" y="${y1}" width="${bw}" height="${h1||0.4}" fill="#3d5ee8" rx="2"><title>收款 ${fmtMoneyFull(s.in)}</title></rect><rect x="${cx+1}" y="${y2}" width="${bw}" height="${h2||0.4}" fill="#ef5b5a" rx="2"><title>付款 ${fmtMoneyFull(s.out)}</title></rect><text x="${cx}" y="${H-6}" font-size="9" fill="#9aa3b5" text-anchor="middle">${s.k.slice(5)}</text>`;
+    const x=padL+i*barW,cx=x+barW/2;
+    const hA=max?(s.a/max)*plotH:0,hB=max?(s.b/max)*plotH:0;
+    const yA=padT+plotH-hA,yB=padT+plotH-hB;
+    return `<rect x="${cx-bw-2}" y="${yA}" width="${bw}" height="${hA||0.6}" rx="3" fill="url(#gInvA)"><title>销项开票 ${fmtMoneyFull(s.a)}</title></rect><rect x="${cx+2}" y="${yB}" width="${bw}" height="${hB||0.6}" rx="3" fill="url(#gInvB)"><title>进项收票 ${fmtMoneyFull(s.b)}</title></rect><text x="${cx}" y="${H-10}" font-size="11" fill="#7a8499" text-anchor="middle">${s.k.slice(5)}</text>`;
   }).join('');
-  const hint=`<text x="${padL}" y="10" font-size="10" fill="#5a6478"><tspan fill="#3d5ee8">■</tspan> 收款 <tspan dx="16" fill="#ef5b5a">■</tspan> 付款</text><text x="${W-padL}" y="10" font-size="9" fill="#9aa3b5" text-anchor="end">单位：元</text>`;
-  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:300px">${hint}${bars}</svg>`;
+  const head=`<defs><linearGradient id="gInvA" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#0e7490"/><stop offset="1" stop-color="#38bdf8"/></linearGradient><linearGradient id="gInvB" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#c084fc"/></linearGradient></defs>
+  <text x="${padL}" y="15" font-size="12" font-weight="600" fill="#3a4460">开票收票月度对比<tspan dx="8" fill="#7a8499" font-weight="400">单位：元</tspan></text><rect x="${W-150}" y="7" width="9" height="9" rx="2" fill="#0e7490"/><text x="${W-136}" y="15" font-size="11" fill="#7a8499">销项</text><rect x="${W-98}" y="7" width="9" height="9" rx="2" fill="#7c3aed"/><text x="${W-84}" y="15" font-size="11" fill="#7a8499">进项</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:300px" role="img" aria-label="开票收票月度趋势">${head}${grid}${bars}</svg>`;
 }
-
 /* ============ 提醒中心 ============ */
 const REM_FILTERS=[['','全部'],['receivable','应收类'],['payable','应付类'],['done','仅待处理']];
 function remKindMeta(k){
@@ -2240,8 +2347,9 @@ PAGES.reminder=function(){
         <button class="btn sm ok" onclick="markAllReminders()">全部标为已处理</button>
       </span>
     </div>
-    <div style="display:flex;gap:6px;padding:10px 14px 0;flex-wrap:wrap">
-      ${REM_FILTERS.map(f=>`<button class="btn sm ${(st.remF||'')===f[0]?'':'ghost'}" onclick="setRemF('${f[0]}')">${f[1]}</button>`).join('')}
+    <div style="display:flex;gap:8px;padding:12px 14px 0;flex-wrap:wrap;align-items:center">
+      <div style="display:flex;gap:6px;flex-wrap:wrap">${REM_FILTERS.map(f=>`<button class="btn sm ${(st.remF||'')===f[0]?'':'ghost'}" onclick="setRemF('${f[0]}')">${f[1]}</button>`).join('')}</div>
+      <input class="inp" id="remKw" placeholder="搜索提醒事项 / 合同名称…" value="${esc(remState().kw||'')}" style="min-width:200px;flex:1;max-width:340px">
     </div>
     <div id="remBody"></div>
   </div>
@@ -2250,18 +2358,22 @@ PAGES.reminder=function(){
     应收合同到期、应付合同到期与发票提醒分开统计；提醒按当前公司档案隔离，切换公司后只显示该公司的提醒。
   </div></div>`;
 };
-AFTER.reminder=function(){renderReminders()}
+AFTER.reminder=function(){renderReminders();bindRemKw()}
+function remState(){STATE.rem=STATE.rem||{};return STATE.rem}
+function bindRemKw(){const el=$('remKw');if(!el)return;el.oninput=debounce(function(){remState().kw=this.value;renderReminders()},200)}
 function setRemF(f){STATE.remF=f;renderReminders()}
 function scanReminders(){const n=genReminders();renderReminders();toast(n>0?'已生成 '+n+' 条新提醒':'暂无新的到期提醒',n>0?'':'warn')}
 function reminderList(){return scopeList('reminders').sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''))}
 function renderReminders(){
   const el=$('remBody');if(!el)return;
   const f=STATE.remF||'';
+  const kw=(remState().kw||'').trim().toLowerCase();
   let list=reminderList();
   if(f==='receivable')list=list.filter(r=>r.kind==='contract_expire_receivable'||r.kind==='invoice_receivable');
   else if(f==='payable')list=list.filter(r=>r.kind==='contract_expire_payable'||r.kind==='invoice_payable');
   else if(f==='done')list=list.filter(r=>r.status===0);
-  if(!list.length){el.innerHTML='<div class="blank">暂无提醒，点击右上角「重新扫描到期合同」生成</div>';return}
+  if(kw)list=list.filter(r=>(r.title||'').toLowerCase().includes(kw)||remKindMeta(r.kind)[1].toLowerCase().includes(kw));
+  if(!list.length){el.innerHTML=kw||f?'<div class="blank">没有符合条件的提醒</div>':'<div class="blank">暂无提醒，点击右上角「重新扫描到期合同」生成</div>';return}
   el.innerHTML=`
     <div class="tbl-wrap"><table class="tbl"><thead><tr><th>提醒事项</th><th>类型</th><th>方向</th><th>到期/生成日期</th><th>状态</th><th style="width:150px">操作</th></tr></thead><tbody>
     ${list.map(r=>{const mk=remKindMeta(r.kind);const isRecv=r.kind.indexOf('receivable')>-1;return `<tr>
@@ -2288,7 +2400,7 @@ PAGES.settings=function(){
   return `<div class="card">
     <div style="padding:12px 14px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
       <div class="seg">${segs.map(s=>`<button class="${st.seg===s[0]?'on':''}" onclick="setSetSeg('${s[0]}')">${s[1]}</button>`).join('')}</div>
-      <span style="margin-left:auto;font-size:12px;color:#9aa3b5">授权：${lic.activated?'已激活'+(lic.owner?' · '+esc(lic.owner):'')+' · '+esc(lic.code):'试用模式（未激活）'}</span>
+      <span style="margin-left:auto;font-size:18px;color:#9aa3b5">授权：${lic.activated?'已激活'+(lic.owner?' · '+esc(lic.owner):'')+' · '+esc(lic.code):'试用模式（未激活）'}</span>
     </div>
     <div id="setBody"></div>
   </div>`;
@@ -2302,7 +2414,7 @@ function setCompanyHtml(){
   const list=dbList('companies');const cur=curCompany();
   return `
   <div style="padding:14px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e7eaf2">
-    <div style="font-size:13px;color:#5a6478">共 ${list.length} 个公司档案，业务数据（客户/供应商/合同/发票/资金/提醒）按公司相互隔离</div>
+    <div style="font-size:19px;color:#5a6478">共 ${list.length} 个公司档案，业务数据（客户/供应商/合同/发票/资金/提醒）按公司相互隔离</div>
     <button class="btn pri sm" onclick="openCompanyForm()">${ICO.plus} 新增公司</button>
   </div>
   <div class="bd">${list.map(c=>`
@@ -2310,7 +2422,7 @@ function setCompanyHtml(){
       <div style="width:36px;height:36px;border-radius:10px;background:${cur&&cur.id===c.id?'#eef1fd;color:#3d5ee8':'#f0f3f9;color:#5a6478'};display:flex;align-items:center;justify-content:center;font-weight:600;flex:none">${esc((c.shortName||c.name||'?').slice(0,1))}</div>
       <div style="flex:1;min-width:0">
         <div style="font-weight:500">${esc(c.name)}${c.shortName?'<span style="color:#9aa3b5;font-weight:400">（'+esc(c.shortName)+'）</span>':''} ${cur&&cur.id===c.id?'<span class="tag brand" style="margin-left:4px">当前使用</span>':''}</div>
-        <div style="font-size:12px;color:#9aa3b5">联系人 ${esc(c.contact||'—')} · ${esc(c.phone||'—')}${c.address?' · '+esc(c.address):''}</div>
+        <div style="font-size:18px;color:#9aa3b5">联系人 ${esc(c.contact||'—')} · ${esc(c.phone||'—')}${c.address?' · '+esc(c.address):''}</div>
       </div>
       <button class="btn sm" onclick="switchCompany('${c.id}')">使用</button>
       <button class="btn sm ghost" onclick="openCompanyForm('${c.id}')">${ICO.edit}编辑</button>
@@ -2374,9 +2486,9 @@ function setBasicHtml(){
   </div>
   <div class="bd">
     <div style="font-weight:500;margin-bottom:10px">字典维护</div>
-    ${dictRows.map(d=>{const vals=dictGet(d[1]);return `<div style="margin-bottom:16px"><div style="font-size:13px;color:#5a6478;margin-bottom:6px">${d[0]}</div>
+    ${dictRows.map(d=>{const vals=dictGet(d[1]);return `<div style="margin-bottom:16px"><div style="font-size:19px;color:#5a6478;margin-bottom:6px">${d[0]}</div>
       <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center" id="dict_${d[1]}">
-        ${vals.map((v,i)=>`<span class="tag plain" style="padding:4px 10px;font-size:13px">${esc(v)} <a href="javascript:void(0)" style="color:#d4382e;margin-left:4px" onclick="delDictItem('${d[1]}',${i})">✕</a></span>`).join('')}
+        ${vals.map((v,i)=>`<span class="tag plain" style="padding:4px 10px;font-size:19px">${esc(v)} <a href="javascript:void(0)" style="color:#d4382e;margin-left:4px" onclick="delDictItem('${d[1]}',${i})">✕</a></span>`).join('')}
         <input class="inp" id="dnew_${d[1]}" placeholder="新增项，回车添加" style="width:150px;padding:4px 8px" onkeydown="if(event.key==='Enter')addDictItem('${d[1]}')">
       </div></div>`}).join('')}
   </div>`;
@@ -2394,7 +2506,7 @@ function renderOptGrid(){
   const el=$('optGrid');if(!el)return;
   const opts=[['enableInvoice','发票管理（销项/进项）'],['enableFund','资金管理（收款/付款）'],['enableOther','其他收支与转账'],['enableArchive','合同归档功能'],['enableAtt','合同附件上传']];
   const s=getSettings();s.opt=s.opt||{};
-  el.innerHTML=opts.map(o=>{const v=s.opt[o[0]]!==false;return `<label style="display:flex;align-items:center;gap:8px;border:1px solid #e7eaf2;border-radius:8px;padding:8px 10px;font-size:13px;cursor:pointer"><input type="checkbox" ${v?'checked':''} onchange="toggleOpt('${o[0]}',this.checked)">${o[1]}</label>`}).join('');
+  el.innerHTML=opts.map(o=>{const v=s.opt[o[0]]!==false;return `<label style="display:flex;align-items:center;gap:8px;border:1px solid #e7eaf2;border-radius:8px;padding:8px 10px;font-size:19px;cursor:pointer"><input type="checkbox" ${v?'checked':''} onchange="toggleOpt('${o[0]}',this.checked)">${o[1]}</label>`}).join('');
 }
 function toggleOpt(k,v){const s=getSettings();s.opt=s.opt||{};s.opt[k]=v;saveSettings(s);toast('已'+(v?'开启':'关闭'));renderNav()}
 
@@ -2496,11 +2608,66 @@ function fillSampleDataCore(){
 window.addEventListener('DOMContentLoaded',function(){
   initIfNeeded();
   Store.remove('curUser'); /* 兼容旧版登录会话残留，已改为激活授权制 */
+  initDrawerDrag();
   if(isLicensed()){enterApp()}
   else{showAuth()}
 });
 /* ============ 生成码工具（gen 脚本可复用，页面不使用） ============ */
 window.genCodeForSeller=function(seedHex,keyHex){return ''}
+
+/* ==== 11_colset.js ==== */
+/* ================= 11 通用列设置 =================
+   用法：
+   1) 表格 <th> 写 data-c="唯一列键"，对应 <td> 同样写 data-c（th 键与 td 键需一致）。
+   2) 任一位置放按钮 onclick="openColSet('表格容器ID')"。
+   3) 每次重新渲染列表后调用 applyColPrefs('表格容器ID')，使隐藏配置生效。
+   偏好按「表ID + 当前 seg/dir」存 localStorage。
+*/
+function colPrefKey(tableId,scope){return 'colpref_'+tableId+'_'+(scope||'')}
+function getColPrefs(tableId,scope){
+  try{return JSON.parse(localStorage.getItem(STORE_KEY+colPrefKey(tableId,scope))||'{}')}catch(e){return{}}
+}
+function saveColPrefs(tableId,scope,obj){try{localStorage.setItem(STORE_KEY+colPrefKey(tableId,scope),JSON.stringify(obj))}catch(e){}}
+/* 读取表格当前列结构（th 带 data-c 且未隐藏常驻列），返回 [{key,title}] */
+function colDefsOf(tableId){
+  const tbl=document.getElementById(tableId);if(!tbl)return [];
+  const ths=tbl.querySelectorAll('thead th');
+  const out=[];
+  ths.forEach((th,i)=>{
+    const c=th.getAttribute('data-c');
+    if(!c)return;
+    out.push({key:c,title:(th.textContent||'').trim()||('列'+(i+1))});
+  });
+  return out;
+}
+/* 应用隐藏：给容器内所有 [data-c] 元素按偏好加/去 hide-col */
+function applyColPrefs(tableId,scope){
+  const tbl=document.getElementById(tableId);if(!tbl)return;
+  const prefs=getColPrefs(tableId,scope);
+  tbl.querySelectorAll('[data-c]').forEach(el=>{
+    const k=el.getAttribute('data-c');
+    if(prefs[k]===false)el.classList.add('hide-col');
+    else el.classList.remove('hide-col');
+  });
+}
+/* 弹窗列设置（scope=当前子页标识，如 inv.dir / fund.seg） */
+function openColSet(tableId,scope,title){
+  const defs=colDefsOf(tableId);
+  if(!defs.length){toast('当前视图无可用列配置','warn');return}
+  const prefs=getColPrefs(tableId,scope);
+  const rows=defs.map(d=>{
+    const on=prefs[d.key]!==false;
+    return `<label><input type="checkbox" data-k="${d.key}" ${on?'checked':''} onclick="colSetToggle('${tableId}','${scope}','${d.key}',this.checked)">${esc(d.title)}</label>`;
+  }).join('');
+  openModal(`<div class="colset-panel">${rows}</div>
+    <div class="hint" style="margin-top:12px">取消勾选的列将隐藏，仅影响当前子页视图；随时可重新勾选显示。</div>`,
+    {title:title||'列设置',footer:[{t:'完成',c:'pri',x:function(){closeModal();applyColPrefs(tableId,scope)}}]});
+}
+function colSetToggle(tableId,scope,key,on){
+  const prefs=getColPrefs(tableId,scope);
+  prefs[key]=on;
+  saveColPrefs(tableId,scope,prefs);
+}
 </script>
 </body>
 </html>
