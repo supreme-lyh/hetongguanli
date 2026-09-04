@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-page-node-id="Rd9jze7GMY4f8mmkuPu3sN">
-<head data-page-node-id="OO3RnVNHyE0pX3q4xQlpZa">
-<meta charset="UTF-8" data-page-node-id="ub48h7jduhHp9wBAfKLYA1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" data-page-node-id="aFY6qyCyFraJtl6ThHkfjk">
+<html lang="zh-CN" data-page-node-id="BKtBVFrf5BsgK3IscK9UBv">
+<head data-page-node-id="VnurRtbGC8spOWiZGlDQoN">
+<meta charset="UTF-8" data-page-node-id="IWEdFVGxzDlIiVL5tPZReE">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" data-page-node-id="lsMrWkKhpbTAiW2l1fEpoa">
 <title>合同管理平台 · Contract Hub</title>
-<meta name="description" content="合同管理平台：合同、发票、资金、客户与供应商一站式管理" data-page-node-id="t1A6rSUGj492rEgAw6tIro">
+<meta name="description" content="合同管理平台：合同、发票、资金、客户与供应商一站式管理" data-page-node-id="nv1XDdyp4pWFUzr2tOrWQD">
 <style>:root{
   --bg:#f4f6fa; --card:#ffffff; --line:#e7eaf2; --line2:#d7dce8;
   --ink:#1c2433; --ink2:#5a6478; --ink3:#9aa3b5;
@@ -79,6 +79,13 @@ select.inp{appearance:none;background-image:linear-gradient(45deg,transparent 50
 .nav-item svg{flex:none}
 .nav-item .cnt{margin-left:auto;font-size:11px;background:#eef1f6;color:var(--ink2);border-radius:99px;padding:0 7px;min-width:20px;text-align:center}
 .nav-item.on .cnt{background:#dbe3fb;color:var(--brand)}
+.nav-item .nv-arr{font-style:normal;margin-left:auto;font-size:10px;color:var(--ink3);transition:transform .15s}
+.nav-item .nv-arr.up{transform:rotate(180deg)}
+.nav-sub{display:none;margin:2px 0 6px;padding-left:10px;border-left:2px solid var(--line)}
+.nav-sub.open{display:block}
+.nav-sub .nav-item{padding:5px 10px;font-size:12.8px;color:var(--ink2)}
+.nav-sub .nav-item.on{background:var(--brand-bg);color:var(--brand)}
+.nav-sub .nav-item:not(.on):hover{background:var(--bg)}
 #main{flex:1;display:flex;flex-direction:column;min-width:0}
 #topbar{height:56px;flex:none;background:var(--card);border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 20px;gap:12px}
 .ttl{font-size:16px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -196,6 +203,9 @@ body.drawer-open #drawer{transform:none}
 /* ============ 图表/进度等 ============ */
 .chart-box{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .chart-box .card{min-width:0;overflow-x:auto}
+.dash-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:14px;margin-bottom:14px}
+.dash-grid .card{min-width:0}
+@media(max-width:960px){.dash-grid{grid-template-columns:1fr}}
 .st3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
 @media(max-width:820px){.chart-box{grid-template-columns:1fr}}
 @media(max-width:640px){.st3{grid-template-columns:1fr}}
@@ -223,52 +233,52 @@ body.drawer-open #drawer{transform:none}
 }
 </style>
 </head>
-<body data-page-node-id="GCmXkTFBv2sj2HWtpUct4j">
-<div id="authWrap" style="display:none" data-page-node-id="SIkNZBBoPvrOKGGslZKoXD"></div>
+<body data-page-node-id="NRPpGWzIKV6BOmz5efwUjU">
+<div id="authWrap" style="display:none" data-page-node-id="XYbkKHTTgbJnq8ywWcupMX"></div>
 
-<div id="app" data-page-node-id="mbJRodCBVC0bU7pfPXlL8i">
-  <aside id="aside" data-page-node-id="MhFoKEoJznhA41zlXFpYIc">
-    <div class="aside-logo" data-page-node-id="cBDQhUx3m16HjuxSGATDY9">
-      <div class="lg" data-page-node-id="6pbpe6BBZXJCa3PXFmI3cf"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-page-node-id="OMByYiZSFYaBSSygk3BlWN"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-page-node-id="WE3FSyR8IbK5N3Ub7r7vi3"/><path d="M14 2v6h6" data-page-node-id="rnFEfFYJfswh8nkCMMLPUo"/><path d="M8 13h8M8 17h5" data-page-node-id="jyqs7rr8sZdDCeZrrhHRMf"/></svg></div>
-      <div data-page-node-id="rGHntFC0rZfGEt63puqHdd"><div class="nm" data-page-node-id="EN9gC4EipJe9xKdpLGhBlS">合同管理平台</div><div class="vn" id="verTag" data-page-node-id="k0OBSADay2wDbSA7ayxMgF"></div></div>
+<div id="app" data-page-node-id="3UZTaa1fCmaLi5IVIG2Nox">
+  <aside id="aside" data-page-node-id="EEYHFqCRWmZNrD0QqyolRN">
+    <div class="aside-logo" data-page-node-id="5FpBVl8q8HTPdVeAefGjzG">
+      <div class="lg" data-page-node-id="HJx4klG59kmTrz6pIQnwOx"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-page-node-id="1f4AS42BRDZDVRDu8S4G7G"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-page-node-id="zb4CvhGeauH2ZrzCtxMDXh"/><path d="M14 2v6h6" data-page-node-id="wzzZKxWKuMu3F6BTrF5vwN"/><path d="M8 13h8M8 17h5" data-page-node-id="M5z2PrVrnufj4eYMktfCH1"/></svg></div>
+      <div data-page-node-id="YCE0DM2FBaOQraXpN5eSFa"><div class="nm" data-page-node-id="wKdVjrRV0yk191W5Sn5JTR">合同管理平台</div><div class="vn" id="verTag" data-page-node-id="4MHQFqx1eb6CV3LMXET1cV"></div></div>
     </div>
-    <div id="nav" data-page-node-id="eMD3l6NGpJsyGNm2GY8TWn"></div>
-    <div class="aside-logo" style="border-top:1px solid var(--line);border-bottom:none" data-page-node-id="1hZa0J6DaokBwvwmaG8oV6">
-      <div style="flex:1;min-width:0" data-page-node-id="CHYDmc7MlRBPjO3OkHCU1f">
-        <div style="font-size:12px;color:var(--ink2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap" id="companyTag" data-page-node-id="ELRwZJhls81XfOYtEAI4w8">未选择公司</div>
-        <div style="font-size:11px;color:var(--ink3)" id="userTag" data-page-node-id="DCz2FWHQDGISm9mPnYMpDW"></div>
+    <div id="nav" data-page-node-id="3F6RdNojHp4EZTGdNZF3HQ"></div>
+    <div class="aside-logo" style="border-top:1px solid var(--line);border-bottom:none" data-page-node-id="BLMbNy4fFOEn8arw9UnW7E">
+      <div style="flex:1;min-width:0" data-page-node-id="FjNb4uNiLZuxGHvWe6DO8A">
+        <div style="font-size:12px;color:var(--ink2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap" id="companyTag" data-page-node-id="8XFs5t4U0GFKJTcc1Zgb8G">未选择公司</div>
+        <div style="font-size:11px;color:var(--ink3)" id="userTag" data-page-node-id="ZIGPHjp9gxKxaAqUfgSolv"></div>
       </div>
-      <button class="btn sm ghost" onclick="openCompanySwitch()" title="切换公司/档案" data-page-node-id="wD4pIA30rbbn8MmqKkQc68">切换</button>
+      <button class="btn sm ghost" onclick="openCompanySwitch()" title="切换公司/档案" data-page-node-id="2I9Xu2yo6nxa3olrIMU2OR">切换</button>
     </div>
   </aside>
 
-  <div id="main" data-page-node-id="VhBCmGPImVDORUb45eGG31">
-    <div id="topbar" data-page-node-id="PqqSirD4yhdW26aIRtdAnI">
-      <button id="menuBtn" onclick="toggleMenu()" data-page-node-id="dNPNMPkAU8Hdbex5CdjfBu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="qGCoSL74SadSwPLNZ3zESI"><path d="M3 6h18M3 12h18M3 18h18" data-page-node-id="EqqRYcnUJLY9WAAuvsljEf"/></svg></button>
-      <div data-page-node-id="liBfld2oCX8TilD8UaoGFH">
-        <div class="ttl" id="pageTitle" data-page-node-id="tPIOm6t7gMwHhL5QSbQ6LF">工作台</div>
-        <div class="crumb" id="pageCrumb" data-page-node-id="d9yud2D58ifnA8RKmeIcpQ"></div>
+  <div id="main" data-page-node-id="u4KqZJSWncophjVK8A8qXK">
+    <div id="topbar" data-page-node-id="tjDH1SbBNKLDLVCfkb0Lb1">
+      <button id="menuBtn" onclick="toggleMenu()" data-page-node-id="OofHQm8HMYEfPvo6xsHX2v"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="lRypG7IV0KB4M7DXqKVmYh"><path d="M3 6h18M3 12h18M3 18h18" data-page-node-id="YVZHFueXT9TXtvEKiDKTAe"/></svg></button>
+      <div data-page-node-id="DQUWwljiYc9OKAaBtQx1Pz">
+        <div class="ttl" id="pageTitle" data-page-node-id="CQB77aqkcwfB687haB0Wtj">工作台</div>
+        <div class="crumb" id="pageCrumb" data-page-node-id="u0zNkXbyoj1lx7gR0dAiBV"></div>
       </div>
-      <div style="flex:1" data-page-node-id="0tDQIfLXQUyMNRWlyxRuvp"></div>
-      <button class="btn sm" onclick="goPage('reminder')" data-page-node-id="i1iAeEutLKHNJ3DQ71XucZ"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:inline-block;vertical-align:-2px;margin-right:4px" data-page-node-id="K4YCDag0IGe5EhRCP1ytuK"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" data-page-node-id="SmfjihGyAeujdL2sGb9ibk"/><path d="M13.73 21a2 2 0 0 1-3.46 0" data-page-node-id="g7AptozGl3oR9uNlkF8k3V"/></svg>提醒<span id="remCnt" style="display:none" data-page-node-id="eUtLusp2TIG9lw38onhfuH"></span></button>
-      <button class="btn sm" onclick="openAbout()" data-page-node-id="bgOTTXIPEPRZKzUduVdKGu"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:inline-block;vertical-align:-2px;margin-right:4px" data-page-node-id="VmDrup7XD1fZtWbyhbKXdH"><circle cx="12" cy="12" r="10" data-page-node-id="W1r5XvpCBkPGND6oOPggwH"/><path d="M12 16v-4M12 8h.01" data-page-node-id="lDMOEFWhbyAOPto0M8a0Ko"/></svg>关于</button>
+      <div style="flex:1" data-page-node-id="ACCKfFWVE2YuNJYM157K1B"></div>
+      <button class="btn sm" onclick="goPage('reminder')" data-page-node-id="tm4d7QQmueOxJhs9HXU8HG"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:inline-block;vertical-align:-2px;margin-right:4px" data-page-node-id="bB45j409P8aRNdwpPFVedc"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" data-page-node-id="DiclLegY1Y7lMOjc6Bzzo9"/><path d="M13.73 21a2 2 0 0 1-3.46 0" data-page-node-id="pZn6HvNP8COyuvTKecD0mF"/></svg>提醒<span id="remCnt" style="display:none" data-page-node-id="afbJ4V6VHek4OL7GdW98en"></span></button>
+      <button class="btn sm" onclick="openAbout()" data-page-node-id="BuhxO34yaTlCCqJBSEctMR"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:inline-block;vertical-align:-2px;margin-right:4px" data-page-node-id="Su1gxuDLk0mlWrdf6TtjMT"><circle cx="12" cy="12" r="10" data-page-node-id="D9LIu0ZZR4hl8JIN3FBkEg"/><path d="M12 16v-4M12 8h.01" data-page-node-id="6Ti2eGeFUMEA138JkZzNbT"/></svg>关于</button>
     </div>
-    <div id="content" data-page-node-id="T0rGVrYvpwvFfH4ojwbzKW"></div>
+    <div id="content" data-page-node-id="A5Ah27AxIdia1icGadjjOP"></div>
   </div>
 </div>
 
-<div id="mask" data-page-node-id="4O9jsXpRfUsJ1Z24p7UF6N"><div class="modal" id="modalBox" data-page-node-id="Qq5jbE7YAAAEVpVddSrRPA"></div></div>
-<div id="drawer" data-page-node-id="QW8835xm1XDPGcDujdAIEz">
-  <div class="mh" data-page-node-id="RpOMV3DQXUCCl4KUmyq2LX"><span id="drawerTitle" data-page-node-id="t7kw4ypbH51dxsiHYDQGus"></span><button class="x" style="margin-left:auto;border:none;background:var(--bg);width:26px;height:26px;border-radius:7px;color:var(--ink2);cursor:pointer" onclick="closeDrawer()" data-page-node-id="7h7oSe7vXkILTESqYqG7ZA">✕</button></div>
-  <div class="mb" id="drawerBody" data-page-node-id="GrFoNquwDrhxRVBPHrZjK5"></div>
+<div id="mask" data-page-node-id="yMmRdKtwpXsUofGu1Wkm99"><div class="modal" id="modalBox" data-page-node-id="fsbLSA8ereD9LlDvPE6r75"></div></div>
+<div id="drawer" data-page-node-id="IIvbGJj6dO1z2jPf4zH86c">
+  <div class="mh" data-page-node-id="PcZESpSfp49xCVpKdlKSNn"><span id="drawerTitle" data-page-node-id="jAmLSU9N4hAu0AueR9TQC9"></span><button class="x" style="margin-left:auto;border:none;background:var(--bg);width:26px;height:26px;border-radius:7px;color:var(--ink2);cursor:pointer" onclick="closeDrawer()" data-page-node-id="DF6n3NSznIKj5xPmqxwKxC">✕</button></div>
+  <div class="mb" id="drawerBody" data-page-node-id="6uhca4CYQKTdtqMDwthDKj"></div>
 </div>
-<div id="toast" data-page-node-id="eY8olgkc7H8HSWXOQnQD3w"></div>
+<div id="toast" data-page-node-id="md9HexmrYWyVCTGlPF6aGH"></div>
 
 <script>
 /* ==== 01_util.js ==== */
 /* ================= 01 基础：常量 / 工具 / 图标 ================= */
 const APP_NAME='合同管理平台';
-const APP_VER='v1.0.0';
+const APP_VER='v1.1.0';
 const APP_SLOGAN='合同、发票、资金与往来单位 一站式管理';
 const LICENSE_CONTACT=''; // 卖家联系方式，售卖前填入，如 '微信：xxx'
 const STORE_KEY='wb_contract_';
@@ -513,15 +523,60 @@ function openAbout(){
 
 /* ==== 04_app.js ==== */
 /* ================= 04 应用框架：导航 / 弹窗 / 路由 / 启动 ================= */
-const STATE={page:'dash'};
+const STATE={page:'dash',nav:'dash'};
+/* 菜单结构：g=组名, items=菜单；m.id 用于路由；可选 param 传给页面(如合同方向/资金子页) */
 const NAV=[
-  {g:'总览',items:[{id:'dash',name:'工作台',icon:ICO.home},{id:'reminder',name:'提醒中心',icon:ICO.bell,badge:true}]},
-  {g:'业务管理',items:[{id:'contract',name:'合同管理',icon:ICO.contract},{id:'invoice',name:'发票管理',icon:ICO.invoice},{id:'fund',name:'资金管理',icon:ICO.money}]},
-  {g:'往来单位',items:[{id:'customer',name:'客户管理',icon:ICO.user},{id:'supplier',name:'供应商管理',icon:ICO.supplier}]},
-  {g:'统计报表',items:[{id:'stat',name:'数据统计',icon:ICO.chart}]},
-  {g:'系统',items:[{id:'settings',name:'系统设置',icon:ICO.gear}]}
+  {g:'总览',items:[
+    {id:'dash',name:'工作台',icon:ICO.home},
+    {id:'reminder',name:'提醒中心',icon:ICO.bell,badge:true}
+  ]},
+  {g:'业务',items:[
+    {id:'contract',name:'合同台账',icon:ICO.contract,children:[
+      {id:'con_recv',name:'应收合同',param:'应收'},{id:'con_pay',name:'应付合同',param:'应付'}
+    ]},
+    {id:'invoice',name:'发票管理',icon:ICO.invoice,children:[
+      {id:'inv_issue',name:'销项发票',param:'销项'},{id:'inv_receipt',name:'进项发票',param:'进项'}
+    ]},
+    {id:'fund',name:'资金管理',icon:ICO.money,children:[
+      {id:'f_receipt',name:'收款记录',param:'收'},{id:'f_payment',name:'付款记录',param:'付'},
+      {id:'f_inc',name:'其他收入',param:'收他'},{id:'f_exp',name:'其他支出',param:'付他'},
+      {id:'f_transfer',name:'资金转账',param:'转'},{id:'f_account',name:'资金账户',param:'账户'}
+    ]}
+  ]},
+  {g:'往来单位',items:[
+    {id:'customer',name:'客户管理',icon:ICO.user},
+    {id:'supplier',name:'供应商管理',icon:ICO.supplier}
+  ]},
+  {g:'统计报表',items:[
+    {id:'stat',name:'统计分析',icon:ICO.chart,children:[
+      {id:'st_overview',name:'经营明细',param:'明细'},{id:'st_chart',name:'图表分析',param:'图表'}
+    ]}
+  ]},
+  {g:'系统',items:[
+    {id:'settings',name:'系统设置',icon:ICO.gear}
+  ]}
 ];
-const PAGE_NAME={dash:'工作台',reminder:'提醒中心',contract:'合同管理',invoice:'发票管理',fund:'资金管理',customer:'客户管理',supplier:'供应商管理',stat:'数据统计',settings:'系统设置'};
+const NAV_FLAT=(function(){const a=[];NAV.forEach(g=>g.items.forEach(it=>{a.push(it);(it.children||[]).forEach(c=>{c._p=it.id;a.push(c)})}));return a})();
+function navById(id){return NAV_FLAT.find(x=>x.id===id)}
+function navParentOf(id){const it=navById(id);return it&&it._p?navById(it._p):null}
+const PAGE_NAME={dash:'工作台',reminder:'提醒中心',contract:'合同台账',invoice:'发票管理',fund:'资金管理',customer:'客户管理',supplier:'供应商管理',stat:'统计分析',settings:'系统设置'};
+/* 菜单子项 -> 页面内切换回调 */
+function applyMenuParam(id){
+  const it=navById(id);if(!it||!it.param)return false;
+  const p=navParentOf(id);
+  const fns={
+    contract:{'应收':()=>{conState().dir='应收';renderConList()},'应付':()=>{conState().dir='应付';renderConList()}},
+    invoice:{'销项':()=>{invState().dir='销项';renderInvList()},'进项':()=>{invState().dir='进项';renderInvList()}},
+    fund:{'收':()=>setFundSeg('收'),'付':()=>setFundSeg('付'),'收他':()=>setFundSeg('收他'),'付他':()=>setFundSeg('付他'),'转':()=>setFundSeg('转'),'账户':()=>setFundSeg('账户')},
+    stat:{'明细':()=>setStatSeg('明细'),'图表':()=>setStatSeg('图表')}
+  };
+  const g=p&&fns[p.id];if(!g)return false;
+  g[it.param]();
+  STATE.nav=id;renderNav();
+  return true;
+}
+function menuTitle(id){const it=navById(id);return it?it.name:'首页'}
+function groupName(id){const it=navById(id);const p=it&&it._p?navById(it._p):it;for(const g of NAV){if(g.items.includes(p))return g.g}return ''}
 
 function $(id){return document.getElementById(id)}
 function canWrite(){if(!isLicensed()){toast('当前为试用模式，激活后可新增与编辑数据','warn');return false}return true}
@@ -530,6 +585,7 @@ function requireLic(){if(!canWrite())return false;return true}
 function enterApp(){
   initIfNeeded();
   if(!dbList('contracts').length)autoSampleData();
+  genReminders();
   document.getElementById('authWrap').style.display='none';
   document.body.classList.add('ready');
   $('verTag').textContent=APP_VER+(isLicensed()?'':' · 试用');
@@ -542,31 +598,131 @@ function enterApp(){
 }
 function autoSampleData(){
   const cid=(dbList('companies')[0]||{}).id;if(!cid)return;
-  const has=dbList('customers').some(x=>x.companyId===cid);
+  const has=dbList('contracts').some(x=>x.companyId===cid);
   if(has)return;
-  const cs=[['华东建筑集团','重要客户','王磊','13912345678','上海市闵行区申长路100号'],['恒信贸易有限公司','普通客户','李静','13798765432','杭州市西湖区文三路12号']];
-  cs.forEach(c=>saveScoped('customers',scopeList('customers').concat([{id:uid(),companyId:cid,code:rulePrefix('customer')+'-'+new Date().getFullYear()+'-'+pad(scopeList('customers').length+1,4),name:c[0],category:c[1],contact:c[2],phone:c[3],address:c[4],taxNo:'',remark:'',followUps:[],createdAt:now()}])));
-  const ss=[['中科原材料供应公司','重要供应商','陈工','13500001111','苏州市工业园区星湖街10号'],['京华包装制品厂','普通供应商','孙姐','13322223333','常州市武进区人民路5号']];
-  ss.forEach(s=>saveScoped('suppliers',scopeList('suppliers').concat([{id:uid(),companyId:cid,code:rulePrefix('supplier')+'-'+new Date().getFullYear()+'-'+pad(scopeList('suppliers').length+1,4),name:s[0],category:s[1],contact:s[2],phone:s[3],address:s[4],taxNo:'',remark:'',followUps:[],createdAt:now()}])));
-  saveScoped('accounts',scopeList('accounts').concat([{id:uid(),companyId:cid,name:'招商银行上海分行',type:'银行账户',remark:'基本户',createdAt:now()},{id:uid(),companyId:cid,name:'现金',type:'现金',remark:'备用金',createdAt:now()}]));
+  const nowS=now();
+  const mkCode=(pref,n)=>pref+'-'+new Date().getFullYear()+'-'+pad(n,4);
+  /* 客户/供应商 */
+  const cs=[
+    {name:'华东建筑集团',category:'重要客户',contact:'王磊',phone:'13912345678',address:'上海市闵行区申长路100号',taxNo:'91310112MA1K30001X',remark:'长期战略合作'},
+    {name:'恒信贸易有限公司',category:'普通客户',contact:'李静',phone:'13798765432',address:'杭州市西湖区文三路12号',taxNo:'91330106MA27X2002X',remark:'按单结算'},
+    {name:'启明信息科技',category:'重点客户',contact:'赵强',phone:'13655556666',address:'南京市建邺区江东中路200号',taxNo:'91320105MA1P3003X',remark:'季度框架'}
+  ];
+  const custs=cs.map((c,i)=>({id:uid(),companyId:cid,code:mkCode(rulePrefix('customer'),i+1),...c,followUps:[],createdAt:nowS}));
+  const ss=[
+    {name:'中科原材料供应公司',category:'重要供应商',contact:'陈工',phone:'13500001111',address:'苏州市工业园区星湖街10号',taxNo:'91320594MA1K10001X',remark:'月结30天'},
+    {name:'京华包装制品厂',category:'普通供应商',contact:'孙姐',phone:'13322223333',address:'常州市武进区人民路5号',taxNo:'91320412MA1Q20002X',remark:''}
+  ];
+  const sups=ss.map((s,i)=>({id:uid(),companyId:cid,code:mkCode(rulePrefix('supplier'),i+1),...s,followUps:[],createdAt:nowS}));
+  /* 资金账户 */
+  const accs=[
+    {id:uid(),companyId:cid,name:'招商银行上海分行',type:'银行账户',bank:'招商银行上海分行',accountNo:'6225 **** **** 1234',opening:500000,remark:'基本户',createdAt:nowS},
+    {id:uid(),companyId:cid,name:'现金',type:'现金',bank:'',accountNo:'',opening:20000,remark:'备用金',createdAt:nowS},
+    {id:uid(),companyId:cid,name:'支付宝',type:'第三方支付',bank:'支付宝',accountNo:'finance@demo.com',opening:0,remark:'收款专用',createdAt:nowS}
+  ];
+  /* 合同（分布在近12个月便于趋势图） */
+  const num=p=>rulePrefix('contract')+'-'+new Date().getFullYear()+'-'+p;
+  function C(p,name,dir,partner,amount,rate,status,offS,offE,signOff,terms,addr){
+    const t=taxCalc(amount,rate);
+    return {id:uid(),companyId:cid,number:num(p),name,direction:dir,typeName:dir==='应收'?'销售合同':'采购合同',status,archive:0,
+      partnerId:partner.id,partnerName:partner.name,manager:'管理员',salesman:'张业务',dept:dir==='应收'?'销售部':'采购部',
+      partyA:'示例科技有限公司',partyB:partner.name,region:dir==='应收'?'华东区':'华东区',address:addr||'上海市浦东新区示例路88号',
+      signDate:daysAgo(signOff),startDate:daysAgo(offS),endDate:daysAgo(-offE),deliverDate:daysAgo(Math.max(0,offS-15)),
+      amount,taxRate:rate,taxExcl:t.taxExcl,tax:t.tax,pricingType:'固定总价',payPercent:30,terms,remark:'',items:[],atts:[],createdAt:nowS};
+  }
+  const contracts=[
+    C('0001','智慧楼宇监控系统集成合同','应收',custs[0],1280000,0.13,'signed',-30,-320,-40,'1. 首付30%；2. 货到验收后60%；3. 质保到期10%。质保12个月。'),
+    C('0002','年度框架采购合同','应付',sups[0],360000,0.13,'signed',-20,-345,-20,'月结30天，按送货对账结算。'),
+    C('0003','办公场所租赁合同（三年）','应付',sups[1],540000,0.09,'signed',-10,-1085,-15,'按季支付租金，押三付三。','上海市静安区示例路200号'),
+    C('0004','技术服务框架合同','应收',custs[1],200000,0.06,'unsigned',-0,-300,-5,'待法务审核后签订。'),
+    C('0005','软件订阅年度合同','应收',custs[2],156000,0.06,'signed',-200,-160,-210,'年付，含运维服务。'),
+    C('0006','原材料补货采购合同','应付',sups[0],88000,0.13,'signed',-60,-40,-70,'一次性交货，到货验收后30天付清。'),
+    C('0007','展厅多媒体集成项目','应收',custs[0],680000,0.13,'signed',-45,-220,-60,'预付40%，验收55%，质保5%。'),
+    C('0008','工位租赁合同','应付',custs[1],42000,0.09,'done',-400,-30,-420,'已到期结算完毕。')
+  ];
+  /* 发票（销项/进项各3-4 张）*/
+  const invoices=[
+    {id:uid(),companyId:cid,direction:'销项',rz:'蓝字',type:'增值税专用发票',code:'FP-'+new Date().getFullYear()+'-0001',number:'0666'+'00001',date:daysAgo(-210),amount:120000,taxRate:0.13,partnerId:custs[0].id,partnerName:custs[0].name,contractNumber:num('0005')},
+    {id:uid(),companyId:cid,direction:'销项',rz:'蓝字',type:'增值税专用发票',code:'FP-'+new Date().getFullYear()+'-0002',number:'0666'+'00012',date:daysAgo(-60),amount:384000,taxRate:0.13,partnerId:custs[0].id,partnerName:custs[0].name,contractNumber:num('0001')},
+    {id:uid(),companyId:cid,direction:'销项',rz:'蓝字',type:'增值税普通发票',code:'FP-'+new Date().getFullYear()+'-0003',number:'0666'+'00035',date:daysAgo(-25),amount:50000,taxRate:0.06,partnerId:custs[1].id,partnerName:custs[1].name,contractNumber:num('0004')},
+    {id:uid(),companyId:cid,direction:'进项',rz:'蓝字',type:'增值税专用发票',code:'JX-'+new Date().getFullYear()+'-0001',number:'0999'+'00001',date:daysAgo(-80),amount:160000,taxRate:0.13,partnerId:sups[0].id,partnerName:sups[0].name,contractNumber:num('0002')},
+    {id:uid(),companyId:cid,direction:'进项',rz:'蓝字',type:'增值税专用发票',code:'JX-'+new Date().getFullYear()+'-0002',number:'0999'+'00008',date:daysAgo(-15),amount:68000,taxRate:0.13,partnerId:sups[1].id,partnerName:sups[1].name,contractNumber:num('0003')},
+    {id:uid(),companyId:cid,direction:'进项',rz:'红字',type:'增值税专用发票',code:'JX-'+new Date().getFullYear()+'-0003',number:'0999'+'00009',date:daysAgo(-10),amount:-8000,taxRate:0.13,partnerId:sups[0].id,partnerName:sups[0].name,contractNumber:num('0006')}
+  ];
+  invoices.forEach(i=>{const t=taxCalc(Math.abs(i.amount),i.taxRate);i.amount=Math.abs(i.amount);i.taxExcl=t.taxExcl;i.tax=t.tax;i.remark='';i.buyerName=(i.direction==='销项'?custs.find(c=>c.id===i.partnerId)||{}:{}).name||'';i.sellerName='示例科技有限公司'});
+  /* 收付款记录（均匀分布近12个月）*/
+  const bills=[];
+  const bill=(kind,days,amt,partner,contractNumber,method,accName,remark)=>{const dir=kind==='收款'?'应收':'应付';const c=contracts.find(x=>x.number===contractNumber);bills.push({id:uid(),companyId:cid,kind,number:rulePrefix('fund')+'-'+new Date().getFullYear()+'-'+pad(bills.length+1,4),date:daysAgo(days),amount:amt,method,accountName:accName||'招商银行上海分行',partnerId:partner.id,partnerName:partner.name,contractId:c?c.id:null,contractNumber,remark,createdAt:nowS});};
+  bill('收款',-220,100000,custs[2],num('0005'),'银行转账');
+  bill('收款',-55,384000,custs[0],num('0001'),'银行转账','招商银行上海分行','首付款30%');
+  bill('收款',-12,30000,custs[1],num('0004'),'微信');
+  bill('付款',-90,120000,sups[0],num('0002'),'银行转账','招商银行上海分行','第一批货款');
+  bill('付款',-40,24000,sups[1],num('0003'),'银行转账','招商银行上海分行','第一季度租金');
+  bill('付款',-8,60000,sups[0],num('0006'),'银行转账','支付宝','到货结算');
+  const others=[
+    {id:uid(),companyId:cid,kind:'收入',category:'服务收入',date:daysAgo(-70),amount:15000,accountName:'招商银行上海分行',number:rulePrefix('other')+'-'+new Date().getFullYear()+'-'+pad(1,4),remark:'售后运维服务费',createdAt:nowS},
+    {id:uid(),companyId:cid,kind:'支出',category:'房租物业',date:daysAgo(-45),amount:20000,accountName:'现金',number:rulePrefix('other')+'-'+new Date().getFullYear()+'-'+pad(2,4),remark:'办公室物业费',createdAt:nowS},
+    {id:uid(),companyId:cid,kind:'支出',category:'市场费用',date:daysAgo(-20),amount:8000,accountName:'支付宝',number:rulePrefix('other')+'-'+new Date().getFullYear()+'-'+pad(3,4),remark:'行业展会',createdAt:nowS}
+  ];
+  const transfers=[
+    {id:uid(),companyId:cid,fromAccount:'招商银行上海分行',toAccount:'支付宝',date:daysAgo(-30),amount:30000,number:rulePrefix('transfer')+'-'+new Date().getFullYear()+'-'+pad(1,4),remark:'补充收款账户额度',createdAt:nowS}
+  ];
+  saveScoped('customers',custs);
+  saveScoped('suppliers',sups);
+  saveScoped('accounts',accs);
+  saveScoped('contracts',contracts);
+  saveScoped('invoices',invoices);
+  saveScoped('fundBills',bills);
+  saveScoped('otherBills',others);
+  saveScoped('transfers',transfers);
 }
-const NAV_HASH={'dash':'dash','reminder':'reminder','contract':'contract','invoice':'invoice','fund':'fund','customer':'customer','supplier':'supplier','stat':'stat','settings':'settings'};
+const NAV_HASH={dash:'dash',reminder:'reminder',contract:'contract',invoice:'invoice',fund:'fund',customer:'customer',supplier:'supplier',stat:'stat',settings:'settings'};
 function renderNav(){
-  const el=$('nav');
-  const li=getLicense();
+  const el=$('nav');if(!el)return;
+  const cur=navById(STATE.nav)||navById('dash');
+  const curP=cur._p||cur.id;               /* 当前逻辑菜单：若是子项，取其父 */
   let h='';
   NAV.forEach(g=>{
     h+='<div class="nav-group">'+g.g+'</div>';
     g.items.forEach(it=>{
       let badge='';
       if(it.badge){const n=unreadReminderCount();if(n>0)badge='<span class="cnt" style="background:#fdecec;color:#d4382e">'+n+'</span>'}
-      h+='<div class="nav-item'+(STATE.page===it.id?' on':'')+'" data-nav="'+it.id+'" onclick="goPage(\''+it.id+'\')">'+it.icon+'<span>'+it.name+'</span>'+badge+'</div>';
+      const kids=it.children||[];
+      const open=kids.length&&curP===it.id;
+      const onP=!kids.length&&curP===it.id;
+      h+='<div class="nav-parent"><div class="nav-item'+(onP?' on':'')+'" data-nav="'+it.id+'" onclick="navClick(\''+it.id+'\')">'+it.icon+'<span>'+it.name+'</span>'+(kids.length?'<em class="nv-arr'+(open?' up':'')+'">▾</em>':'')+badge+'</div>';
+      if(kids.length){
+        h+='<div class="nav-sub'+(open?' open':'')+'">';
+        const first=kids[0];
+        kids.forEach(c=>{
+          const on=cur.id===c.id||(cur.id===it.id&&c===first);
+          h+='<div class="nav-item sub'+(on?' on':'')+'" data-nav="'+c.id+'" onclick="navClick(\''+c.id+'\')"><span>'+c.name+'</span></div>';
+        });
+        h+='</div>';
+      }
+      h+='</div>';
     });
   });
   el.innerHTML=h;
   $('remCnt').style.display='none';
   const n=unreadReminderCount();
   if(n>0){$('remCnt').style.display='inline';$('remCnt').textContent=' ('+n+')'}
+}
+function navClick(id){
+  const it=navById(id);if(!it)return;
+  STATE.nav=id;
+  const target=it._p||it.id;               /* 子项 => 父页面 */
+  const needReload=STATE.page!==target;
+  if(needReload){goPage(target);STATE.nav=id;renderNav()}
+  if(it._p)setTimeout(()=>applyMenuParam(id),needReload?30:0);
+  else if(it.children&&it.children.length)setTimeout(()=>{applyMenuParam(it.children[0].id)},needReload?30:0);
+}
+/* 页面内 seg/方向切换后同步侧栏高亮：parentId=所在父菜单，param=子菜单参数 */
+function syncNavState(parentId,param){
+  const p=navById(parentId);if(!p)return;
+  const hit=(p.children||[]).find(c=>c.param===param);
+  STATE.nav=hit?hit.id:parentId;
+  renderNav();
 }
 function goPage(id){
   if(!NAV_HASH[id])id='dash';
@@ -575,8 +731,9 @@ function goPage(id){
   document.body.classList.remove('menu-open');
   if(!PAGES[id]){PAGES[id]=function(){return '<div class="card"><div class="bd blank">页面建设中</div></div>'}}
   $('pageTitle').textContent=PAGE_NAME[id]||'';
-  const item=NAV.flatMap(g=>g.items).find(i=>i.id===id);
-  $('pageCrumb').textContent=item?'首页 / '+(NAV.find(g=>g.items.some(i=>i.id===id))||{}).g+' / '+item.name:'';
+  const item=navById(id);
+  const grp=groupName(id);
+  $('pageCrumb').textContent=item?('首页 / '+(grp||'')+' / '+(item.name||'')):'';
   $('content').innerHTML=PAGES[id]();
   renderNav();
   if(AFTER[id])AFTER[id]();
@@ -625,7 +782,7 @@ function switchCompany(id){Store.set('curCompanyId',id);closeModal();toast('已�
 /* ============ 提醒工具 ============ */
 function unreadReminderCount(){const cid=curCompanyId();return scopeList('reminders').filter(r=>r.status===0&&(!cid||r.companyId===cid)).length}
 function genReminders(){
-  const cid=curCompanyId();if(!cid)return;
+  const cid=curCompanyId();if(!cid)return 0;
   const cons=dbList('contracts').filter(c=>c.companyId===cid&&c.status!=='stopped'&&c.status!=='done'&&!c.archive&&c.endDate);
   let added=0;
   const rems=dbList('reminders');
@@ -633,7 +790,15 @@ function genReminders(){
     const left=diffDays(today(),c.endDate);
     if(!isFinite(left))return;
     if(left>=0&&left<=30&&!rems.some(r=>r.refId==='c_exp_'+c.id&&r.companyId===cid&&r.status===0)){
-      rems.push({id:uid(),companyId:cid,kind:'contract_expire',title:'合同即将到期：「'+c.name+'」',refId:'c_exp_'+c.id,due:c.endDate,status:0,createdAt:now()});added++;
+      const isRecv=isRecvCon(c);
+      rems.push({id:uid(),companyId:cid,kind:isRecv?'contract_expire_receivable':'contract_expire_payable',title:(isRecv?'应收':'应付')+'合同即将到期：「'+c.name+'」',refId:'c_exp_'+c.id,due:c.endDate,status:0,createdAt:now()});added++;
+    }
+  });
+  const invs=dbList('invoices').filter(i=>i.companyId===cid);
+  invs.forEach(i=>{
+    const d=i.date||'';if(!d)return;
+    if(!rems.some(r=>r.refId==='inv_'+i.id&&r.companyId===cid&&r.status===0)){
+      rems.push({id:uid(),companyId:cid,kind:i.direction==='销项'?'invoice_receivable':'invoice_payable',title:(i.direction==='销项'?'销项发票':'进项发票')+'登记于 '+d+'（'+i.number+'）',refId:'inv_'+i.id,due:d,status:0,createdAt:now()});added++;
     }
   });
   if(added)saveList('reminders',rems);
@@ -701,28 +866,75 @@ function renderPartnerTable(kind){
   if(!list.length){el.innerHTML='<div class="blank">暂无'+title+'数据，点击右上角「新增'+title+'」开始录入</div>';return}
   el.innerHTML=`<table class="tbl"><thead><tr>
     <th style="width:28px"><input type="checkbox" onchange="toggleAllPt(this,'${kind}')"></th>
-    <th>编码</th><th>${title}名称</th><th>分类</th><th>联系人</th><th>电话</th><th>地址</th><th>跟进</th><th>创建时间</th><th style="width:170px">操作</th></tr></thead><tbody>
-    ${list.map(p=>`<tr>
+    <th>编码</th><th>${title}名称</th><th>分类</th><th>联系人</th><th>电话</th><th>地址</th><th class="num">关联合同</th><th>跟进</th><th>创建时间</th><th style="width:210px">操作</th></tr></thead><tbody>
+    ${list.map(p=>{const cons=scopeList('contracts').filter(c=>c.partnerId===p.id);const conAmt=cons.reduce((s,c)=>s+moneyIn(c.amount),0);return `<tr>
       <td><input type="checkbox" class="ptchk" data-id="${p.id}"></td>
       <td class="muted">${esc(p.code)}</td>
-      <td class="strong">${esc(p.name)}</td>
+      <td class="strong" style="cursor:pointer;color:var(--brand)" onclick="openPartnerDetail('${kind}','${p.id}')">${esc(p.name)}</td>
       <td>${p.category?'<span class="tag info">'+esc(p.category)+'</span>':'<span class="tag gray">未分类</span>'}</td>
       <td>${esc(p.contact||'—')}</td>
       <td>${esc(p.phone||'—')}</td>
-      <td class="muted" style="max-width:180px;overflow:hidden;text-overflow:ellipsis">${esc(p.address||'')}</td>
+      <td class="muted" style="max-width:150px;overflow:hidden;text-overflow:ellipsis" title="${esc(p.address||'')}">${esc(p.address||'')}</td>
+      <td class="num" title="合同金额 ${fmtMoneyFull(conAmt)}">${cons.length?'<span class="strong" style="color:var(--brand)">'+cons.length+'</span><span class="muted" style="font-size:11px"> 份</span>':'<span class="tag gray">—</span>'}</td>
       <td>${(p.followUps||[]).length?('<span class="tag brand">'+p.followUps.length+' 条</span>'):'<span class="tag gray">无</span>'}</td>
       <td class="muted">${fmtDate(p.createdAt)}</td>
       <td class="ops">
+        <button class="btn sm ghost" onclick="openPartnerDetail('${kind}','${p.id}')" title="查看档案/关联合同/往来">${ICO.eye}详情</button>
         <button class="btn sm ghost" onclick="openPartnerFollow('${kind}','${p.id}')" title="跟进记录">${ICO.bell.replace('16','14')}跟进</button>
         <button class="btn sm ghost" onclick="openPartnerForm('${kind}','${p.id}')" title="编辑">${ICO.edit}编辑</button>
         <button class="btn sm ghost" onclick="delPartner('${kind}','${p.id}')" style="color:#d4382e" title="删除">${ICO.del}删除</button>
-      </td></tr>`).join('')}
+      </td></tr>`}).join('')}
   </tbody></table>
   <div style="padding:10px 14px;display:flex;align-items:center;gap:10px;font-size:12.5px;color:#5a6478">
     已选 <span id="ptSel_${kind}">0</span> 项
     <button class="btn sm bad" onclick="batchDelPartner('${kind}')">批量删除</button>
     <span class="sp"></span><span class="muted">共 ${list.length} 条</span>
   </div>`;
+}
+/* 客户/供应商详情：档案 + 关联合同 + 收付款往来 */
+function partnerStats(kind,id){
+  const isC=kind==='customer';const key=isC?'customers':'suppliers';
+  const p=scopeList(key).find(x=>x.id===id);if(!p)return null;
+  const cons=scopeList('contracts').filter(c=>c.partnerId===id);
+  const bills=scopeList('fundBills').filter(b=>b.partnerId===id);
+  const invs=scopeList('invoices').filter(i=>i.partnerId===id);
+  const conAmt=cons.reduce((s,c)=>s+moneyIn(c.amount),0);
+  const got=bills.filter(b=>b.kind==='收款').reduce((s,b)=>s+moneyIn(b.amount),0);
+  const paid=bills.filter(b=>b.kind==='付款').reduce((s,b)=>s+moneyIn(b.amount),0);
+  const invOut=invs.filter(i=>i.direction==='销项').reduce((s,i)=>s+moneyIn(i.amount),0);
+  const invIn=invs.filter(i=>i.direction==='进项').reduce((s,i)=>s+moneyIn(i.amount),0);
+  return {p,cons,bills,invs,conAmt,got,paid,invOut,invIn};
+}
+function openPartnerDetail(kind,id){
+  const s=partnerStats(kind,id);if(!s)return;
+  const {p,cons,bills,invs}=s;const isC=kind==='customer';
+  const title=isC?'客户':'供应商';
+  const recvMoney=isC?bills.filter(b=>b.kind==='收款').reduce((x,b)=>x+moneyIn(b.amount),0):bills.filter(b=>b.kind==='付款').reduce((x,b)=>x+moneyIn(b.amount),0);
+  const kv=`<div class="kv">
+    <div class="it"><div class="k">编码</div><div class="v">${esc(p.code||'—')}</div></div>
+    <div class="it"><div class="k">名称</div><div class="v"><strong>${esc(p.name)}</strong></div></div>
+    <div class="it"><div class="k">分类</div><div class="v">${p.category?esc(p.category):'—'}</div></div>
+    <div class="it"><div class="k">联系人</div><div class="v">${esc(p.contact||'—')}</div></div>
+    <div class="it"><div class="k">电话</div><div class="v">${esc(p.phone||'—')}</div></div>
+    <div class="it"><div class="k">邮箱</div><div class="v">${esc(p.email||'—')}</div></div>
+    <div class="it"><div class="k">地址</div><div class="v">${esc(p.address||'—')}</div></div>
+    <div class="it"><div class="k">税号</div><div class="v">${esc(p.taxNo||'—')}</div></div>
+    <div class="it"><div class="k">开户行</div><div class="v">${esc(p.bank||'—')}</div></div>
+    <div class="it"><div class="k">账号</div><div class="v">${esc(p.bankAccount||'—')}</div></div>
+  </div>`;
+  const followHtml=(p.followUps||[]).length?`<div style="font-weight:500;margin:12px 0 6px">最近跟进</div>${(p.followUps||[]).slice(0,3).map(f=>`<div style="border:1px solid #eef1f6;border-radius:8px;padding:8px 10px;margin-bottom:6px;font-size:12.5px"><span class="tag info">${esc(f.type||'')}</span><span class="muted" style="margin-left:6px">${esc(f.date||'')}</span><div style="margin-top:3px">${esc(f.content)}</div></div>`).join('')}`:'';
+  const consHtml=cons.length?`<div style="font-weight:500;margin:12px 0 6px">关联合同（${cons.length} 份 · 金额 ${fmtMoneyFull(s.conAmt)}）</div><div class="tbl-wrap"><table class="tbl" style="font-size:12.5px"><thead><tr><th>编号</th><th>名称</th><th>方向</th><th class="num">金额</th><th class="num">${isC?'已收':'已付'}</th><th>状态</th></tr></thead><tbody>${cons.map(c=>{const m=conMoney(c);return `<tr style="cursor:pointer" onclick="closeDrawer();openConDetail('${c.id}')"><td class="muted">${esc(c.number)}</td><td>${esc(c.name)}</td><td>${dirTag(c.direction)}</td><td class="num">${fmtMoneyFull(c.amount)}</td><td class="num">${fmtMoneyFull(isRecvCon(c)?m.got:m.paid)}</td><td>${stTag(c.status)}</td></tr>`}).join('')}</tbody></table></div>`:'';
+  const billsHtml=bills.length?`<div style="font-weight:500;margin:12px 0 6px">收付款往来（${bills.length} 笔）</div><div class="tbl-wrap"><table class="tbl" style="font-size:12.5px"><thead><tr><th>单号</th><th>类型</th><th>日期</th><th class="num">金额</th><th>方式</th><th>账户</th></tr></thead><tbody>${bills.map(b=>`<tr><td class="muted">${esc(b.number)}</td><td>${b.kind==='收款'?'<span class="tag brand">收款</span>':'<span class="tag warn">付款</span>'}</td><td>${fmtDate(b.date)}</td><td class="num">${fmtMoneyFull(b.amount)}</td><td>${esc(b.method||'—')}</td><td>${esc(b.accountName||'—')}</td></tr>`).join('')}</tbody></table></div>`:'';
+  openDrawer(title+'档案 · '+p.name,`
+    <div class="st3">
+      ${statCard('关联合同',cons.length+' 份',fmtMoneyFull(s.conAmt),'#3d5ee8',ICO.contract)}
+      ${statCard(isC?'累计已收款':'累计已付款',fmtMoneyFull(isC?s.got:s.paid),'','#129b5a',ICO.ok)}
+      ${statCard('发票',invs.length+' 张',(isC?'销项开票 ':'进项收票 ')+fmtMoneyFull(isC?s.invOut:s.invIn),'#0e7490',ICO.invoice)}
+    </div>
+    <div class="card" style="margin:0"><div class="bd">${kv}</div></div>
+    ${followHtml}${consHtml}${billsHtml}
+    ${canWrite()?`<div style="display:flex;gap:8px;margin-top:14px"><button class="btn pri sm" onclick="openConForm()">${ICO.plus} 新增合同</button><button class="btn sm" onclick="openPartnerFollow('${kind}','${p.id}')">${ICO.bell.replace('16','14')} 添加跟进</button><button class="btn sm" onclick="openPartnerForm('${kind}','${p.id}')">${ICO.edit} 编辑档案</button></div>`:''}
+  `);
 }
 function toggleAllPt(ck,kind){document.querySelectorAll('#ptList_'+kind+' .ptchk').forEach(c=>c.checked=ck.checked);$('ptSel_'+kind).textContent=ck.checked?document.querySelectorAll('#ptList_'+kind+' .ptchk').length:0}
 function selectedPt(kind){return Array.from(document.querySelectorAll('#ptList_'+kind+' .ptchk')).filter(c=>c.checked).map(c=>c.dataset.id)}
@@ -854,13 +1066,14 @@ function conState(){STATE.con=STATE.con||{};return STATE.con}
 PAGES.contract=function(){
   const st=conState();st.dir=st.dir||'应收';
   return `
+  <div id="conTop"></div>
   <div class="card">
     <div style="padding:12px 14px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
       <div class="seg">
         <button class="${st.dir==='应收'?'on':''}" onclick="setConDir('应收')">应收合同</button>
         <button class="${st.dir==='应付'?'on':''}" onclick="setConDir('应付')">应付合同</button>
       </div>
-      <div style="font-size:12.5px;color:#9aa3b5" id="conSummary"></div>
+      <span style="font-size:12.5px;color:#9aa3b5" id="conSub"></span>
     </div>
     <div class="filter">
       <input class="inp" id="conKw" placeholder="搜索合同编号 / 名称 / 往来单位 / 负责人" value="${esc(st.kw||'')}" style="min-width:230px">
@@ -868,6 +1081,7 @@ PAGES.contract=function(){
       <select class="inp" id="conArch"><option value="">归档：全部</option><option value="0" ${st.arch==='0'?'selected':''}>未归档</option><option value="1" ${st.arch==='1'?'selected':''}>已归档</option></select>
       <select class="inp" id="conType"><option value="">全部类型</option>${contractTypesOf(st.dir).map(t=>`<option value="${esc(t.name)}">${esc(t.name)}</option>`).join('')}</select>
       <span class="sp"></span>
+      <button class="btn" onclick="openConImport()" title="按 CSV 模板批量导入">${ICO.upload} 导入</button>
       <button class="btn" onclick="exportContract()">${ICO.xls} 导出</button>
       <button class="btn pri" onclick="openConForm()">${ICO.plus} 新增${st.dir}合同</button>
     </div>
@@ -875,7 +1089,7 @@ PAGES.contract=function(){
   </div>`;
 };
 AFTER.contract=function(){bindConSearch();renderConList()}
-function setConDir(dir){conState().dir=dir;const ct=$('content');if(ct)ct.innerHTML=PAGES.contract();bindConSearch();renderConList()}
+function setConDir(dir){conState().dir=dir;const ct=$('content');if(ct)ct.innerHTML=PAGES.contract();bindConSearch();renderConList();syncNavState('contract',dir)}
 function contractTypesOf(dir){return dictGet('contractType').filter(t=>!t.direction||t.direction===dir)}
 function conFiltered(){
   const st=conState();
@@ -910,8 +1124,16 @@ function isRecvCon(c){return (c.direction||'应收')==='应收'}
 function renderConList(){
   const el=$('conList');if(!el)return;
   const st=conState();const list=conFiltered();
-  const sums=list.reduce((s,c)=>{const m=conMoney(c);const a=moneyIn(c.amount);if(isRecvCon(c)){s.amt+=a;s.pro+=m.got}else{s.amt+=a;s.pro+=m.paid}return s},{amt:0,pro:0});
-  $('conSummary').textContent='共 '+list.length+' 份 · 合同金额合计 '+fmtMoney(sums.amt)+' · 已收付 '+fmtMoney(sums.pro);
+  const sums=list.reduce((s,c)=>{const m=conMoney(c);const a=moneyIn(c.amount);if(isRecvCon(c)){s.amt+=a;s.pro+=m.got;s.left+=a-m.got}else{s.amt+=a;s.pro+=m.paid;s.left+=a-m.paid}return s},{amt:0,pro:0,left:0});
+  const top=$('conTop');
+  if(top){const amt=sums.amt,rate=amt?(sums.pro/amt*100):0;
+    top.innerHTML=`<div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr));margin-top:2px">
+      ${statCard(st.dir==='应收'?'应收合同金额':'应付合同金额',fmtMoneyFull(amt),list.length+' 份','#3d5ee8',ICO.contract)}
+      ${statCard(st.dir==='应收'?'累计已收款':'累计已付款',fmtMoneyFull(sums.pro),'收付进度 '+rate.toFixed(1)+'%','#129b5a',ICO.ok)}
+      ${statCard(st.dir==='应收'?'待收款余额':'待付款余额',fmtMoneyFull(Math.max(0,sums.left)),'','#c47b0a',ICO.bell)}
+    </div>`;
+  }
+  const sub=$('conSub');if(sub)sub.textContent='共 '+list.length+' 份';
   if(!list.length){el.innerHTML='<div class="blank">暂无'+st.dir+'合同</div>';return}
   const recv=st.dir==='应收';
   el.innerHTML=`<table class="tbl"><thead><tr>
@@ -947,6 +1169,9 @@ function openConForm(id){
   const types=contractTypesOf(dir);
   const r=(c&&c.taxRate!=null)?c.taxRate:0.13;
   const CON_EDITING=id||null;
+  const fv=(v)=>esc(v||'');
+  const defPartyA=(c&&c.partyA)?c.partyA:((curCompany()||{}).name||'');
+  const payPct=(c&&c.payPercent!=null)?String(c.payPercent):'';
   openModal(`<div class="form-grid">
     <div class="fg"><label>合同编号</label><div class="two"><input class="inp" id="co_num" value="${esc(c?c.number:nextNum(rulePrefix('contract')))}"><button class="btn sm" onclick="$('co_num').value=genConNum()">自动</button></div></div>
     <div class="fg"><label>合同名称<i>*</i></label><input class="inp" id="co_name" value="${esc(c?c.name:'')}" placeholder="如：年度框架采购合同"></div>
@@ -954,18 +1179,25 @@ function openConForm(id){
     <div class="fg"><label>${dir==='应收'?'客户':'供应商'}单位<i>*</i></label><select class="inp" id="co_partner">${partners.map(p=>`<option value="${p.id}" ${c&&c.partnerId===p.id?'selected':''}>${esc(p.name)}</option>`).join('')||'<option value="">暂无往来单位，请先到客户/供应商模块添加</option>'}</select></div>
     <div class="fg"><label>合同类型</label><select class="inp" id="co_type">${types.map(t=>`<option ${c&&c.typeName===t.name?'selected':''}>${esc(t.name)}</option>`).join('')||'<option>其他</option>'}</select></div>
     <div class="fg"><label>合同状态</label><select class="inp" id="co_status">${CONTRACT_STATUS.map(s=>`<option value="${s}" ${c&&c.status===s?'selected':''}>${fmtStatus(s)}</option>`).join('')}</select></div>
-    <div class="fg"><label>负责人</label><input class="inp" id="co_manager" value="${esc(c?c.manager||'':'')}" placeholder="合同经办人"></div>
-    <div class="fg"><label>所属部门</label><input class="inp" id="co_dept" value="${esc(c?c.dept||'':'')}" placeholder="如：销售部"></div>
+    <div class="fg"><label>负责人</label><input class="inp" id="co_manager" value="${fv(c&&c.manager)}" placeholder="合同经办人"></div>
+    <div class="fg"><label>业务员</label><input class="inp" id="co_salesman" value="${fv(c&&c.salesman)}" placeholder="业务跟进人员"></div>
+    <div class="fg"><label>所属部门</label><input class="inp" id="co_dept" value="${fv(c&&c.dept)}" placeholder="如：销售部"></div>
+    <div class="fg"><label>甲方（我方）</label><input class="inp" id="co_partyA" value="${fv(defPartyA)}" placeholder="我方签约主体"></div>
+    <div class="fg"><label>乙方（对方）</label><input class="inp" id="co_partyB" value="${fv(c&&c.partyB)}" placeholder="对方签约主体（空则取往来单位）"></div>
+    <div class="fg"><label>区域 / 地区</label><input class="inp" id="co_region" value="${fv(c&&c.region)}" placeholder="如：华东区"></div>
     <div class="fg"><label>签订日期</label><input class="inp" type="date" id="co_signd" value="${c&&c.signDate?c.signDate.slice(0,10):''}"></div>
     <div class="fg"><label>开始日期</label><input class="inp" type="date" id="co_start" value="${c&&c.startDate?c.startDate.slice(0,10):''}"></div>
     <div class="fg"><label>结束日期</label><input class="inp" type="date" id="co_end" value="${c&&c.endDate?c.endDate.slice(0,10):''}"></div>
+    <div class="fg"><label>交货/到货日期</label><input class="inp" type="date" id="co_deliver" value="${c&&c.deliverDate?c.deliverDate.slice(0,10):''}"></div>
+    <div class="fg full"><label>合同地址 / 交货地点</label><input class="inp" id="co_address" value="${esc(c?c.address||'':'')}" placeholder="项目/交货/服务地点"></div>
     <div class="fg"><label>合同金额（含税）<i>*</i></label><div class="two"><input class="inp num" id="co_amount" type="number" min="0" step="0.01" value="${c?c.amount:''}" placeholder="0.00" oninput="coTaxSync()"><button class="btn sm" onclick="coSumItems()" title="按明细合计">按明细</button></div></div>
     <div class="fg"><label>税率</label><select class="inp" id="co_tax" onchange="coTaxSync()"><option value="0">0%</option><option value="0.03" ${r===0.03?'selected':''}>3%</option><option value="0.06" ${r===0.06?'selected':''}>6%</option><option value="0.09" ${r===0.09?'selected':''}>9%</option><option value="0.13" ${r===0.13?'selected':''}>13%</option><option value="0.16" ${r===0.16?'selected':''}>16%</option></select></div>
     <div class="fg"><label>不含税金额</label><input class="inp num" id="co_taxexcl" readonly value="${c?moneyStr(c.taxExcl||0):'0.00'}"></div>
-    <div class="fg"><label>税额</label><input class="inp num" id="co_tax" readonly value="${c?moneyStr(c.tax||0):'0.00'}"></div>
+    <div class="fg"><label>税额</label><input class="inp num" id="co_taxv" readonly value="${c?moneyStr(c.tax||0):'0.00'}"></div>
     <div class="fg"><label>计价方式</label><select class="inp" id="co_price"><option value="固定总价" ${c&&c.pricingType==='固定总价'?'selected':''}>固定总价</option><option value="按实结算" ${c&&c.pricingType==='按实结算'?'selected':''}>按实结算</option></select></div>
-    <div class="fg full"><label>合同条款 / 付款约定</label><textarea class="inp" id="co_terms" placeholder="主要条款、付款比例、质保等">${esc(c?c.terms||'':'')}</textarea></div>
-    <div class="fg full"><label>备注</label><input class="inp" id="co_remark" value="${esc(c?c.remark||'':'')}"></div>
+    <div class="fg"><label>收款/付款约定比例(%)</label><input class="inp num" id="co_paypct" value="${fv(payPct)}" placeholder="如 30"></div>
+    <div class="fg full"><label>合同条款 / 付款约定</label><textarea class="inp" id="co_terms" placeholder="主要条款、付款比例、质保等">${fv(c&&c.terms)}</textarea></div>
+    <div class="fg full"><label>备注</label><input class="inp" id="co_remark" value="${fv(c&&c.remark)}"></div>
     <div class="fg full"><label>合同明细（可选）</label>
       <table class="mini-tbl" id="ciTbl"><thead><tr><th style="width:26px"></th><th>名称</th><th style="width:70px">数量</th><th style="width:90px">单价</th><th style="width:90px">税率</th><th style="width:120px">金额</th></tr></thead><tbody id="ciBody"></tbody></table>
       <button class="btn sm ghost" style="margin-top:6px" onclick="addCiRow()">+ 添加明细行</button>
@@ -1000,7 +1232,7 @@ function saveConForm(id){
   const r=parseFloat($('co_tax').value)||0;
   const t=taxCalc(amount,r);
   const items=[];document.querySelectorAll('#ciBody tr').forEach(tr=>{const c=tr.children;const nm=c[1].querySelector('input').value.trim();const q=parseFloat(c[2].querySelector('input').value)||0,p=parseFloat(c[3].querySelector('input').value)||0,rt=parseFloat(c[4].querySelector('input').value)||0;const amt=parseFloat(c[5].querySelector('input').value)||0;if(nm)items.push({name:nm,qty:q,price:p,taxRate:rt,amount:amt})});
-  const data={number:$('co_num').value.trim(),name,direction:dir,typeName:$('co_type').value,status:$('co_status').value,partnerId,partnerName:partnerName.name||'',manager:$('co_manager').value.trim(),dept:$('co_dept').value.trim(),signDate:$('co_signd').value,startDate:$('co_start').value,endDate:$('co_end').value,amount,taxRate:r,taxExcl:t.taxExcl,tax:t.tax,pricingType:$('co_price').value,terms:$('co_terms').value.trim(),remark:$('co_remark').value.trim(),items};
+  const data={number:$('co_num').value.trim(),name,direction:dir,typeName:$('co_type').value,status:$('co_status').value,partnerId,partnerName:partnerName.name||'',manager:$('co_manager').value.trim(),salesman:$('co_salesman').value.trim(),dept:$('co_dept').value.trim(),partyA:$('co_partyA').value.trim(),partyB:$('co_partyB').value.trim(),region:$('co_region').value.trim(),address:$('co_address').value.trim(),deliverDate:$('co_deliver').value,signDate:$('co_signd').value,startDate:$('co_start').value,endDate:$('co_end').value,amount,taxRate:r,taxExcl:t.taxExcl,tax:t.tax,pricingType:$('co_price').value,payPercent:parseFloat($('co_paypct').value)||0,terms:$('co_terms').value.trim(),remark:$('co_remark').value.trim(),items};
   const list=scopeList('contracts');
   if(id){list.forEach(x=>{if(x.id===id)Object.assign(x,data)})}
   else{list.unshift(Object.assign({id:uid(),companyId:curCompanyId(),archive:0,atts:[],createdAt:now()},data))}
@@ -1033,11 +1265,16 @@ function openConDetail(id){
     <div class="it"><div class="k">合同名称</div><div class="v"><strong>${esc(c.name)}</strong></div></div>
     <div class="it"><div class="k">方向 / 状态</div><div class="v">${dirTag(c.direction)} ${stTag(c.status)} ${archTag(c.archive)}</div></div>
     <div class="it"><div class="k">${recv?'客户':'供应商'}</div><div class="v">${esc(c.partnerName||'—')}</div></div>
+    <div class="it"><div class="k">甲方 / 乙方</div><div class="v">${esc(c.partyA||'—')} / ${esc(c.partyB||c.partnerName||'—')}</div></div>
     <div class="it"><div class="k">类型 / 计价</div><div class="v">${esc(c.typeName||'—')} · ${esc(c.pricingType||'固定总价')}</div></div>
-    <div class="it"><div class="k">负责人 / 部门</div><div class="v">${esc(c.manager||'—')} / ${esc(c.dept||'—')}</div></div>
+    <div class="it"><div class="k">负责人 / 业务员</div><div class="v">${esc(c.manager||'—')} / ${esc(c.salesman||'—')}</div></div>
+    <div class="it"><div class="k">部门 / 区域</div><div class="v">${esc(c.dept||'—')} / ${esc(c.region||'—')}</div></div>
     <div class="it"><div class="k">签订日期</div><div class="v">${fmtDate(c.signDate)}</div></div>
     <div class="it"><div class="k">合同期限</div><div class="v">${fmtDate(c.startDate)} 至 ${fmtDate(c.endDate)}${conExpireTag(c.endDate)}</div></div>
+    <div class="it"><div class="k">交货/到货</div><div class="v">${fmtDate(c.deliverDate)}</div></div>
+    <div class="it full" style="grid-column:1/-1"><div class="k">交货地点</div><div class="v">${esc(c.address||'—')}</div></div>
     <div class="it"><div class="k">税率</div><div class="v">${(Number(c.taxRate)*100||0)}%</div></div>
+    <div class="it"><div class="k">约定收款/付款比例</div><div class="v">${c.payPercent!=null?c.payPercent+'%':'—'}</div></div>
     <div class="it"><div class="k">不含税 / 税额</div><div class="v">${fmtMoneyFull(c.taxExcl)} / ${fmtMoneyFull(c.tax)}</div></div>
     <div class="it full" style="grid-column:1/-1"><div class="k">条款</div><div class="v" style="white-space:pre-wrap">${esc(c.terms||'无')}</div></div>
     <div class="it full" style="grid-column:1/-1"><div class="k">备注</div><div class="v">${esc(c.remark||'无')}</div></div>
@@ -1124,7 +1361,43 @@ function exportContract(){
     list.map(c=>[c.number,c.name,c.direction,c.partnerName,c.typeName,c.manager,c.signDate,c.startDate,c.endDate,c.amount,c.taxExcl,c.taxRate,fmtStatus(c.status),c.archive?'是':'否',c.terms,c.remark]));
   toast('已导出 '+list.length+' 条');
 }
-function openConImport(){toast('合同 Excel 导入：请先使用「导出」模板填写后导入（开发中，可先使用 CSV 客户/供应商导入）','warn')}
+/* 合同 CSV 导入（模板与「导出」一致：编号,名称,方向,往来单位,类型,负责人,签订,开始,结束,金额,税率,状态,归档,条款,备注） */
+function openConImport(){
+  if(!requireLic())return;
+  openModal(`<div style="font-size:13px">
+    <div class="dropzone" onclick="$('ciFile').click()">${ICO.upload} 点击选择 CSV 文件<div class="hint">表头：编号,名称,方向,往来单位,类型,负责人,签订日期,开始日期,结束日期,金额,税率,状态,备注</div></div>
+    <input type="file" id="ciFile" accept=".csv,text/csv" style="display:none" onchange="importConFile(this)">
+    <div class="hint" style="margin-top:10px">方向填「应收/应付」；往来单位需与客户/供应商档案名称一致；税率如 0.13；状态填 未签订/已签订/已完成/已终止。也可先列表页「导出」获得模板再填写。</div>
+    <div id="ciMsg"></div>
+  </div>`,{title:'导入合同（CSV）',footer:[{t:'关闭',x:closeModal}]});
+}
+function importConFile(inp){
+  const f=inp.files[0];if(!f)return;
+  readFileText(f,txt=>{
+    const lines=txt.replace(/^\ufeff/,'').split(/\r?\n/).filter(l=>l.trim());
+    let ok=0,fail=0,errs=[];
+    const list=scopeList('contracts');
+    lines.forEach((ln,idx)=>{
+      if(idx===0&&ln.includes('名称'))return;
+      const cols=parseCsvLine(ln);
+      const name=(cols[1]||'').trim();
+      const dir=(cols[2]||'应收').trim()==='应付'?'应付':'应收';
+      if(!name){fail++;return}
+      const partnerName=(cols[3]||'').trim();
+      const partner=scopeList(dir==='应收'?'customers':'suppliers').find(p=>p.name===partnerName)||{};
+      const amount=moneyIn(cols[9]);
+      const taxRate=parseFloat(cols[10]);const r=isFinite(taxRate)?taxRate:0.13;
+      const t=taxCalc(amount,r);
+      const stMap={未签订:'unsigned',已签订:'signed',已完成:'done',已终止:'stopped'};
+      const status=stMap[(cols[11]||'').trim()]||'unsigned';
+      list.unshift({id:uid(),companyId:curCompanyId(),number:(cols[0]||'').trim()||nextNum(rulePrefix('contract')),name,direction:dir,typeName:(cols[4]||'').trim()||'其他',partnerId:partner.id||null,partnerName:partnerName||'',manager:(cols[5]||'').trim(),signDate:(cols[6]||'').trim(),startDate:(cols[7]||'').trim(),endDate:(cols[8]||'').trim(),amount,taxRate:r,taxExcl:t.taxExcl,tax:t.tax,status,archive:0,terms:(cols[12]||'').trim(),remark:(cols[13]||'').trim()||'',items:[],atts:[],createdAt:now()});
+      ok++;
+    });
+    saveScoped('contracts',list);
+    const m=$('ciMsg');if(m)m.innerHTML='<div class="msg ok">导入完成：成功 '+ok+' 条'+(fail?'，失败 '+fail+' 条':'')+'</div>';
+    addLog('导入合同','成功 '+ok+' 条');renderConList();genReminders();toast('导入完成 '+ok+' 条');
+  });
+}
 
 /* ==== 07_p_invoice_fund.js ==== */
 /* ================= 07 发票管理 + 资金管理 ================= */
@@ -1132,6 +1405,7 @@ function invState(){STATE.inv=STATE.inv||{};return STATE.inv}
 PAGES.invoice=function(){
   const st=invState();st.dir=st.dir||'销项';
   return `
+  <div id="invTop"></div>
   <div class="card">
     <div style="padding:12px 14px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
       <div class="seg">
@@ -1142,7 +1416,9 @@ PAGES.invoice=function(){
     </div>
     <div class="filter">
       <input class="inp" id="invKw" placeholder="搜索号码 / 往来单位 / 合同 / 代码" value="${esc(st.kw||'')}" style="min-width:210px">
+      <select class="inp" id="invTypeF"><option value="">全部种类</option>${dictGet('invoiceType').map(t=>`<option ${st.type===t?'selected':''}>${esc(t)}</option>`).join('')}</select>
       <span class="sp"></span>
+      <button class="btn" onclick="openInvImport()" title="按 CSV 模板批量导入">${ICO.upload} 导入</button>
       <button class="btn" onclick="exportInvoice()">${ICO.xls} 导出</button>
       <button class="btn pri" onclick="openInvoiceForm({})">${ICO.plus} 登记${st.dir}发票</button>
     </div>
@@ -1150,24 +1426,43 @@ PAGES.invoice=function(){
   </div>`;
 };
 AFTER.invoice=function(){bindInvSearch();renderInvList()}
-function setInvDir(d){invState().dir=d;renderInvList();}
+function setInvDir(d){invState().dir=d;renderInvList();syncNavState('invoice',d)}
 function invFiltered(){
   const st=invState();const kw=(st.kw||'').toLowerCase();
   let list=scopeList('invoices').filter(i=>i.direction===st.dir);
   if(kw)list=list.filter(i=>(i.number||'').includes(kw)||(i.code||'').toLowerCase().includes(kw)||(i.partnerName||'').toLowerCase().includes(kw)||(i.contractNumber||'').toLowerCase().includes(kw));
   return list.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
 }
-function bindInvSearch(){const kw=$('invKw');if(!kw)return;kw.oninput=debounce(function(){invState().kw=kw.value;renderInvList()},250)}
+function bindInvSearch(){
+  const kw=$('invKw');if(!kw)return;
+  kw.oninput=debounce(function(){invState().kw=kw.value;renderInvList()},250);
+  const tf=$('invTypeF');if(tf)tf.onchange=function(){invState().type=tf.value||'';renderInvList()};
+}
+function invFiltered2(){
+  const st=invState();
+  let list=invFiltered();
+  if(st.type)list=list.filter(i=>i.type===st.type);
+  return list;
+}
 function renderInvList(){
   const el=$('invList');if(!el)return;
-  const st=invState();const list=invFiltered();
+  const st=invState();const list=invFiltered2();
   const sum=list.reduce((s,i)=>s+moneyIn(i.amount),0);const tax=list.reduce((s,i)=>s+moneyIn(i.tax),0);
   $('invCnt').textContent=list.length;
+  const top=$('invTop');
+  if(top){const blue=list.filter(i=>!i.rz||i.rz==='蓝字').length;const red=list.length-blue;
+    top.innerHTML=`<div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(170px,1fr));margin-top:2px">
+      ${statCard(st.dir==='销项'?'销项开票合计':'进项收票合计',fmtMoneyFull(sum),list.length+' 张','#3d5ee8',ICO.invoice)}
+      ${statCard('税额合计',fmtMoneyFull(tax),'','#c47b0a',ICO.doc)}
+      ${statCard('票面标识','蓝字 '+blue+' 张','红字 '+red+' 张','#5a6478',ICO.info)}
+    </div>`;
+  }
   if(!list.length){el.innerHTML='<div class="blank">暂无'+st.dir+'发票记录</div>';return}
-  el.innerHTML=`<table class="tbl"><thead><tr><th>发票号码</th><th>类型</th><th>日期</th><th>往来单位</th><th>关联合同</th><th class="num">价税合计</th><th class="num">金额</th><th class="num">税额</th><th>税率</th><th style="width:100px">操作</th></tr></thead><tbody>
+  el.innerHTML=`<table class="tbl"><thead><tr><th>发票号码</th><th>类型</th><th>标识</th><th>日期</th><th>往来单位</th><th>关联合同</th><th class="num">价税合计</th><th class="num">金额</th><th class="num">税额</th><th>税率</th><th style="width:120px">操作</th></tr></thead><tbody>
     ${list.map(i=>`<tr>
       <td class="strong">${esc(i.number)}<div class="muted" style="font-size:11.5px">${esc(i.code||'')}</div></td>
       <td>${i.type?esc(i.type):'—'}</td>
+      <td>${i.rz==='红字'?'<span class="tag bad">红字</span>':'<span class="tag info">蓝字</span>'}</td>
       <td class="muted">${fmtDate(i.date)}</td>
       <td>${esc(i.partnerName||'—')}</td>
       <td class="muted">${esc(i.contractNumber||'—')}</td>
@@ -1175,7 +1470,7 @@ function renderInvList(){
       <td class="num muted">${fmtMoneyFull(i.taxExcl)}</td>
       <td class="num">${fmtMoneyFull(i.tax)}</td>
       <td class="muted">${Number(i.taxRate)*100||0}%</td>
-      <td class="ops"><button class="btn sm ghost" onclick="openInvoiceForm({id:'${i.id}'})">${ICO.edit}编辑</button><button class="btn sm ghost" style="color:#d4382e" onclick="delInvoice('${i.id}')">${ICO.del}</button></td>
+      <td class="ops"><button class="btn sm ghost" onclick="openInvoiceDetail('${i.id}')">${ICO.eye}详情</button><button class="btn sm ghost" onclick="openInvoiceForm({id:'${i.id}'})">${ICO.edit}编辑</button><button class="btn sm ghost" style="color:#d4382e" onclick="delInvoice('${i.id}')">${ICO.del}</button></td>
     </tr>`).join('')}
   </tbody></table>
   <div style="padding:10px 14px;font-size:12.5px;color:#5a6478">价税合计 <span class="money">${fmtMoneyFull(sum)}</span> · 税额 <span class="money">${fmtMoneyFull(tax)}</span>（共 ${list.length} 张）</div>`;
@@ -1193,21 +1488,71 @@ function openInvoiceForm(def){
   const cons=scopeList('contracts').filter(c=>c.direction===(dir==='销项'?'应收':'应付'));
   const partners=scopeList(dir==='销项'?'customers':'suppliers');
   const r=(i&&i.taxRate!=null)?i.taxRate:0.13;
+  const comp=curCompany();
+  const defBuyer=(dir==='销项'?comp:null);
+  const defSeller=(dir==='进项'?comp:null);
+  /* sv: 从发票对象取字段；缺省时从默认公司对象取字段；再缺省取兜底串 */
+  function sv(rec,f1,fb,f2){if(rec&&rec[f1]!=null&&rec[f1]!=='')return rec[f1];if(fb&&fb[f2]!=null&&fb[f2]!=='')return fb[f2];return rec&&rec[f1]?rec[f1]:''}
   openModal(`<div class="form-grid">
-    <div class="fg"><label>发票类型</label><select class="inp" id="iv_dir"><option value="销项" ${dir==='销项'?'selected':''}>销项（开给客户）</option><option value="进项" ${dir==='进项'?'selected':''}>进项（供应商开来）</option></select></div>
+    <div class="fg"><label>发票方向</label><select class="inp" id="iv_dir" onchange="ivDirChange()"><option value="销项" ${dir==='销项'?'selected':''}>销项（开给客户）</option><option value="进项" ${dir==='进项'?'selected':''}>进项（供应商开来）</option></select></div>
     <div class="fg"><label>发票种类</label><select class="inp" id="iv_type">${dictGet('invoiceType').map(t=>`<option ${i&&i.type===t?'selected':''}>${esc(t)}</option>`).join('')||'<option>增值税专用发票</option><option>增值税普通发票</option>'}</select></div>
+    <div class="fg"><label>票面标识</label><select class="inp" id="iv_rz"><option value="蓝字" ${!i||i.rz!=='红字'?'selected':''}>蓝字发票（正数）</option><option value="红字" ${i&&i.rz==='红字'?'selected':''}>红字发票（负数冲销）</option></select></div>
     <div class="fg"><label>发票号码<i>*</i></label><input class="inp" id="iv_number" value="${esc(i?i.number:'')}" placeholder="发票票面号码"></div>
     <div class="fg"><label>发票代码</label><input class="inp" id="iv_code" value="${esc(i?i.code:'')}" placeholder="（可不填）"></div>
     <div class="fg"><label>开票日期<i>*</i></label><input class="inp" type="date" id="iv_date" value="${i?(i.date||'').slice(0,10):today()}"></div>
-    <div class="fg"><label>往来单位</label><select class="inp" id="iv_partner"><option value="">— 不关联 —</option>${partners.map(p=>`<option value="${p.id}" ${i&&i.partnerId===p.id?'selected':''}>${esc(p.name)}</option>`).join('')}</select></div>
+    <div class="fg"><label>往来单位</label><select class="inp" id="iv_partner" onchange="ivFillHead()"><option value="">— 不关联 —</option>${partners.map(p=>`<option value="${p.id}" ${i&&i.partnerId===p.id?'selected':''}>${esc(p.name)}</option>`).join('')}</select></div>
     <div class="fg"><label>关联合同</label><select class="inp" id="iv_con"><option value="">— 不关联 —</option>${cons.map(c=>`<option value="${c.id}" ${i&&i.contractId===c.id?'selected':''}>${esc(c.number)} ${esc(c.name)}</option>`).join('')}</select></div>
     <div class="fg"><label>价税合计金额<i>*</i></label><input class="inp num" id="iv_amount" type="number" min="0" step="0.01" value="${i?i.amount:''}" placeholder="0.00" oninput="invTaxSync()"></div>
     <div class="fg"><label>税率</label><select class="inp" id="iv_tax" onchange="invTaxSync()"><option value="0">0%</option><option value="0.03" ${r===0.03?'selected':''}>3%</option><option value="0.06" ${r===0.06?'selected':''}>6%</option><option value="0.09" ${r===0.09?'selected':''}>9%</option><option value="0.13" ${r===0.13?'selected':''}>13%</option></select></div>
     <div class="fg"><label>金额（不含税）</label><input class="inp num" id="iv_tex" readonly value="${i?moneyStr(i.taxExcl||0):'0.00'}"></div>
     <div class="fg"><label>税额</label><input class="inp num" id="iv_taxv" readonly value="${i?moneyStr(i.tax||0):'0.00'}"></div>
-    <div class="fg full"><label>备注</label><input class="inp" id="iv_remark" value="${esc(i?i.remark||'':'')}"></div>
-  </div>`,{title:(i?'编辑':'登记')+dir+'发票',footer:[{t:'取消',c:'ghost',x:closeModal},{t:'保存',c:'pri',x:function(){saveInvoiceForm(i?i.id:null)}}]});
+    <div class="fg full"><div style="display:flex;align-items:center;gap:8px;margin:6px 0 2px"><span style="font-size:12.5px;color:var(--ink2);font-weight:500">购方（购买方抬头）</span><button class="btn sm ghost" onclick="ivSwap()" title="与我方公司抬头互换">⇅ 用我方公司</button></div></div>
+    <div class="fg"><label>购方名称</label><input class="inp" id="iv_bname" value="${esc(sv(i,'buyerName',defBuyer,'name'))}"></div>
+    <div class="fg"><label>购方税号</label><input class="inp" id="iv_btax" value="${esc(sv(i,'buyerTaxNo',defBuyer,'taxNo'))}"></div>
+    <div class="fg"><label>购方地址电话</label><input class="inp" id="iv_baddr" value="${esc(i?i.buyerAddress:'')}" placeholder="地址、电话"></div>
+    <div class="fg"><label>购方开户行及账号</label><input class="inp" id="iv_bbank" value="${esc(i?i.buyerBank:'')}" placeholder="开户行 账号"></div>
+    <div class="fg full"><div style="display:flex;align-items:center;gap:8px;margin:6px 0 2px"><span style="font-size:12.5px;color:var(--ink2);font-weight:500">销方（销售方抬头）</span><button class="btn sm ghost" onclick="ivSwap()">⇅ 用我方公司</button></div></div>
+    <div class="fg"><label>销方名称</label><input class="inp" id="iv_sname" value="${esc(sv(i,'sellerName',defSeller,'name'))}"></div>
+    <div class="fg"><label>销方税号</label><input class="inp" id="iv_stax" value="${esc(sv(i,'sellerTaxNo',defSeller,'taxNo'))}"></div>
+    <div class="fg"><label>销方地址电话</label><input class="inp" id="iv_saddr" value="${esc(i?i.sellerAddress:'')}" placeholder="地址、电话"></div>
+    <div class="fg"><label>销方开户行及账号</label><input class="inp" id="iv_sbank" value="${esc(i?i.sellerBank:'')}" placeholder="开户行 账号"></div>
+    <div class="fg full"><label>备注</label><input class="inp" id="iv_remark" value="${esc(i&&i.remark?i.remark:'')}"></div>
+  </div>`,{title:(i?'编辑':'登记')+dir+'发票',lg:true,footer:[{t:'取消',c:'ghost',x:closeModal},{t:'保存',c:'pri',x:function(){saveInvoiceForm(i?i.id:null)}}]});
   invTaxSync();
+}
+function ivSwap(){
+  const comp=curCompany();if(!comp){toast('请先在系统设置中完善本公司资料','warn');return}
+  if(!comp.taxNo&&!comp.address){toast('本公司未录入税号/地址，可到系统设置-公司管理中补充','warn')}
+  const dir=$('iv_dir').value;
+  if(dir==='销项'){ /* 销项：我方是销方 */
+    if(!$('iv_sname').value||confirmDlg2('覆盖销方抬头','销方抬头已有内容，是否用本公司资料覆盖？'))setHead($('iv_sname'),$('iv_stax'),$('iv_saddr'),$('iv_sbank'),comp);
+  }else{
+    if(!$('iv_bname').value||confirmDlg2('覆盖购方抬头','购方抬头已有内容，是否用本公司资料覆盖？'))setHead($('iv_bname'),$('iv_btax'),$('iv_baddr'),$('iv_bbank'),comp);
+  }
+}
+function setHead(nEl,tEl,aEl,bEl,comp){
+  if(nEl)nEl.value=comp.name||'';
+  if(tEl)tEl.value=comp.taxNo||'';
+  if(aEl)aEl.value=((comp.address||'')+' '+(comp.phone||'')).trim();
+  if(bEl)bEl.value=((comp.bank||'')+' '+(comp.bankAccount||'')).trim();
+}
+function ivFillHead(){
+  const pid=$('iv_partner').value;if(!pid)return;
+  const dir=$('iv_dir').value;const p=scopeList(dir==='销项'?'customers':'suppliers').find(x=>x.id===pid);if(!p)return;
+  const isOut=dir==='销项';
+  const b=isOut?$('iv_bname'):$('iv_sname'),t=isOut?$('iv_btax'):$('iv_stax'),a=isOut?$('iv_baddr'):$('iv_saddr'),bk=isOut?$('iv_bbank'):$('iv_sbank');
+  if(b&&!b.value){b.value=p.name||'';if(t)t.value=p.taxNo||'';if(a)a.value=(p.address||'')+' '+(p.phone||'');if(bk)bk.value=(p.bank||'')+' '+(p.bankAccount||'')}
+}
+function ivDirChange(){
+  const dir=$('iv_dir').value;
+  const cons=scopeList('contracts').filter(c=>c.direction===(dir==='销项'?'应收':'应付'));
+  const partners=scopeList(dir==='销项'?'customers':'suppliers');
+  const conSel=$('iv_con');if(conSel){conSel.innerHTML='<option value="">— 不关联 —</option>'+cons.map(c=>`<option value="${c.id}">${esc(c.number)} ${esc(c.name)}</option>`).join('')}
+  const ptSel=$('iv_partner');if(ptSel){ptSel.innerHTML='<option value="">— 不关联 —</option>'+partners.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join('')}
+  const comp=curCompany();if(comp){
+    if(dir==='销项'){const sn=$('iv_sname');if(sn&&!sn.value)setHead(sn,$('iv_stax'),$('iv_saddr'),$('iv_sbank'),comp)}
+    else{const bn=$('iv_bname');if(bn&&!bn.value)setHead(bn,$('iv_btax'),$('iv_baddr'),$('iv_bbank'),comp)}
+  }
 }
 function invTaxSync(){const a=parseFloat($('iv_amount').value)||0;const r=parseFloat($('iv_tax').value)||0;const t=taxCalc(a,r);$('iv_tex').value=moneyStr(t.taxExcl);$('iv_taxv').value=moneyStr(t.tax)}
 function saveInvoiceForm(id){
@@ -1218,43 +1563,142 @@ function saveInvoiceForm(id){
   const pid=$('iv_partner').value;const cid=$('iv_con').value;
   const pname=pid?(scopeList(dir==='销项'?'customers':'suppliers').find(p=>p.id===pid)||{}).name:'';
   const cnum=cid?(scopeList('contracts').find(c=>c.id===cid)||{}).number:'';
-  const data={direction:dir,type:$('iv_type').value,number,code:$('iv_code').value.trim(),date:$('iv_date').value,partnerId:pid||null,partnerName:pname,contractId:cid||null,contractNumber:cnum,amount,taxRate:r,taxExcl:t.taxExcl,tax:t.tax,remark:$('iv_remark').value.trim()};
+  const data={direction:dir,rz:$('iv_rz').value,type:$('iv_type').value,number,code:$('iv_code').value.trim(),date:$('iv_date').value,partnerId:pid||null,partnerName:pname,contractId:cid||null,contractNumber:cnum,amount,taxRate:r,taxExcl:t.taxExcl,tax:t.tax,
+    buyerName:$('iv_bname').value.trim(),buyerTaxNo:$('iv_btax').value.trim(),buyerAddress:$('iv_baddr').value.trim(),buyerBank:$('iv_bbank').value.trim(),
+    sellerName:$('iv_sname').value.trim(),sellerTaxNo:$('iv_stax').value.trim(),sellerAddress:$('iv_saddr').value.trim(),sellerBank:$('iv_sbank').value.trim(),
+    remark:$('iv_remark').value.trim()};
   const list=scopeList('invoices');
   if(id){list.forEach(x=>{if(x.id===id)Object.assign(x,data)})}else{list.unshift(Object.assign({id:uid(),companyId:curCompanyId(),createdAt:now()},data))}
   saveScoped('invoices',list);addLog((id?'编辑':'登记')+dir+'发票',number);closeModal();toast('保存成功');renderInvList();
 }
-function exportInvoice(){const list=invFiltered();exportCsv((invState().dir||'发票')+'记录.csv',['发票号码','代码','类型','方向','日期','往来单位','关联合同','价税合计','金额','税额','税率','备注'],list.map(i=>[i.number,i.code,i.type,i.direction,i.date,i.partnerName,i.contractNumber,i.amount,i.taxExcl,i.tax,i.taxRate,i.remark]));toast('已导出 '+list.length+' 张')}
+function openInvoiceDetail(id){
+  const i=scopeList('invoices').find(x=>x.id===id);if(!i)return;
+  const c=scopeList('contracts').find(x=>x.id===i.contractId);
+  openDrawer('发票详情 · '+i.number,`
+    <div class="kv">
+      <div class="it"><div class="k">发票号码</div><div class="v"><strong>${esc(i.number)}</strong></div></div>
+      <div class="it"><div class="k">代码 / 类型</div><div class="v">${esc(i.code||'—')} · ${esc(i.type||'—')} ${i.rz?esc(i.rz):'蓝字'}</div></div>
+      <div class="it"><div class="k">方向 / 日期</div><div class="v">${i.direction==='销项'?'<span class="tag brand">销项</span>':'<span class="tag warn">进项</span>'} ${fmtDate(i.date)}</div></div>
+      <div class="it"><div class="k">往来单位</div><div class="v">${esc(i.partnerName||'—')}</div></div>
+      <div class="it"><div class="k">关联合同</div><div class="v">${esc(i.contractNumber||'—')}${c?'（'+esc(c.name)+'）':''}</div></div>
+      <div class="it"><div class="k">价税合计</div><div class="v" style="color:#1c2433;font-weight:600">${fmtMoneyFull(i.amount)}</div></div>
+      <div class="it"><div class="k">金额 / 税额</div><div class="v">${fmtMoneyFull(i.taxExcl)} / ${fmtMoneyFull(i.tax)}（税率 ${Number(i.taxRate)*100}%）</div></div>
+    </div>
+    <div class="card" style="margin:12px 0 0"><div class="bd" style="padding:12px 14px">
+      <div style="font-weight:500;margin-bottom:8px">购方抬头</div>
+      <div style="font-size:12.5px;color:#5a6478;line-height:2">名称：${esc(i.buyerName||'—')}<br>税号：${esc(i.buyerTaxNo||'—')}<br>地址电话：${esc(i.buyerAddress||'—')}<br>开户行账号：${esc(i.buyerBank||'—')}</div>
+    </div></div>
+    <div class="card" style="margin:10px 0 0"><div class="bd" style="padding:12px 14px">
+      <div style="font-weight:500;margin-bottom:8px">销方抬头</div>
+      <div style="font-size:12.5px;color:#5a6478;line-height:2">名称：${esc(i.sellerName||'—')}<br>税号：${esc(i.sellerTaxNo||'—')}<br>地址电话：${esc(i.sellerAddress||'—')}<br>开户行账号：${esc(i.sellerBank||'—')}</div>
+    </div></div>
+    ${i.remark?`<div class="hint" style="margin-top:10px">备注：${esc(i.remark)}</div>`:''}
+  `);
+}
+function exportInvoice(){const list=invFiltered2();exportCsv((invState().dir||'发票')+'记录.csv',['发票号码','代码','类型','标识','方向','日期','往来单位','关联合同','价税合计','金额','税额','税率','购方','销方','备注'],list.map(i=>[i.number,i.code,i.type,i.rz||'蓝字',i.direction,i.date,i.partnerName,i.contractNumber,i.amount,i.taxExcl,i.tax,i.taxRate,i.buyerName,i.sellerName,i.remark]));toast('已导出 '+list.length+' 张')}
+/* 发票 CSV 导入：号码,代码,种类,方向,日期,往来单位,价税合计,税率,备注（种类如 增值税专用发票）*/
+function openInvImport(){
+  if(!requireLic())return;
+  openModal(`<div style="font-size:13px">
+    <div class="dropzone" onclick="$('ivFile').click()">${ICO.upload} 点击选择 CSV 文件<div class="hint">表头：发票号码,代码,种类,方向,日期,往来单位,价税合计,税率,备注</div></div>
+    <input type="file" id="ivFile" accept=".csv,text/csv" style="display:none" onchange="importInvFile(this)">
+    <div class="hint" style="margin-top:10px">方向填「销项/进项」；种类如「增值税专用发票」；税率如 0.13；往来单位需与档案名称一致。也可先「导出」获得模板。</div>
+    <div id="ivMsg"></div>
+  </div>`,{title:'导入发票（CSV）',footer:[{t:'关闭',x:closeModal}]});
+}
+function importInvFile(inp){
+  const f=inp.files[0];if(!f)return;
+  readFileText(f,txt=>{
+    const lines=txt.replace(/^\ufeff/,'').split(/\r?\n/).filter(l=>l.trim());
+    let ok=0,fail=0;
+    const list=scopeList('invoices');
+    lines.forEach((ln,idx)=>{
+      if(idx===0&&ln.includes('发票'))return;
+      const cols=parseCsvLine(ln);
+      const number=(cols[0]||'').trim();
+      const dir=(cols[3]||'销项').trim()==='进项'?'进项':'销项';
+      if(!number){fail++;return}
+      const partnerName=(cols[5]||'').trim();
+      const partner=scopeList(dir==='销项'?'customers':'suppliers').find(p=>p.name===partnerName)||{};
+      const amount=moneyIn(cols[6]);
+      const tr=parseFloat(cols[7]);const taxRate=isFinite(tr)?tr:0.13;
+      const t=taxCalc(amount,taxRate);
+      list.unshift({id:uid(),companyId:curCompanyId(),direction:dir,rz:'蓝字',type:(cols[2]||'').trim()||'增值税普通发票',number,code:(cols[1]||'').trim(),date:(cols[4]||'').trim()||today(),partnerId:partner.id||null,partnerName:partnerName||'',contractId:null,contractNumber:'',amount,taxRate,taxExcl:t.taxExcl,tax:t.tax,buyerName:'',buyerTaxNo:'',buyerAddress:'',buyerBank:'',sellerName:'',sellerTaxNo:'',sellerAddress:'',sellerBank:'',remark:(cols[8]||'').trim(),createdAt:now()});
+      ok++;
+    });
+    saveScoped('invoices',list);
+    const m=$('ivMsg');if(m)m.innerHTML='<div class="msg ok">导入完成：成功 '+ok+' 条'+(fail?'，失败 '+fail+' 条':'')+'</div>';
+    addLog('导入发票','成功 '+ok+' 条');renderInvList();toast('导入完成 '+ok+' 条');
+  });
+}
 
 /* ============ 资金管理 ============ */
 function fundState(){STATE.fund=STATE.fund||{};return STATE.fund}
 PAGES.fund=function(){
   const st=fundState();st.seg=st.seg||'收';
   return `
+  <div id="fundTop"></div>
   <div class="card">
     <div style="padding:12px 14px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
       <div class="seg" id="fundSeg">
-        <button class="${st.seg==='收'?'on':''}" onclick="setFundSeg('收')">收款记录</button>
-        <button class="${st.seg==='付'?'on':''}" onclick="setFundSeg('付')">付款记录</button>
-        <button class="${st.seg==='收他'?'on':''}" onclick="setFundSeg('收他')">其他收入</button>
-        <button class="${st.seg==='付他'?'on':''}" onclick="setFundSeg('付他')">其他支出</button>
-        <button class="${st.seg==='转'?'on':''}" onclick="setFundSeg('转')">资金转账</button>
+        <button data-seg="收" class="${st.seg==='收'?'on':''}" onclick="setFundSeg('收')">收款记录</button>
+        <button data-seg="付" class="${st.seg==='付'?'on':''}" onclick="setFundSeg('付')">付款记录</button>
+        <button data-seg="收他" class="${st.seg==='收他'?'on':''}" onclick="setFundSeg('收他')">其他收入</button>
+        <button data-seg="付他" class="${st.seg==='付他'?'on':''}" onclick="setFundSeg('付他')">其他支出</button>
+        <button data-seg="转" class="${st.seg==='转'?'on':''}" onclick="setFundSeg('转')">资金转账</button>
+        <button data-seg="账户" class="${st.seg==='账户'?'on':''}" onclick="setFundSeg('账户')">资金账户</button>
       </div>
-      <span style="margin-left:auto;display:flex;gap:8px;align-items:center">
-        <button class="btn sm ghost" onclick="openAccountMgr()">资金账户</button>
-      </span>
     </div>
-    <div class="filter">
-      <input class="inp" id="fdKw" placeholder="搜索单号 / 往来单位 / 合同 / 备注" value="${esc(st.kw||'')}" style="min-width:210px">
-      <span class="sp"></span>
-      <button class="btn" onclick="exportFund()">${ICO.xls} 导出</button>
-      <button class="btn pri" id="fdAddBtn" onclick="openFundAdd()">${ICO.plus} 新增</button>
-    </div>
+    <div class="filter" id="fdFilter"></div>
     <div id="fdList" class="tbl-wrap"></div>
   </div>`;
 };
-AFTER.fund=function(){bindFundSearch();renderFundList()}
-function setFundSeg(s){const st=fundState();st.seg=s;$('fundSeg').innerHTML=fundSegHtml();renderFundList()}
-function fundSegHtml(){const st=fundState();const def=[['收','收款记录'],['付','付款记录'],['收他','其他收入'],['付他','其他支出'],['转','资金转账']];return def.map(d=>`<button class="${st.seg===d[0]?'on':''}" onclick="setFundSeg('${d[0]}')">${d[1]}</button>`).join('')}
+AFTER.fund=function(){renderFundPage()}
+function setFundSeg(s){const st=fundState();st.seg=s;renderFundPage();syncNavState('fund',s)}
+function renderFundPage(){
+  const st=fundState();
+  const segBtns=document.querySelectorAll('#fundSeg button[data-seg]');
+  segBtns.forEach(b=>{b.className=b.dataset.seg===st.seg?'on':''});
+  const el=$('fdFilter');if(!el)return;
+  const isAcc=st.seg==='账户';
+  const filter=$('fdFilter');
+  filter.innerHTML=isAcc
+    ?`<span style="font-size:13px;color:#5a6478;line-height:1.8">资金账户用于登记收付款的资金去向与结余；<b>期初余额</b>可在下方录入。</span><span class="sp"></span><button class="btn pri" onclick="openAccountMgr()">${ICO.plus} 管理资金账户</button>`
+    :`<input class="inp" id="fdKw" placeholder="搜索单号 / 往来单位 / 合同 / 备注" value="${esc(st.kw||'')}" style="min-width:210px">
+      <span class="sp"></span>
+      ${(st.seg==='收'||st.seg==='付')?'<button class="btn" onclick="openFundImport()">'+ICO.upload+' 导入</button>':''}
+      <button class="btn" onclick="exportFund()">${ICO.xls} 导出</button>
+      <button class="btn pri" id="fdAddBtn" onclick="openFundAdd()">${ICO.plus} 新增</button>`;
+  if(isAcc){renderAccountList()}
+  else{bindFundSearch();renderFundTop();renderFundList()}
+}
+function renderFundTop(){
+  const st=fundState();const el=document.getElementById('fundTop');if(!el)return;
+  const todayYM=today().slice(0,7);
+  if(st.seg==='收'||st.seg==='付'){
+    const isIn=st.seg==='收';const all=scopeList('fundBills').filter(b=>b.kind===(isIn?'收款':'付款'));
+    const tot=all.reduce((s,x)=>s+moneyIn(x.amount),0);
+    const mt=all.filter(x=>(x.date||'').startsWith(todayYM)).reduce((s,x)=>s+moneyIn(x.amount),0);
+    el.innerHTML=`<div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr));margin-top:2px">
+      ${statCard(isIn?'累计收款':'累计付款',fmtMoneyFull(tot),all.length+' 笔','#3d5ee8',ICO.money)}
+      ${statCard('本月'+(isIn?'收款':'付款'),fmtMoneyFull(mt),'','#129b5a',ICO.ok)}
+      ${statCard('资金账户结存',fmtMoneyFull(scopeList('accounts').reduce((s,a)=>s+accountBalance(a.name).balance,0)),'','#c47b0a',ICO.doc)}
+    </div>`;
+  }else if(st.seg==='收他'||st.seg==='付他'){
+    const isIn=st.seg==='收他';const all=scopeList('otherBills').filter(b=>b.kind===(isIn?'收入':'支出'));
+    const tot=all.reduce((s,x)=>s+moneyIn(x.amount),0);
+    el.innerHTML=`<div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr));margin-top:2px">
+      ${statCard(isIn?'其他收入累计':'其他支出累计',fmtMoneyFull(tot),all.length+' 笔','#3d5ee8',ICO.money)}
+      ${statCard(isIn?'本月其他收入':'本月其他支出',fmtMoneyFull(all.filter(x=>(x.date||'').startsWith(todayYM)).reduce((s,x)=>s+moneyIn(x.amount),0)),'','#129b5a',ICO.ok)}
+    </div>`;
+  }else if(st.seg==='转'){
+    const all=scopeList('transfers');const tot=all.reduce((s,x)=>s+moneyIn(x.amount),0);
+    el.innerHTML=`<div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr));margin-top:2px">
+      ${statCard('累计转账金额',fmtMoneyFull(tot),all.length+' 笔','#3d5ee8',ICO.money)}
+      ${statCard('资金账户结存',fmtMoneyFull(scopeList('accounts').reduce((s,a)=>s+accountBalance(a.name).balance,0)),'','#c47b0a',ICO.doc)}
+    </div>`;
+  }else{el.innerHTML=''}
+}
 function bindFundSearch(){const kw=$('fdKw');if(!kw)return;kw.oninput=debounce(function(){fundState().kw=kw.value;renderFundList()},250)}
 function fundListData(){
   const st=fundState();const kw=(st.kw||'').toLowerCase();
@@ -1269,7 +1713,9 @@ function fundListData(){
 }
 function renderFundList(){
   const el=$('fdList');if(!el)return;
-  const st=fundState();const list=fundListData();
+  const st=fundState();
+  if(st.seg==='账户')return renderAccountList();
+  const list=fundListData();
   $('fdAddBtn').innerHTML=(st.seg==='收'?'+ 登记收款':st.seg==='付'?'+ 登记付款':st.seg==='收他'?'+ 登记其他收入':st.seg==='付他'?'+ 登记其他支出':'+ 登记转账');
   if(!list.length){el.innerHTML='<div class="blank">暂无记录</div>';return}
   if(st.seg==='收'||st.seg==='付'){
@@ -1379,24 +1825,112 @@ function exportFund(){
   exportCsv(name+'.csv',['单号','日期','类型','往来单位','关联合同','金额','方式','账户','备注'],list.map(x=>[x.number,x.date,st.seg==='转'?(x.fromAccount+'→'+x.toAccount):(x.kind||''),x.partnerName,x.contractNumber,x.amount,x.method||'','',x.remark]));
   toast('已导出 '+list.length+' 笔');
 }
-/* 资金账户管理 */
+/* 资金流水 CSV 导入（适用于收/付款记录）：单号,日期,往来单位,关联合同编号,金额,方式,账户,备注 */
+function openFundImport(){
+  if(!requireLic())return;
+  openModal(`<div style="font-size:13px">
+    <div class="dropzone" onclick="$('fbFile').click()">${ICO.upload} 点击选择 CSV 文件<div class="hint">表头：单号,日期,往来单位,关联合同编号,金额,方式,账户,备注</div></div>
+    <input type="file" id="fbFile" accept=".csv,text/csv" style="display:none" onchange="importFundFile(this)">
+    <div class="hint" style="margin-top:10px">导入为「${fundState().seg==='付'?'付款':'收款'}」记录；金额必填；往来单位/关联合同按名称自动匹配。</div>
+    <div id="fbMsg"></div>
+  </div>`,{title:'导入资金流水（CSV）',footer:[{t:'关闭',x:closeModal}]});
+}
+function importFundFile(inp){
+  const f=inp.files[0];if(!f)return;
+  readFileText(f,txt=>{
+    const kind=fundState().seg==='付'?'付款':'收款';
+    const dir=kind==='收款'?'应收':'应付';
+    const lines=txt.replace(/^\ufeff/,'').split(/\r?\n/).filter(l=>l.trim());
+    let ok=0,fail=0;
+    const list=scopeList('fundBills');
+    lines.forEach((ln,idx)=>{
+      if(idx===0&&ln.includes('单号'))return;
+      const cols=parseCsvLine(ln);
+      const amount=moneyIn(cols[4]);
+      if(amount<=0){fail++;return}
+      const partnerName=(cols[2]||'').trim();
+      const cnum=(cols[3]||'').trim();
+      const partner=scopeList(kind==='收款'?'customers':'suppliers').find(p=>p.name===partnerName)||{};
+      const con=(cnum?scopeList('contracts').find(c=>c.number===cnum&&c.direction===dir):null)||null;
+      list.unshift({id:uid(),companyId:curCompanyId(),kind,number:(cols[0]||'').trim()||nextNum(rulePrefix('fund')),date:(cols[1]||'').trim()||today(),amount,method:(cols[5]||'').trim()||'银行转账',accountName:(cols[6]||'').trim()||'',partnerId:partner.id||null,partnerName:partnerName||'',contractId:con?con.id:null,contractNumber:cnum||'',remark:(cols[7]||'').trim(),createdAt:now()});
+      ok++;
+    });
+    saveScoped('fundBills',list);
+    const m=$('fbMsg');if(m)m.innerHTML='<div class="msg ok">导入完成：成功 '+ok+' 条'+(fail?'，失败 '+fail+' 条':'')+'</div>';
+    addLog('导入资金流水','成功 '+ok+' 条');renderFundList();genReminders();toast('导入完成 '+ok+' 条');
+  });
+}
+function accountBalance(name){
+  const bills=scopeList('fundBills').filter(b=>b.accountName===name);
+  const others=scopeList('otherBills').filter(b=>b.accountName===name);
+  const trs=scopeList('transfers');
+  let inAmt=0,outAmt=0;
+  bills.forEach(b=>{if(b.kind==='收款')inAmt+=moneyIn(b.amount);else outAmt+=moneyIn(b.amount)});
+  others.forEach(b=>{if(b.kind==='收入')inAmt+=moneyIn(b.amount);else outAmt+=moneyIn(b.amount)});
+  trs.forEach(t=>{if(t.fromAccount===name)outAmt+=moneyIn(t.amount);if(t.toAccount===name)inAmt+=moneyIn(t.amount)});
+  return {in:inAmt,out:outAmt,balance:moneyIn((scopeList('accounts').find(a=>a.name===name)||{}).opening||0)+inAmt-outAmt};
+}
+function renderAccountList(){
+  const el=$('fdList');if(!el)return;
+  const list=scopeList('accounts');
+  const totalBalance=list.reduce((s,a)=>s+accountBalance(a.name).balance,0);
+  const totalOpen=list.reduce((s,a)=>s+moneyIn(a.opening||0),0);
+  let h=`<div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr))">
+    ${statCard('账户数量',list.length+' 个','','#3d5ee8',ICO.money)}
+    ${statCard('账户资金结存',fmtMoneyFull(totalBalance),'期初合计 '+fmtMoneyFull(totalOpen),'#129b5a',ICO.ok)}
+  </div>`;
+  if(!list.length){h+='<div class="blank">暂无资金账户，点击右上角「管理资金账户」添加</div>'}
+  else{h+=`<div class="tbl-wrap"><table class="tbl"><thead><tr><th>账户名称</th><th>类型</th><th>开户行</th><th>账号</th><th class="num">期初余额</th><th class="num">累计收入</th><th class="num">累计支出</th><th class="num">当前结存</th><th style="width:70px">操作</th></tr></thead><tbody>
+    ${list.map(a=>{const b=accountBalance(a.name);return `<tr>
+      <td class="strong">${esc(a.name)}</td><td>${esc(a.type||'—')}</td><td class="muted">${esc(a.bank||'—')}</td><td class="muted">${esc(a.accountNo||'—')}</td>
+      <td class="num">${fmtMoneyFull(a.opening||0)}</td><td class="num money-pos">${fmtMoneyFull(b.in)}</td><td class="num money-neg">${fmtMoneyFull(b.out)}</td>
+      <td class="num money" style="color:${b.balance<0?'#d4382e':'#1c2433'}">${fmtMoneyFull(b.balance)}</td>
+      <td><button class="btn sm ghost" style="color:#d4382e" onclick="delAccount('${a.id}')">${ICO.del}</button></td></tr>`}).join('')}
+  </tbody></table></div>
+  <div class="hint" style="padding:10px 14px">结存 = 期初余额 + 累计收入（收款+其他收入+转入）− 累计支出（付款+其他支出+转出）。</div>`;}
+  el.innerHTML=h;
+}
 function openAccountMgr(){
   const list=scopeList('accounts');
-  openModal(`<div class="tbl-wrap" style="margin-bottom:10px">${list.length?`<table class="tbl"><thead><tr><th>账户名称</th><th>类型</th><th>备注</th><th style="width:60px"></th></tr></thead><tbody>${list.map(a=>`<tr><td class="strong">${esc(a.name)}</td><td>${a.type?esc(a.type):'—'}</td><td class="muted">${esc(a.remark||'')}</td><td><button class="btn sm ghost" style="color:#d4382e" onclick="delAccount('${a.id}')">${ICO.del}</button></td></tr>`).join('')}</tbody></table>`:'<div class="blank">暂无资金账户</div>'}</div>
-  <div style="display:flex;gap:8px">
-    <input class="inp" id="accName" placeholder="账户名称，如：招商银行基本户" style="flex:1">
-    <select class="inp" id="accType"><option>银行账户</option><option>现金</option><option>第三方支付</option><option>其他</option></select>
-    <button class="btn pri" onclick="addAccount()">+ 添加</button>
-  </div>
-  <div class="hint" style="margin-top:8px">资金账户用于收付款/收支记录中标记资金去向，仅当前公司可见。</div>`,{title:'资金账户管理'});
+  const row=id=>{const a=id?list.find(x=>x.id===id):null;
+    return `<div class="form-grid" style="border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:10px;background:#fbfcfe">
+      <div class="fg"><label>账户名称<i>*</i></label><input class="inp acc_fld" id="an_${id||'new'}" value="${esc(a?a.name:'')}" placeholder="如：招商银行基本户"></div>
+      <div class="fg"><label>类型</label><select class="inp" id="at_${id||'new'}">${['银行账户','现金','第三方支付','其他'].map(t=>`<option ${a&&a.type===t?'selected':''}>${t}</option>`).join('')}</select></div>
+      <div class="fg"><label>开户行</label><input class="inp" id="ab_${id||'new'}" value="${esc(a?a.bank||'':'')}" placeholder="如：招商银行上海分行"></div>
+      <div class="fg"><label>账号</label><input class="inp" id="ano_${id||'new'}" value="${esc(a?a.accountNo||'':'')}"></div>
+      <div class="fg"><label>期初余额（元）</label><input class="inp num" id="ao_${id||'new'}" type="number" step="0.01" value="${a?(a.opening||0):0}"></div>
+      <div class="fg"><label>备注</label><input class="inp" id="ar_${id||'new'}" value="${esc(a?a.remark||'':'')}"></div>
+      <div class="fg" style="align-self:end">${id&&a?'<button class="btn sm bad" onclick="delAccount(\''+a.id+'\')">'+ICO.del+' 删除</button>':''}</div>
+    </div>`;
+  };
+  openModal(`<div style="font-size:13px">${row('new')}${list.map(a=>row(a.id)).join('')}
+    <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:6px">
+      <button class="btn" onclick="closeModal()">取消</button>
+      <button class="btn pri" onclick="saveAccounts()">保存全部账户</button>
+    </div></div>`,{title:'资金账户管理',lg:true});
+}
+function saveAccounts(){
+  if(!requireLic())return;
+  const list=scopeList('accounts');
+  /* 新增行 */
+  const nName=$('an_new').value.trim();
+  if(!nName){toast('请填写账户名称','err');return}
+  const nBank=$('ab_new').value.trim(),nNo=$('ano_new').value.trim(),nOpen=moneyIn($('ao_new').value);
+  const newAcc={id:uid(),companyId:curCompanyId(),name:nName,type:$('at_new').value,bank:nBank,accountNo:nNo,opening:nOpen,remark:$('ar_new').value.trim(),createdAt:now()};
+  /* 更新已存在账户 */
+  list.forEach(a=>{const i=a.id;const nm=$('an_'+i);if(nm){a.name=nm.value.trim();a.type=$('at_'+i).value;a.bank=$('ab_'+i).value.trim();a.accountNo=$('ano_'+i).value.trim();a.opening=moneyIn($('ao_'+i).value);a.remark=$('ar_'+i).value.trim()}});
+  if(!list.some(a=>a.id===newAcc.id))list.push(newAcc);
+  saveScoped('accounts',list);
+  addLog('更新资金账户',nName);
+  closeModal();toast('账户已保存');renderAccountList();
 }
 function addAccount(){
   if(!requireLic())return;
   const name=$('accName').value.trim();if(!name){toast('请输入账户名称','err');return}
-  const list=scopeList('accounts');list.push({id:uid(),companyId:curCompanyId(),name,type:$('accType').value,remark:'',createdAt:now()});
+  const list=scopeList('accounts');list.push({id:uid(),companyId:curCompanyId(),name,type:$('accType').value,bank:'',accountNo:'',opening:0,remark:'',createdAt:now()});
   saveScoped('accounts',list);openAccountMgr();toast('已添加');
 }
-function delAccount(id){if(!requireLic())return;confirmDlg('确定删除该资金账户？历史单据中的账户名称不受影响。',()=>{saveScoped('accounts',scopeList('accounts').filter(x=>x.id!==id));openAccountMgr();toast('已删除')})}
+function delAccount(id){if(!requireLic())return;const a=scopeList('accounts').find(x=>x.id===id);if(!a)return;confirmDlg('确定删除资金账户「'+esc(a.name)+'」？历史单据中的账户名称不受影响。',()=>{saveScoped('accounts',scopeList('accounts').filter(x=>x.id!==id));const lg=$('modalBox');if(lg&&lg.querySelector('.acc_fld'))openAccountMgr();else renderAccountList();toast('已删除')})}
 
 /* ==== 08_p_dash_stat_rem.js ==== */
 /* ================= 08 工作台 / 数据统计 / 提醒中心 ================= */
@@ -1407,60 +1941,143 @@ PAGES.dash=function(){
   const pays=cons.filter(c=>!isRecvCon(c)&&c.status!=='stopped');
   const recvAmt=recvs.reduce((s,c)=>s+moneyIn(c.amount),0);
   const payAmt=pays.reduce((s,c)=>s+moneyIn(c.amount),0);
-  const got=scopeList('fundBills').filter(b=>b.kind==='收款').reduce((s,b)=>s+moneyIn(b.amount),0);
-  const paid=scopeList('fundBills').filter(b=>b.kind==='付款').reduce((s,b)=>s+moneyIn(b.amount),0);
-  const mRecv=scopeList('fundBills').filter(b=>b.kind==='收款'&&(b.date||'').startsWith(String(new Date().getFullYear()))).reduce((s,b)=>s+moneyIn(b.amount),0);
+  const allBills=scopeList('fundBills');
+  const got=allBills.filter(b=>b.kind==='收款').reduce((s,b)=>s+moneyIn(b.amount),0);
+  const paid=allBills.filter(b=>b.kind==='付款').reduce((s,b)=>s+moneyIn(b.amount),0);
+  const mRecv=allBills.filter(b=>b.kind==='收款'&&(b.date||'').startsWith(String(new Date().getFullYear()))).reduce((s,b)=>s+moneyIn(b.amount),0);
+  const mPaid=allBills.filter(b=>b.kind==='付款'&&(b.date||'').startsWith(String(new Date().getFullYear()))).reduce((s,b)=>s+moneyIn(b.amount),0);
+  const oIn=scopeList('otherBills').filter(b=>b.kind==='收入').reduce((s,b)=>s+moneyIn(b.amount),0);
+  const oOut=scopeList('otherBills').filter(b=>b.kind==='支出').reduce((s,b)=>s+moneyIn(b.amount),0);
+  const invs=scopeList('invoices');
+  const invOut=invs.filter(i=>i.direction==='销项').reduce((s,i)=>s+moneyIn(i.amount),0);
+  const invIn=invs.filter(i=>i.direction==='进项').reduce((s,i)=>s+moneyIn(i.amount),0);
   const unpaid=recvAmt-got,unpaidPay=payAmt-paid;
+  const net=(got+oIn)-(paid+oOut);
   const alerts=unreadReminderCount();
   const expSoon=cons.filter(c=>c.endDate&&c.status!=='stopped'&&c.status!=='done'&&!c.archive).map(c=>({c,left:diffDays(today(),c.endDate)})).filter(x=>isFinite(x.left)&&x.left<=30).sort((a,b)=>a.left-b.left).slice(0,6);
   const monthCon=cons.filter(c=>(c.createdAt||'').slice(0,7)===today().slice(0,7)).length;
+  const monthInv=invs.filter(i=>(i.date||'').slice(0,7)===today().slice(0,7)).length;
   const curC=curCompany();
   const uname=curUser()?curUser().realName||curUser().username:'';
   const h=new Date().getHours();
   const greet=h<6?'夜深了':h<12?'上午好':h<14?'中午好':h<18?'下午好':'晚上好';
+  const statusCount={unsigned:0,signed:0,done:0,stopped:0};cons.forEach(c=>{if(statusCount[c.status]!=null)statusCount[c.status]++});
+  const statusTotal=cons.length||1;
+  const months=last12Months();
+  const trend=months.map(m=>({k:m.key,in:moneyAgg(allBills.filter(b=>b.kind==='收款'&&(b.date||'').startsWith(m.key)),b=>b.amount),out:moneyAgg(allBills.filter(b=>b.kind==='付款'&&(b.date||'').startsWith(m.key)),b=>b.amount)}));
+  const recentCons=cons.slice().sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||'')).slice(0,5);
   return `
   <div style="margin:2px 0 14px">
     <div style="font-size:17px;font-weight:600">${esc(curC?(curC.shortName||curC.name)+' · ':'' )}${greet}，${esc(uname||'朋友')}</div>
     <div class="hint">今天 ${todayCN()} · ${APP_NAME} ${APP_VER}</div>
   </div>
   <div class="cards">
-    ${statCard('应收合同总额',fmtMoneyFull(recvAmt),'待收款 '+fmtMoneyFull(unpaid),'#3d5ee8',ICO.contract)}
-    ${statCard('应付合同总额',fmtMoneyFull(payAmt),'待付款 '+fmtMoneyFull(unpaidPay),'#7c3aed',ICO.supplier)}
+    ${statCard('应收合同总额',fmtMoneyFull(recvAmt),'待收款 '+fmtMoneyFull(Math.max(0,unpaid)),'#3d5ee8',ICO.contract)}
+    ${statCard('应付合同总额',fmtMoneyFull(payAmt),'待付款 '+fmtMoneyFull(Math.max(0,unpaidPay)),'#7c3aed',ICO.supplier)}
     ${statCard('累计收款',fmtMoneyFull(got),'本年收款 '+fmtMoneyFull(mRecv),'#129b5a',ICO.ok)}
-    ${statCard('累计付款',fmtMoneyFull(paid),'','#d4382e',ICO.money)}
+    ${statCard('累计付款',fmtMoneyFull(paid),'本年付款 '+fmtMoneyFull(mPaid),'#d4382e',ICO.money)}
     ${statCard('待办提醒',alerts,alerts?'合同到期/待处理事项':'点击右上角铃铛查看','#c47b0a',ICO.bell)}
-    ${statCard('本月新增合同',monthCon+' 份','','#2f6fdb',ICO.doc)}
+    ${statCard('本月新增',monthCon+' 份合同 · '+monthInv+' 张发票','','#2f6fdb',ICO.doc)}
   </div>
+  <div class="dash-grid">
+    <div class="card" style="margin:0"><div class="ch">${ICO.chart} 近 12 个月收付款趋势</div><div class="bd">${trend.length?svgTrend(trend):'<div class="blank">暂无数据</div>'}</div></div>
+    <div class="card" style="margin:0"><div class="ch">${ICO.chart} 资金收支概览</div><div class="bd" style="padding:6px 16px 12px">
+      ${dashGauge('净现金流',net,got+oIn,paid+oOut)}
+      ${dashBarRow('合同回款进度',got,recvAmt,unpaid,unpaid>=0)}
+      ${dashBarRow('合同付款进度',paid,payAmt,unpaidPay,true)}
+      ${dashBarRow('销项开票进度',invOut,recvAmt,Math.max(0,recvAmt-invOut),true)}
+      ${dashBarRow('进项收票进度',invIn,payAmt,Math.max(0,payAmt-invIn),true)}
+    </div></div>
+    <div class="card" style="margin:0"><div class="ch">${ICO.contract} 合同状态分布（${cons.length} 份）</div><div class="bd">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+        ${svgDonut([{k:'未签订',v:statusCount.unsigned,c:'#c47b0a'},{k:'已签订',v:statusCount.signed,c:'#3d5ee8'},{k:'已完成',v:statusCount.done,c:'#129b5a'},{k:'已终止',v:statusCount.stopped,c:'#9aa3b5'}],'份')}
+        <div style="flex:1;min-width:150px">${Object.entries(statusCount).map(([k,v])=>{const p=v/statusTotal*100;const c=k==='signed'?'#3d5ee8':k==='done'?'#129b5a':k==='stopped'?'#9aa3b5':'#c47b0a';return `<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span class="dot" style="background:${c}"></span><span style="width:52px;font-size:12.5px;color:#5a6478">${fmtStatus(k)}</span><span style="font-size:12px;color:#9aa3b5">${v} 份</span><div class="pbar" style="flex:1;min-width:50px"><i style="background:${c};width:${p}%"></i></div></div>`}).join('')}</div>
+      </div>
+    </div></div>
+    <div class="card" style="margin:0"><div class="ch">${ICO.info} 经营快览</div><div class="bd" style="font-size:13px;line-height:2.2;color:#5a6478">
+      <div>客户 <b style="color:#1c2433">${scopeList('customers').length}</b> 家 · 供应商 <b style="color:#1c2433">${scopeList('suppliers').length}</b> 家</div>
+      <div>应收合同 <b style="color:#1c2433">${recvs.length}</b> 份 · 应付合同 <b style="color:#1c2433">${pays.length}</b> 份</div>
+      <div>已开票（销项）${fmtMoneyFull(invOut)} · 已收票（进项）${fmtMoneyFull(invIn)}</div>
+      <div>其他收入 ${fmtMoneyFull(oIn)} · 其他支出 ${fmtMoneyFull(oOut)}</div>
+      <div>资金账户 ${scopeList('accounts').length} 个 · 收付款单据 ${allBills.length} 笔</div>
+    </div></div>
+  </div>
+  ${recentCons.length?`<div class="card"><div class="ch">${ICO.contract} 最近合同<span style="margin-left:auto"><button class="btn sm ghost" onclick="goPage('contract')">查看全部 →</button></span></div><div class="tbl-wrap"><table class="tbl"><thead><tr><th>合同编号</th><th>合同名称</th><th>方向</th><th>往来单位</th><th class="num">合同金额</th><th>收付进度</th><th>状态</th></tr></thead><tbody>
+    ${recentCons.map(c=>{const m=conMoney(c);const recv=isRecvCon(c);return `<tr style="cursor:pointer" onclick="openConDetail('${c.id}')"><td class="muted">${esc(c.number)}</td><td class="strong" style="max-width:220px;overflow:hidden;text-overflow:ellipsis">${esc(c.name)}</td><td>${dirTag(c.direction)}</td><td>${esc(c.partnerName||'—')}</td><td class="num money">${fmtMoneyFull(c.amount)}</td><td>${progressBar(c.amount?((recv?m.got:m.paid)/moneyIn(c.amount))*100:0)}</td><td>${stTag(c.status)}</td></tr>`}).join('')}
+  </tbody></table></div></div>`:''}
   ${expSoon.length?`<div class="card"><div class="ch">${ICO.bell} 即将到期合同<span style="margin-left:auto;font-size:12px;font-weight:400" class="hint">30 天内到期，请及时安排结算</span></div><div class="tbl-wrap"><table class="tbl"><thead><tr><th>合同编号</th><th>合同名称</th><th>方向</th><th>往来单位</th><th>到期日</th><th>剩余</th><th class="num">合同金额</th><th>状态</th></tr></thead><tbody>
     ${expSoon.map(x=>{const c=x.c;return `<tr><td class="muted">${esc(c.number)}</td><td class="strong">${esc(c.name)}</td><td>${dirTag(c.direction)}</td><td>${esc(c.partnerName||'—')}</td><td>${fmtDate(c.endDate)}</td><td>${x.left<0?'<span class="tag bad">已过期 '+Math.abs(x.left)+'天</span>':'<span class="tag warn">剩'+x.left+'天</span>'}</td><td class="num money">${fmtMoneyFull(c.amount)}</td><td>${stTag(c.status)}</td></tr>`}).join('')}
   </tbody></table></div></div>`:''}
   <div class="card"><div class="ch">${ICO.gear} 快捷操作</div><div class="bd" style="display:flex;flex-wrap:wrap;gap:10px">
-    <button class="btn" onclick="goPage('contract')">${ICO.contract} 新增${conState().dir==='应付'?'应付':'应收'}合同</button>
-    <button class="btn" onclick="goPage('fund');setTimeout(()=>openFundAdd(),30)">${ICO.money} 登记收款/付款</button>
-    <button class="btn" onclick="goPage('invoice')">${ICO.invoice} 登记发票</button>
+    <button class="btn" onclick="navClick('con_recv')">${ICO.contract} 新增应收合同</button>
+    <button class="btn" onclick="navClick('con_pay')">${ICO.contract} 新增应付合同</button>
+    <button class="btn" onclick="navClick('f_receipt');setTimeout(()=>openFundAdd(),50)">${ICO.money} 登记收款</button>
+    <button class="btn" onclick="navClick('f_payment');setTimeout(()=>openFundAdd(),50)">${ICO.money} 登记付款</button>
+    <button class="btn" onclick="goPage('invoice');setTimeout(()=>openInvoiceForm({}),50)">${ICO.invoice} 登记发票</button>
     <button class="btn" onclick="goPage('customer')">${ICO.user} 客户管理</button>
     <button class="btn" onclick="goPage('supplier')">${ICO.supplier} 供应商管理</button>
+    <button class="btn" onclick="navClick('f_account')">${ICO.money} 资金账户</button>
     <button class="btn" onclick="openCompanySwitch()">${ICO.users} 切换公司档案</button>
   </div></div>`;
 };
+/* 仪表盘小部件：现金流/进度条/环形图 */
+function dashGauge(title,val,inAmt,outAmt){
+  const pos=val>=0;
+  return `<div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px dashed #eef1f6;padding:10px 0"><span style="font-size:13px;color:#5a6478">${esc(title)}</span><span style="font-size:24px;font-weight:600;color:${pos?'#129b5a':'#d4382e'}">${fmtMoneyFull(val)}</span><span class="hint" style="margin-left:auto">收入 ${fmtMoneyFull(inAmt)} − 支出 ${fmtMoneyFull(outAmt)}</span></div>`;
+}
+function dashBarRow(txt,cur,total,left,positive){
+  const p=total>0?Math.max(0,Math.min(100,cur/total*100)):0;
+  const col=positive?'#3d5ee8':'#7c3aed';
+  return `<div style="margin-top:10px"><div style="display:flex;font-size:12.5px;color:#5a6478;margin-bottom:4px"><span>${esc(txt)}</span><span style="margin-left:auto">${fmtMoneyFull(cur)} / ${fmtMoneyFull(total)}</span></div><div class="pbar" style="height:8px"><i style="background:${col};width:${p}%"></i></div><div class="hint" style="font-size:11px;margin-top:2px">${p.toFixed(1)}%${left>=0?' · 剩余 '+fmtMoneyFull(left):''}</div></div>`;
+}
+function svgDonut(items,totalUnit){
+  const total=items.reduce((s,x)=>s+x.v,0);
+  if(!total)return '<div class="blank">暂无数据</div>';
+  const R=44,CX=56,CY=56,STROKE=20;let ang=-90;
+  const segs=items.filter(x=>x.v>0).map(x=>{
+    const a1=ang,a2=ang+x.v/total*360;ang=a2;
+    const large=(a2-a1)>180?1:0;
+    const r=(Math.PI/180);
+    const x1=CX+R*Math.cos(a1*r),y1=CY+R*Math.sin(a1*r),x2=CX+R*Math.cos(a2*r),y2=CY+R*Math.sin(a2*r);
+    const outer=Math.abs(a2-a1)>=360;
+    if(outer)return `<circle cx="${CX}" cy="${CY}" r="${R}" fill="none" stroke="${x.c}" stroke-width="${STROKE}"/>`;
+    return `<path d="M ${x1} ${y1} A ${R} ${R} 0 ${large} 1 ${x2} ${y2}" fill="none" stroke="${x.c}" stroke-width="${STROKE}" stroke-linecap="butt"/>`;
+  }).join('');
+  const legend=items.filter(x=>x.v>0).map(x=>`<span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;color:#5a6478"><span class="dot" style="background:${x.c}"></span>${esc(x.k)} ${x.v}${totalUnit||''}</span>`).join('<span style="width:10px"></span>');
+  return `<div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px"><svg width="112" height="112" viewBox="0 0 112 112" role="img" aria-label="占比环形图"><circle cx="56" cy="56" r="${R}" fill="none" stroke="#f0f2f6" stroke-width="${STROKE}"/>${segs}<text x="56" y="52" text-anchor="middle" font-size="11" fill="#9aa3b5">共</text><text x="56" y="68" text-anchor="middle" font-size="15" font-weight="600" fill="#1c2433">${total}</text></svg><div style="display:flex;flex-direction:column;gap:4px">${legend}</div></div>`;
+}
+function svgDonutPie(items){
+  const total=items.reduce((s,x)=>s+x.v,0);
+  if(!total)return '<div class="blank">暂无数据</div>';
+  const CX=100,CY=70,R=58;
+  let acc=-90;const paths=[];
+  items.forEach(x=>{
+    if(!x.v)return;
+    const a1=acc*Math.PI/180,a2=(acc+x.v/total*360)*Math.PI/180;
+    const x1=CX+R*Math.cos(a1),y1=CY+R*Math.sin(a1),x2=CX+R*Math.cos(a2),y2=CY+R*Math.sin(a2);
+    const large=(a2-a1)>Math.PI?1:0;
+    paths.push(`<path d="M ${CX} ${CY} L ${x1} ${y1} A ${R} ${R} 0 ${large} 1 ${x2} ${y2} Z" fill="${x.c}"/>`);
+    acc+=x.v/total*360;
+  });
+  return `<div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap"><svg width="200" height="140" viewBox="0 0 200 140" role="img" aria-label="分布图">${paths.join('')}</svg><div>${items.map(x=>`<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;font-size:12.5px;color:#5a6478"><span class="dot" style="background:${x.c}"></span>${esc(x.k)} <b style="color:#1c2433">${x.v}</b>（${total?(x.v/total*100).toFixed(1):0}%）</div>`).join('')}</div></div>`;
+}
 
 /* ============ 数据统计 ============ */
 function statState(){STATE.stat=STATE.stat||{};return STATE.stat}
 PAGES.stat=function(){
   const st=statState();st.seg=st.seg||'明细';
   return `<div class="card">
-    <div style="padding:12px 14px;display:flex;align-items:center;gap:12px">
-      <div class="seg">
-        <button class="${st.seg==='明细'?'on':''}" onclick="setStatSeg('明细')">经营明细</button>
-        <button class="${st.seg==='图表'?'on':''}" onclick="setStatSeg('图表')">图表分析</button>
-      </div>
-    </div>
     <div id="statBody"></div>
   </div>`;
 };
 AFTER.stat=function(){renderStat()}
-function setStatSeg(s){statState().seg=s;renderStat()}
-function renderStat(){const st=statState();const el=$('statBody');if(!el)return;if(st.seg==='明细')el.innerHTML=statDetailHtml();else el.innerHTML=statChartHtml()}
+function setStatSeg(s){statState().seg=s;renderStat();syncNavState('stat',s)}
+function renderStat(){
+  const st=statState();
+  const segHtml=`<div style="padding:12px 14px;display:flex;align-items:center;gap:12px;flex-wrap:wrap"><div class="seg" id="statSegBar"><button data-v="明细" class="${st.seg==='明细'?'on':''}" onclick="setStatSeg('明细')">经营明细</button><button data-v="图表" class="${st.seg==='图表'?'on':''}" onclick="setStatSeg('图表')">图表分析</button></div></div>`;
+  const el=$('statBody');if(!el)return;
+  el.innerHTML=segHtml+(st.seg==='明细'?statDetailHtml():statChartHtml());
+}
 function moneyAgg(list,f){return list.reduce((s,x)=>s+moneyIn(f(x)),0)}
 function statDetailHtml(){
   const cid=curCompanyId();
@@ -1479,23 +2096,44 @@ function statDetailHtml(){
   const oIn=moneyAgg(others.filter(o=>o.kind==='收入'),o=>o.amount);
   const oOut=moneyAgg(others.filter(o=>o.kind==='支出'),o=>o.amount);
   const net=(got+oIn)-(paid+oOut);
+  const signedCnt=cons.filter(c=>c.status==='signed').length;
+  const unsignedCnt=cons.filter(c=>c.status==='unsigned').length;
+  const doneCnt=cons.filter(c=>c.status==='done').length;
+  const stoppedCnt=cons.filter(c=>c.status==='stopped').length;
+  const archivedCnt=cons.filter(c=>c.archive).length;
+  const ym=today().slice(0,7);
+  const monthGot=moneyAgg(bills.filter(b=>b.kind==='收款'&&(b.date||'').startsWith(ym)),b=>b.amount);
+  const monthPaid=moneyAgg(bills.filter(b=>b.kind==='付款'&&(b.date||'').startsWith(ym)),b=>b.amount);
   return `
-  <div class="cards">
-    ${statCard('应收合同总额',fmtMoneyFull(recvAmt),'已收 '+fmtMoneyFull(got),'#3d5ee8',ICO.contract)}
-    ${statCard('应付合同总额',fmtMoneyFull(payAmt),'已付 '+fmtMoneyFull(paid),'#7c3aed',ICO.supplier)}
-    ${statCard('已开票（销项）',fmtMoneyFull(invOut),'占应收 '+(recvAmt?(invOut/recvAmt*100).toFixed(1):0)+'%','#2f6fdb',ICO.invoice)}
-    ${statCard('已收票（进项）',fmtMoneyFull(invIn),'占应付 '+(payAmt?(invIn/payAmt*100).toFixed(1):0)+'%','#0891b2',ICO.doc)}
+  <div style="padding:4px 16px 0;font-size:12.5px;color:#9aa3b5">统计口径：当前公司「${esc((curCompany()||{}).name||'')}」全部业务数据，金额均为含税价。</div>
+  <div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(170px,1fr))">
+    ${statCard('合同总数',cons.length+' 份',signedCnt+' 已签订 / '+unsignedCnt+' 未签订','#3d5ee8',ICO.contract)}
+    ${statCard('合同总金额',fmtMoneyFull(recvAmt+payAmt),'应收 '+fmtMoneyFull(recvAmt)+' / 应付 '+fmtMoneyFull(payAmt),'#2f6fdb',ICO.contract)}
+    ${statCard('累计已收款',fmtMoneyFull(got),'本月收款 '+fmtMoneyFull(monthGot),'#129b5a',ICO.ok)}
+    ${statCard('累计已付款',fmtMoneyFull(paid),'本月付款 '+fmtMoneyFull(monthPaid),'#d4382e',ICO.money)}
+    ${statCard('销项开票',fmtMoneyFull(invOut),recvAmt?'占应收 '+(invOut/recvAmt*100).toFixed(1)+'%':'','#0e7490',ICO.invoice)}
+    ${statCard('进项收票',fmtMoneyFull(invIn),payAmt?'占应付 '+(invIn/payAmt*100).toFixed(1)+'%':'','#7c3aed',ICO.doc)}
     ${statCard('其他收入',fmtMoneyFull(oIn),'','#129b5a',ICO.money)}
     ${statCard('其他支出',fmtMoneyFull(oOut),'','#d4382e',ICO.money)}
+    ${statCard('已完成 / 已终止',doneCnt+' / '+stoppedCnt+' 份','已归档 '+archivedCnt+' 份','#5a6478',ICO.info)}
   </div>
-  <div class="card" style="box-shadow:none;border:none;margin:0;padding:0"><div class="bd" style="padding:0">
-    <div style="font-weight:500;margin:2px 0 10px">资金净流入（累计收付相抵）</div>
-    <div style="font-size:26px;font-weight:600;${net>=0?'color:#129b5a':'color:#d4382e'}">${fmtMoneyFull(net)}</div>
-    <div class="hint" style="margin-top:4px">= 已收款 ${fmtMoneyFull(got)} + 其他收入 ${fmtMoneyFull(oIn)} − 已付款 ${fmtMoneyFull(paid)} − 其他支出 ${fmtMoneyFull(oOut)}</div>
-  </div></div>
-  <div class="card"><div class="ch">${ICO.chart} 合同台账（当前公司）</div><div class="tbl-wrap">
-    ${cons.length?`<table class="tbl"><thead><tr><th>编号</th><th>名称</th><th>方向</th><th>往来单位</th><th class="num">合同金额</th><th class="num">已收/付</th><th class="num">未收/付</th><th>状态</th></tr></thead><tbody>
-    ${cons.map(c=>{const m=conMoney(c);const recv=isRecvCon(c);return `<tr><td class="muted">${esc(c.number)}</td><td>${esc(c.name)}</td><td>${dirTag(c.direction)}</td><td>${esc(c.partnerName||'—')}</td><td class="num money">${fmtMoneyFull(c.amount)}</td><td class="num">${fmtMoneyFull(recv?m.got:m.paid)}</td><td class="num">${fmtMoneyFull(recv?m.amt-m.got:m.amt-m.paid)}</td><td>${stTag(c.status)}</td></tr>`}).join('')}
+  <div class="chart-box">
+    <div class="card" style="margin:0"><div class="ch">应收汇总（合同口径）</div><div class="bd" style="padding:6px 16px 12px">
+      ${dashBarRow('合同金额',recvAmt,recvAmt,0,true)}
+      ${dashBarRow('累计已收',got,recvAmt,Math.max(0,recvAmt-got),true)}
+      ${dashBarRow('已开票销项',invOut,recvAmt,Math.max(0,recvAmt-invOut),true)}
+      <div class="hint" style="margin-top:8px">应收余额 ${fmtMoneyFull(Math.max(0,recvAmt-got))} · 开票未收款 ${fmtMoneyFull(Math.max(0,invOut-got))}</div>
+    </div></div>
+    <div class="card" style="margin:0"><div class="ch">应付汇总（合同口径）</div><div class="bd" style="padding:6px 16px 12px">
+      ${dashBarRow('合同金额',payAmt,payAmt,0,false)}
+      ${dashBarRow('累计已付',paid,payAmt,Math.max(0,payAmt-paid),false)}
+      ${dashBarRow('已收票进项',invIn,payAmt,Math.max(0,payAmt-invIn),false)}
+      <div class="hint" style="margin-top:8px">应付余额 ${fmtMoneyFull(Math.max(0,payAmt-paid))} · 收票未付款 ${fmtMoneyFull(Math.max(0,invIn-paid))}</div>
+    </div></div>
+  </div>
+  <div class="card"><div class="ch">${ICO.chart} 合同台账（应收 / 应付 明细）</div><div class="tbl-wrap">
+    ${cons.length?`<table class="tbl"><thead><tr><th>编号</th><th>名称</th><th>方向</th><th>往来单位</th><th>负责人</th><th class="num">合同金额</th><th class="num">已收/付</th><th class="num">未收/付</th><th>收付进度</th><th>状态</th></tr></thead><tbody>
+    ${cons.map(c=>{const m=conMoney(c);const recv=isRecvCon(c);return `<tr style="cursor:pointer" onclick="openConDetail('${c.id}')"><td class="muted">${esc(c.number)}</td><td>${esc(c.name)}</td><td>${dirTag(c.direction)}</td><td>${esc(c.partnerName||'—')}</td><td class="muted">${esc(c.manager||'—')}</td><td class="num money">${fmtMoneyFull(c.amount)}</td><td class="num">${fmtMoneyFull(recv?m.got:m.paid)}</td><td class="num">${fmtMoneyFull(recv?m.amt-m.got:m.amt-m.paid)}</td><td>${progressBar(c.amount?((recv?m.got:m.paid)/moneyIn(c.amount))*100:0)}</td><td>${stTag(c.status)}</td></tr>`}).join('')}
     </tbody></table>`:'<div class="blank">暂无合同数据</div>'}
   </div></div>`;
 }
@@ -1505,14 +2143,31 @@ function statChartHtml(){
   const bills=scopeList('fundBills');
   const series=months.map(m=>({k:m.key,in:moneyAgg(bills.filter(b=>b.kind==='收款'&&(b.date||'').startsWith(m.key)),b=>b.amount),out:moneyAgg(bills.filter(b=>b.kind==='付款'&&(b.date||'').startsWith(m.key)),b=>b.amount)}));
   const cons=scopeList('contracts');
+  const recvs=cons.filter(c=>isRecvCon(c));
+  const pays=cons.filter(c=>!isRecvCon(c));
+  const invs=scopeList('invoices');
+  const recvAmt=moneyAgg(recvs,c=>c.amount),payAmt=moneyAgg(pays,c=>c.amount);
+  const got=moneyAgg(bills.filter(b=>b.kind==='收款'),b=>b.amount),paid=moneyAgg(bills.filter(b=>b.kind==='付款'),b=>b.amount);
+  const invOut=moneyAgg(invs.filter(i=>i.direction==='销项'),i=>i.amount),invIn=moneyAgg(invs.filter(i=>i.direction==='进项'),i=>i.amount);
   const byType={};cons.forEach(c=>{const t=c.typeName||'未分类';byType[t]=(byType[t]||0)+moneyIn(c.amount)});
   const typeEntries=Object.entries(byType).sort((a,b)=>b[1]-a[1]);
   const statusCount={unsigned:0,signed:0,done:0,stopped:0};cons.forEach(c=>{if(statusCount[c.status]!=null)statusCount[c.status]++});
   const typeTotal=typeEntries.reduce((s,e)=>s+e[1],0);
   const statusTotal=cons.length||1;
+  /* 应收/应付资金分布（含税金额 vs 已收付 vs 剩余）*/
+  const dirAmt=[{k:'应收合同',v:recvAmt,c:'#3d5ee8'},{k:'应付合同',v:payAmt,c:'#7c3aed'}];
+  const dirFlow=[{k:'已收款',v:got,c:'#129b5a'},{k:'已付款',v:paid,c:'#d4382e'}];
+  const invFlow=[{k:'销项已开票',v:invOut,c:'#0e7490'},{k:'进项已收票',v:invIn,c:'#7c3aed'}];
+  /* 月度发票对比 */
+  const invSeries=months.map(m=>({k:m.key,a:moneyAgg(invs.filter(i=>i.direction==='销项'&&(i.date||'').startsWith(m.key)),i=>i.amount),b:moneyAgg(invs.filter(i=>i.direction==='进项'&&(i.date||'').startsWith(m.key)),i=>i.amount)}));
+  const invMax=Math.max(1,...invSeries.map(s=>Math.max(s.a,s.b)));
+  const invBar=invSeries.map((s,i)=>{const barW=(430-8)/12,bw=Math.min(16,(barW-2)*0.42),x=4+i*barW,cx=x+barW/2;const hA=invMax?(s.a/invMax)*158:0,hB=invMax?(s.b/invMax)*158:0;return `<rect x="${cx-bw-1}" y="${196-22-hA}" width="${bw}" height="${hA||0.4}" fill="#0e7490" rx="2"/><rect x="${cx+1}" y="${196-22-hB}" width="${bw}" height="${hB||0.4}" fill="#7c3aed" rx="2"/><text x="${cx}" y="${196-6}" font-size="9" fill="#9aa3b5" text-anchor="middle">${s.k.slice(5)}</text>`;}).join('');
   return `<div class="chart-box">
     <div class="card" style="margin:0"><div class="ch">近 12 个月收付款趋势（元）</div><div class="bd">
-      ${svgTrend(series)}
+      ${series.some(s=>s.in||s.out)?svgTrend(series):'<div class="blank">暂无收付款数据</div>'}
+    </div></div>
+    <div class="card" style="margin:0"><div class="ch">近 12 个月开票 / 收票趋势（元）</div><div class="bd">
+      ${invSeries.some(s=>s.a||s.b)?`<svg viewBox="0 0 430 196" width="100%" style="min-width:300px"><text x="4" y="10" font-size="10" fill="#5a6478"><tspan fill="#0e7490">■</tspan> 销项开票 <tspan dx="16" fill="#7c3aed">■</tspan> 进项收票</text>${invBar}</svg>`:'<div class="blank">暂无发票数据</div>'}
     </div></div>
     <div class="card" style="margin:0"><div class="ch">合同类型金额分布</div><div class="bd">
       ${typeTotal?typeEntries.map(e=>{const p=e[1]/typeTotal*100;return `<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="width:90px;font-size:12.5px;color:#5a6478;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(e[0])}</span><div class="pbar" style="flex:1;min-width:60px"><i class="green" style="width:${p}%"></i></div><span class="pct" style="width:120px">${fmtMoneyFull(e[1])}（${p.toFixed(1)}%）</span></div>`}).join(''):'<div class="blank">暂无合同</div>'}
@@ -1520,71 +2175,103 @@ function statChartHtml(){
     <div class="card" style="margin:0"><div class="ch">合同状态分布（份）</div><div class="bd">
       ${Object.entries(statusCount).map(([k,v])=>{const p=v/statusTotal*100;const c=k==='signed'?'#2f6fdb':k==='done'?'#129b5a':k==='stopped'?'#9aa3b5':'#c47b0a';return `<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="width:70px;font-size:12.5px;color:#5a6478">${fmtStatus(k)}</span><div class="pbar" style="flex:1;min-width:60px"><i style="background:${c};width:${p}%"></i></div><span class="pct" style="width:60px">${v} 份</span></div>`}).join('')}
     </div></div>
+    <div class="card" style="margin:0"><div class="ch">应收 / 应付 合同金额构成</div><div class="bd">
+      ${svgDonutPie(dirAmt)}
+    </div></div>
+    <div class="card" style="margin:0"><div class="ch">资金流入 / 流出构成</div><div class="bd">
+      ${svgDonutPie(dirFlow)}
+    </div></div>
+    <div class="card" style="margin:0"><div class="ch">开票 / 收票构成</div><div class="bd">
+      ${svgDonutPie(invFlow)}
+    </div></div>
     <div class="card" style="margin:0"><div class="ch">数据概览</div><div class="bd" style="font-size:13px;line-height:2.2;color:#5a6478">
       <div>· 客户 <span class="strong" style="color:#1c2433">${scopeList('customers').length}</span> 家 · 供应商 <span class="strong" style="color:#1c2433">${scopeList('suppliers').length}</span> 家</div>
-      <div>· 合同共 <span class="strong" style="color:#1c2433">${cons.length}</span> 份（应收 ${cons.filter(c=>isRecvCon(c)).length} / 应付 ${cons.filter(c=>!isRecvCon(c)).length}）</div>
-      <div>· 发票 ${scopeList('invoices').length} 张 · 收付款单据 ${bills.length} 笔 · 转账 ${scopeList('transfers').length} 笔</div>
+      <div>· 合同共 <span class="strong" style="color:#1c2433">${cons.length}</span> 份（应收 ${recvs.length} / 应付 ${pays.length}）· 金额合计 ${fmtMoneyFull(recvAmt+payAmt)}</div>
+      <div>· 已收款 ${fmtMoneyFull(got)} · 已付款 ${fmtMoneyFull(paid)} · 净现金流 ${fmtMoneyFull(got-paid)}</div>
+      <div>· 发票 ${invs.length} 张 · 收付款单据 ${bills.length} 笔 · 转账 ${scopeList('transfers').length} 笔</div>
       <div class="hint" style="margin-top:6px">以上图表基于本机当前公司数据实时计算。</div>
     </div></div>
   </div>`;
 }
 function svgTrend(series){
-  const W=430,H=200,padL=8,padB=22,padT=14;
-  const max=Math.max(1,...series.map(s=>Math.max(s.in,s.out)));
-  const gw=(W-padL*2)/(series.length*2-1);
-  const bw=gw*0.62;
+  const W=430,H=196,padL=4,padB=22,padT=16;
+  const max=Math.max(1,...series.map(s=>Math.max(moneyIn(s.in),moneyIn(s.out))));
   const barW=(W-padL*2)/series.length;
+  const bw=Math.min(20,(barW-2)*0.42);
   const bars=series.map((s,i)=>{
     const x=padL+i*barW;
-    const h1=max?H-padB-padT-(s.in/max)*(H-padB-padT):0;
-    const h2=max?H-padB-padT-(s.out/max)*(H-padB-padT):0;
+    const h1=max?(moneyIn(s.in)/max)*(H-padB-padT):0;
+    const h2=max?(moneyIn(s.out)/max)*(H-padB-padT):0;
     const y1=H-padB-h1,y2=H-padB-h2;
-    return `<rect x="${x+bw*0.18}" y="${y1}" width="${bw*0.9}" height="${h1||0.5}" fill="#3d5ee8" rx="2"/><rect x="${x+bw*1.2}" y="${y2}" width="${bw*0.9}" height="${h2||0.5}" fill="#e35d5a" rx="2"/><text x="${x+barW/2}" y="${H-6}" font-size="9" fill="#9aa3b5" text-anchor="middle">${s.k.slice(5)}</text>`;
+    const cx=x+barW/2;
+    return `<rect x="${cx-bw-1}" y="${y1}" width="${bw}" height="${h1||0.4}" fill="#3d5ee8" rx="2"><title>收款 ${fmtMoneyFull(s.in)}</title></rect><rect x="${cx+1}" y="${y2}" width="${bw}" height="${h2||0.4}" fill="#ef5b5a" rx="2"><title>付款 ${fmtMoneyFull(s.out)}</title></rect><text x="${cx}" y="${H-6}" font-size="9" fill="#9aa3b5" text-anchor="middle">${s.k.slice(5)}</text>`;
   }).join('');
-  const hint=`<text x="${padL}" y="10" font-size="10" fill="#5a6478"><tspan fill="#3d5ee8">■</tspan> 收款 <tspan dx="14" fill="#e35d5a">■</tspan> 付款</text>`;
-  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:320px">${hint}${bars}</svg>`;
+  const hint=`<text x="${padL}" y="10" font-size="10" fill="#5a6478"><tspan fill="#3d5ee8">■</tspan> 收款 <tspan dx="16" fill="#ef5b5a">■</tspan> 付款</text><text x="${W-padL}" y="10" font-size="9" fill="#9aa3b5" text-anchor="end">单位：元</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:300px">${hint}${bars}</svg>`;
 }
 
 /* ============ 提醒中心 ============ */
+const REM_FILTERS=[['','全部'],['receivable','应收类'],['payable','应付类'],['done','仅待处理']];
+function remKindMeta(k){
+  if(k==='contract_expire_receivable')return ['warn','应收合同到期'];
+  if(k==='contract_expire_payable')return ['warn','应付合同到期'];
+  if(k==='invoice_receivable')return ['info','销项发票'];
+  if(k==='invoice_payable')return ['info','进项发票'];
+  return ['gray','其他'];
+}
 PAGES.reminder=function(){
-  const st=STATE;
+  const st=STATE;st.remF=st.remF||'';
+  const list=reminderList();
+  const un=list.filter(r=>r.status===0).length;
+  const rCnt=list.filter(r=>r.kind==='contract_expire_receivable').length;
+  const pCnt=list.filter(r=>r.kind==='contract_expire_payable').length;
+  const oCnt=list.filter(r=>r.kind==='invoice_receivable'||r.kind==='invoice_payable').length;
   return `
+  <div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr));margin-top:2px">
+    ${statCard('待处理',un,un?'请尽快安排收付结算':'暂无待办','#c47b0a',ICO.bell)}
+    ${statCard('应收到期',rCnt,'应收合同即将到期','#3d5ee8',ICO.contract)}
+    ${statCard('应付到期',pCnt,'应付合同即将到期','#7c3aed',ICO.supplier)}
+    ${statCard('发票登记',oCnt,'销项/进项发票','#0e7490',ICO.invoice)}
+  </div>
   <div class="card">
-    <div class="ch">${ICO.bell} 提醒中心
+    <div class="ch">${ICO.bell} 提醒明细
       <span class="r">
         <button class="btn sm" onclick="scanReminders()">重新扫描到期合同</button>
         <button class="btn sm ok" onclick="markAllReminders()">全部标为已处理</button>
       </span>
     </div>
+    <div style="display:flex;gap:6px;padding:10px 14px 0;flex-wrap:wrap">
+      ${REM_FILTERS.map(f=>`<button class="btn sm ${(st.remF||'')===f[0]?'':'ghost'}" onclick="setRemF('${f[0]}')">${f[1]}</button>`).join('')}
+    </div>
     <div id="remBody"></div>
   </div>
   <div class="card"><div class="ch">${ICO.info} 提醒规则说明</div><div class="bd hint" style="color:#5a6478">
-    系统会自动扫描「30 天内到期的未完成合同」并生成到期提醒；每次进入系统或点击「重新扫描」时更新。<br>
-    提醒按当前公司档案隔离；切换公司后只显示该公司的提醒。
+    系统自动扫描「30 天内到期的未完成合同」与「最近登记的发票」，生成到期提醒；每次进入系统或点击「重新扫描」时更新。<br>
+    应收合同到期、应付合同到期与发票提醒分开统计；提醒按当前公司档案隔离，切换公司后只显示该公司的提醒。
   </div></div>`;
 };
 AFTER.reminder=function(){renderReminders()}
+function setRemF(f){STATE.remF=f;renderReminders()}
 function scanReminders(){const n=genReminders();renderReminders();toast(n>0?'已生成 '+n+' 条新提醒':'暂无新的到期提醒',n>0?'':'warn')}
 function reminderList(){return scopeList('reminders').sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''))}
 function renderReminders(){
   const el=$('remBody');if(!el)return;
-  const list=reminderList();
-  const un=list.filter(r=>r.status===0).length;
+  const f=STATE.remF||'';
+  let list=reminderList();
+  if(f==='receivable')list=list.filter(r=>r.kind==='contract_expire_receivable'||r.kind==='invoice_receivable');
+  else if(f==='payable')list=list.filter(r=>r.kind==='contract_expire_payable'||r.kind==='invoice_payable');
+  else if(f==='done')list=list.filter(r=>r.status===0);
   if(!list.length){el.innerHTML='<div class="blank">暂无提醒，点击右上角「重新扫描到期合同」生成</div>';return}
   el.innerHTML=`
-    <div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr))">
-      ${statCard('待处理',un,'','#c47b0a',ICO.bell)}
-      ${statCard('已处理',list.length-un,'','#129b5a',ICO.ok)}
-      ${statCard('全部提醒',list.length,'','#5a6478',ICO.info)}
-    </div>
-    <div class="tbl-wrap"><table class="tbl"><thead><tr><th>提醒事项</th><th>类型</th><th>到期/生成日期</th><th>状态</th><th style="width:150px">操作</th></tr></thead><tbody>
-    ${list.map(r=>`<tr>
+    <div class="tbl-wrap"><table class="tbl"><thead><tr><th>提醒事项</th><th>类型</th><th>方向</th><th>到期/生成日期</th><th>状态</th><th style="width:150px">操作</th></tr></thead><tbody>
+    ${list.map(r=>{const mk=remKindMeta(r.kind);const isRecv=r.kind.indexOf('receivable')>-1;return `<tr>
       <td class="strong">${esc(r.title)}</td>
-      <td><span class="tag ${r.kind==='contract_expire'?'warn':'info'}">${r.kind==='contract_expire'?'合同到期':'其他'}</span></td>
+      <td><span class="tag ${mk[0]}">${mk[1]}</span></td>
+      <td>${r.kind==='contract_expire_receivable'||r.kind==='invoice_receivable'?'<span class="tag brand">应收</span>':(r.kind==='contract_expire_payable'||r.kind==='invoice_payable'?'<span class="tag warn" style="background:#f3e8fd;color:#7c3aed">应付</span>':'<span class="tag gray">—</span>')}</td>
       <td class="muted">${fmtDate(r.due||r.createdAt)} ${r.due&&r.due<today()?'<span class="tag bad">已超期</span>':''}</td>
       <td>${r.status===0?'<span class="tag warn">待处理</span>':'<span class="tag ok">已处理</span>'}</td>
       <td class="ops">${r.status===0?`<button class="btn sm ok" onclick="handleReminder('${r.id}')">${ICO.ok}处理</button>`:''}<button class="btn sm ghost" style="color:#d4382e" onclick="delReminder('${r.id}')">${ICO.del}删除</button></td>
-    </tr>`).join('')}
+    </tr>`}).join('')}
     </tbody></table></div>`;
 }
 function handleReminder(id){if(!requireLic())return;const list=scopeList('reminders');list.forEach(r=>{if(r.id===id)r.status=1});saveScoped('reminders',list);renderReminders();renderNav();toast('已处理')}
@@ -1639,6 +2326,9 @@ function openCompanyForm(id){
     <div class="fg"><label>公司简称</label><input class="inp" id="cmp_short" value="${esc(c?c.shortName||'':'')}" placeholder="列表与标签中显示"></div>
     <div class="fg"><label>联系人</label><input class="inp" id="cmp_contact" value="${esc(c?c.contact||'':'')}"></div>
     <div class="fg"><label>联系电话</label><input class="inp" id="cmp_phone" value="${esc(c?c.phone||'':'')}"></div>
+    <div class="fg"><label>统一社会信用代码（税号）</label><input class="inp" id="cmp_tax" value="${esc(c?c.taxNo||'':'')}" placeholder="开票抬头用"></div>
+    <div class="fg"><label>开户银行</label><input class="inp" id="cmp_bank" value="${esc(c?c.bank||'':'')}"></div>
+    <div class="fg"><label>银行账号</label><input class="inp" id="cmp_bankacc" value="${esc(c?c.bankAccount||'':'')}"></div>
     <div class="fg full"><label>注册地址</label><input class="inp" id="cmp_addr" value="${esc(c?c.address||'':'')}"></div>
     <div class="fg full"><label>备注</label><input class="inp" id="cmp_remark" value="${esc(c?c.remark||'':'')}"></div>
   </div>`,{title:(id?'编辑':'新增')+'公司档案',footer:[{t:'取消',c:'ghost',x:closeModal},{t:'保存',c:'pri',x:function(){saveCompanyForm(id)}}]});
@@ -1647,7 +2337,7 @@ function saveCompanyForm(id){
   if(!requireLic())return;
   const name=$('cmp_name').value.trim();if(!name){toast('请输入公司全称','err');return}
   const list=dbList('companies');
-  const data={name,shortName:$('cmp_short').value.trim(),contact:$('cmp_contact').value.trim(),phone:$('cmp_phone').value.trim(),address:$('cmp_addr').value.trim(),remark:$('cmp_remark').value.trim()};
+  const data={name,shortName:$('cmp_short').value.trim(),contact:$('cmp_contact').value.trim(),phone:$('cmp_phone').value.trim(),taxNo:$('cmp_tax').value.trim(),bank:$('cmp_bank').value.trim(),bankAccount:$('cmp_bankacc').value.trim(),address:$('cmp_addr').value.trim(),remark:$('cmp_remark').value.trim()};
   if(id){list.forEach(x=>{if(x.id===id)Object.assign(x,data)})}
   else{const nc=Object.assign({id:uid(),createdAt:now()},data);list.push(nc);if(!Store.get('curCompanyId'))Store.set('curCompanyId',nc.id)}
   saveList('companies',list);addLog((id?'编辑':'新增')+'公司',name);closeModal();renderSet();refreshAside();toast('保存成功');
