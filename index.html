@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-page-node-id="QAiK8MYP5371Y7HnCwjn0R">
-<head data-page-node-id="U6CkuFei83Y3DTJQbzJMMk">
-<meta charset="UTF-8" data-page-node-id="0PNSwr80BFZqwL1m6UwAVx">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" data-page-node-id="xREBmgcQRzM0lv6YYYlqUF">
+<html lang="zh-CN" data-page-node-id="yP6Mu1CEuILtY9CQFoPzzy">
+<head data-page-node-id="zGx6IPMauhFhe1OFJE0M6u">
+<meta charset="UTF-8" data-page-node-id="C4xSOOEcfo1GkyEtwCYiOG">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" data-page-node-id="nPC9t0ECxsW1p3FrjKCfNe">
 <title>合同管理平台 · Contract Hub</title>
-<meta name="description" content="合同管理平台：合同、发票、资金、客户与供应商一站式管理" data-page-node-id="b4uoGrTkmS3145oYNltUjC">
+<meta name="description" content="合同管理平台：合同、发票、资金、客户与供应商一站式管理" data-page-node-id="MHCdbxmRQl1P5aZDcATPYW">
 <style>:root{
   --bg:#f4f6fa; --card:#ffffff; --line:#e7eaf2; --line2:#d7dce8;
   --ink:#1c2433; --ink2:#5a6478; --ink3:#9aa3b5;
@@ -102,6 +102,11 @@ select.inp{appearance:none;background-image:linear-gradient(45deg,transparent 50
 .stat-card .ex{font-size:17px;color:var(--ink3);margin-top:3px}
 .stat-card .ico{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-left:auto}
 .stat-card:hover{box-shadow:0 4px 14px rgba(61,94,232,.08),0 2px 6px rgba(20,30,60,.06);border-color:#d6defc}
+/* 环形占比图 hover 交互：悬停某段高亮并放大，其余段淡化，原生 title 显示名称/数值/占比 */
+.ringbox{cursor:default}
+.ringbox .ring-seg{transition:opacity .18s ease,transform .18s ease;transform-box:fill-box;transform-origin:center;cursor:pointer}
+.ringbox:hover .ring-seg{opacity:.45}
+.ringbox .ring-seg:hover{opacity:1;transform:scale(1.045);filter:drop-shadow(0 2px 5px rgba(20,30,60,.22))}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);margin-bottom:14px}
 .card .ch{padding:15px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;font-size:17px;font-weight:500}
 .card .ch .r{margin-left:auto;display:flex;gap:8px;align-items:center}
@@ -257,54 +262,54 @@ body.drawer-open #drawer{transform:none}
 }
 </style>
 </head>
-<body data-page-node-id="Dq7IaoPPWaTZfuLNQBzTFC">
-<div id="authWrap" style="display:none" data-page-node-id="hUFCKXJrmSE5MGbgoDDgib"></div>
+<body data-page-node-id="KL7AKndNNCj8D729rThMzj">
+<div id="authWrap" style="display:none" data-page-node-id="2TSBnVfy22CXc3UFFarxDv"></div>
 
-<div id="app" data-page-node-id="VPHfHae2uzzCakKJ0lVkH5">
-  <aside id="aside" data-page-node-id="5j2kLAWDgAcBIxmkCBxHMn">
-    <div class="aside-logo" data-page-node-id="NlnoTxTaTIiBRQnjAd4CZ5">
-      <div class="lg" data-page-node-id="jnQKJEMXmMWQLAPGXVbBQD"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-page-node-id="koW04yw9dYpsQYWvNVOf7p"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-page-node-id="asI2ZLcCfnADvrY0IHiCUz"/><path d="M14 2v6h6" data-page-node-id="fXYjwipl02Vq25S7lYOl7I"/><path d="M8 13h8M8 17h5" data-page-node-id="IhrC1NxVSFsB4TgUCJaCkC"/></svg></div>
-      <div data-page-node-id="FDK4Dq4D0UuTlQ7JbABB0c"><div class="nm" data-page-node-id="2jAIWHxGV6JGHmRFWX4w3u">合同管理平台</div><div class="vn" id="verTag" data-page-node-id="a06w3jTPFHDnwET95dMCKP"></div></div>
+<div id="app" data-page-node-id="5p8AZugGijwDekHcDcLSe5">
+  <aside id="aside" data-page-node-id="xbN3zF4fPdZysiHB1xgUBa">
+    <div class="aside-logo" data-page-node-id="AMNr0rpHrduDgZQgBgqFuN">
+      <div class="lg" data-page-node-id="oE1esfj7XldyQhppq71J60"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-page-node-id="kSESvi8QK9Jxbe18rF6L9P"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-page-node-id="lWLZuw9Ec77ZCz8gBG6BbK"/><path d="M14 2v6h6" data-page-node-id="Z8StQgYV5OL5J2H3f0afJU"/><path d="M8 13h8M8 17h5" data-page-node-id="uZYfIBvJoEEyZmvkkVb79j"/></svg></div>
+      <div data-page-node-id="okYD7sH8c9bjMvGQYAzXHQ"><div class="nm" data-page-node-id="JIm8KqD44R5X95mALg6vFa">合同管理平台</div><div class="vn" id="verTag" data-page-node-id="wolQSl1sDu9GBxD4VCJIb1"></div></div>
     </div>
-    <div id="nav" data-page-node-id="sh2KkNGCkEadopiSF6Lv1T"></div>
-    <div class="aside-logo" style="border-top:1px solid var(--line);border-bottom:none" data-page-node-id="NtBGnuERcOzE8xR6uIMAQ8">
-      <div style="flex:1;min-width:0" data-page-node-id="0DOVTHDceBwZYd6FhlpTnj">
-        <div style="font-size:15px;color:var(--ink2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap" id="companyTag" data-page-node-id="HwzS6V8AyMYfqQef5XCLeC">未选择公司</div>
-        <div style="font-size:15px;color:var(--ink3)" id="userTag" data-page-node-id="qZwLqFErLHUzerLjWmHy6e"></div>
+    <div id="nav" data-page-node-id="mZLgOoApUBOnqxThNtwHx1"></div>
+    <div class="aside-logo" style="border-top:1px solid var(--line);border-bottom:none" data-page-node-id="CCosNZrJXb6zcCHFa9htmv">
+      <div style="flex:1;min-width:0" data-page-node-id="Vu9z3B1BNbNRImpJDmykR9">
+        <div style="font-size:15px;color:var(--ink2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap" id="companyTag" data-page-node-id="Ehfg80iwvyfsE5dMPxXiZo">未选择公司</div>
+        <div style="font-size:15px;color:var(--ink3)" id="userTag" data-page-node-id="3AQIvrI8DsmX6hLQNAnGHt"></div>
       </div>
-      <button class="btn sm ghost" onclick="openCompanySwitch()" title="切换公司/档案" data-page-node-id="ZXyFMKMy3wgTCzqFppLEGX">切换</button>
+      <button class="btn sm ghost" onclick="openCompanySwitch()" title="切换公司/档案" data-page-node-id="HdWelJ86frbrQfEtBDV7fE">切换</button>
     </div>
   </aside>
 
-  <div id="main" data-page-node-id="waNYiiC8VMO4h5cGN2C5jl">
-    <div id="topbar" data-page-node-id="Dh7Z0YXV5jkcr9NNJxW6QL">
-      <button id="menuBtn" onclick="toggleMenu()" data-page-node-id="trbOGvY9wc3cLGRyFU2YKd"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="sfd20tWw0V2S6e3WIuKpNL"><path d="M3 6h18M3 12h18M3 18h18" data-page-node-id="8nznfkGjLkr3cMwQrWM7mv"/></svg></button>
-      <div data-page-node-id="uwDM0va4Y91kPjcesSfmnv">
-        <div class="ttl" id="pageTitle" data-page-node-id="dBqwX1uQgN0AiDWGn7aErX">工作台</div>
-        <div class="crumb" id="pageCrumb" data-page-node-id="9EXe3BYK5MRRav8M4aMtUv"></div>
+  <div id="main" data-page-node-id="UmE2m55EXL7QvvRDyw7sWc">
+    <div id="topbar" data-page-node-id="puRoCWrhdIHXWM7EUlP3JP">
+      <button id="menuBtn" onclick="toggleMenu()" data-page-node-id="ebXLrmMZIaQzEYKq37oZRA"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="lSDVJfGPGlGBtthxhclM5b"><path d="M3 6h18M3 12h18M3 18h18" data-page-node-id="BoqxlbO5LkdlJvBZhgyy37"/></svg></button>
+      <div data-page-node-id="GUQMnftkcExG2W7hEVYywa">
+        <div class="ttl" id="pageTitle" data-page-node-id="SirCZmmvowFb9xzMMAaOTJ">工作台</div>
+        <div class="crumb" id="pageCrumb" data-page-node-id="Qv7XKGupWCaEInWLHyPY4J"></div>
       </div>
-      <div style="flex:1" data-page-node-id="OBbJVZzek23ij5RpAI2mVM"></div>
-      <button class="btn sm" onclick="goPage('reminder')" data-page-node-id="u3dZdWOCsyz29nrEUK3lMz"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:inline-block;vertical-align:-2px;margin-right:4px" data-page-node-id="QXufW8nEjj6AgDddOA511c"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" data-page-node-id="lJkrIoUBxNPuirE4iQHsa5"/><path d="M13.73 21a2 2 0 0 1-3.46 0" data-page-node-id="8XtBGve440gCrp3mCFznPz"/></svg>提醒<span id="remCnt" style="display:none" data-page-node-id="52i8PbWkEZ5AItBuGB1wOu"></span></button>
-      <button class="btn sm" onclick="openAbout()" data-page-node-id="b0hMXGGnonNoCKn2cEZkDv"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:inline-block;vertical-align:-2px;margin-right:4px" data-page-node-id="67J4XsvkmFjxqxURDNsF5x"><circle cx="12" cy="12" r="10" data-page-node-id="jbRLC9We8gWn8EfMNoQjhD"/><path d="M12 16v-4M12 8h.01" data-page-node-id="urPvO1U74jjDkLuGax7iyy"/></svg>关于</button>
+      <div style="flex:1" data-page-node-id="FCyH3xleg1KIT8BhO6I9LN"></div>
+      <button class="btn sm" onclick="goPage('reminder')" data-page-node-id="JmwDKsLNS2Cy39TDTZyriI"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:inline-block;vertical-align:-2px;margin-right:4px" data-page-node-id="TDYI3bbwyRz19rmFnH6sKC"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" data-page-node-id="4dsxJmQpWOAeqRKwNJRfpi"/><path d="M13.73 21a2 2 0 0 1-3.46 0" data-page-node-id="dKeYslkoPjPKzlCnJJv1cv"/></svg>提醒<span id="remCnt" style="display:none" data-page-node-id="qbhQMWVgHMeYcKU1CFjHyA"></span></button>
+      <button class="btn sm" onclick="openAbout()" data-page-node-id="S7WiSQkmeIy4OLchDnsbsb"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:inline-block;vertical-align:-2px;margin-right:4px" data-page-node-id="s3hisc1tJyu0lLEyjTSNfv"><circle cx="12" cy="12" r="10" data-page-node-id="TGqllGkxI1eciYLCujJgv3"/><path d="M12 16v-4M12 8h.01" data-page-node-id="pRQqIFl7MZOonCfI08uSF0"/></svg>关于</button>
     </div>
-    <div id="content" data-page-node-id="B1pN8WVA1viqer6fmbD2m6"></div>
+    <div id="content" data-page-node-id="elEL1yT7Bhl71lhFPkU3rp"></div>
   </div>
 </div>
 
-<div id="mask" data-page-node-id="R6SG2OBmCs4F1RoDfBe1HZ"><div class="modal" id="modalBox" data-page-node-id="CsJ1lkqQM3aeVVWKuHIxKz"></div></div>
-<div id="maskDw" onclick="closeDrawer()" data-page-node-id="YYiAXVqqYwrMhu8cBvfRpH"></div>
-<div id="drawer" data-page-node-id="4rBbiy861xVzZxJDQHDhdy">
-  <div id="dwResize" title="← 拖拽调整宽度" data-page-node-id="YkB3C0FPhQEgE7gW4rEh0m"></div>
-  <div class="mh" data-page-node-id="05mBPh2gEP1YolP5LbERMb"><span id="drawerTitle" data-page-node-id="kBZbV6AEuUbxTAQpozL4W0"></span><button class="x" style="margin-left:auto;border:none;background:var(--bg);width:30px;height:30px;border-radius:8px;color:var(--ink2);cursor:pointer;font-size:17px" onclick="closeDrawer()" data-page-node-id="o86DnccRgNc0yAxTNzwxiC">✕</button></div>
-  <div class="mb" id="drawerBody" data-page-node-id="V8l4Z1S9yeF0Wm7XZZbOIC"></div>
+<div id="mask" data-page-node-id="lT9QXgI8Eb1YxE8IVvmC3X"><div class="modal" id="modalBox" data-page-node-id="CHAhtMdW0OCBGqNmtW9l9J"></div></div>
+<div id="maskDw" onclick="closeDrawer()" data-page-node-id="WEWHkS2TtRpcMBOA5gnH4h"></div>
+<div id="drawer" data-page-node-id="zmXDGopTJOeMgw6MP7yU4D">
+  <div id="dwResize" title="← 拖拽调整宽度" data-page-node-id="vH4AtF1AgWeNnVfTP6IsOB"></div>
+  <div class="mh" data-page-node-id="mcW0evqkO1TqEWv8h1akbM"><span id="drawerTitle" data-page-node-id="Bu1feV6E9cEqtOak2rYqsy"></span><button class="x" style="margin-left:auto;border:none;background:var(--bg);width:30px;height:30px;border-radius:8px;color:var(--ink2);cursor:pointer;font-size:17px" onclick="closeDrawer()" data-page-node-id="wzTN29Q0p2IfPreqD7JPnA">✕</button></div>
+  <div class="mb" id="drawerBody" data-page-node-id="JbI7iJz8w1F1SGTksq3oUq"></div>
 </div>
-<div id="toast" data-page-node-id="ysDvDLpm7KPNR2LbcHSgHa"></div>
+<div id="toast" data-page-node-id="jxjE7snrZEjQEqYDf66tEY"></div>
 
 <script>
 /* ==== 01_util.js ==== */
 /* ================= 01 基础：常量 / 工具 / 图标 ================= */
 const APP_NAME='合同管理平台';
-const APP_VER='v1.4.0';
+const APP_VER='v1.4.1';
 const APP_SLOGAN='合同、发票、资金与往来单位 一站式管理';
 const LICENSE_CONTACT=''; // 卖家联系方式，售卖前填入，如 '微信：xxx'
 const STORE_KEY='wb_contract_';
@@ -1159,7 +1164,7 @@ PAGES.contract=function(){
       <select class="inp" id="conArch"><option value="">归档：全部</option><option value="0" ${st.arch==='0'?'selected':''}>未归档</option><option value="1" ${st.arch==='1'?'selected':''}>已归档</option></select>
       <select class="inp" id="conType"><option value="">全部类型</option>${contractTypesOf(st.dir).map(t=>`<option value="${esc(t.name)}">${esc(t.name)}</option>`).join('')}</select>
       <span class="sp"></span>
-      <button class="btn" onclick="openColSet('conList',st.dir,'合同列设置')" title="显示/隐藏列">${ICO.gear.replace('16','14')} 列</button>
+      <button class="btn" onclick="openColSet('conList',conState().dir,'合同列设置')" title="显示/隐藏列">${ICO.gear.replace('16','14')} 列</button>
       <button class="btn" onclick="openConImport()" title="按 CSV 模板批量导入">${ICO.upload} 导入</button>
       <button class="btn" onclick="exportContract()">${ICO.xls} 导出</button>
       <button class="btn pri" onclick="openConForm()">${ICO.plus} 新增${st.dir}合同</button>
@@ -1782,10 +1787,10 @@ function renderFundPage(){
   const isAcc=st.seg==='账户';
   const filter=$('fdFilter');
   filter.innerHTML=isAcc
-    ?`<span style="font-size:19px;color:#5a6478;line-height:1.8">资金账户用于登记收付款的资金去向与结余；<b>期初余额</b>可在下方录入。</span><span class="sp"></span><button class="btn pri" onclick="openAccountMgr()">${ICO.plus} 管理资金账户</button>`
+    ?`<span style="font-size:19px;color:#5a6478;line-height:1.8">资金账户用于登记收付款的资金去向与结余；<b>期初余额</b>可在下方录入。</span><span class="sp"></span><button class="btn" onclick="openColSet('fdList','账户','资金账户列设置')" title="显示/隐藏列">${ICO.gear.replace('16','14')} 列</button><button class="btn pri" onclick="openAccountMgr()">${ICO.plus} 管理资金账户</button>`
     :`<input class="inp" id="fdKw" placeholder="搜索单号 / 往来单位 / 合同 / 备注" value="${esc(st.kw||'')}" style="min-width:210px">
       <span class="sp"></span>
-      <button class="btn" onclick="openColSet('fdList',st.seg,'资金列设置')" title="显示/隐藏列">${ICO.gear.replace('16','14')} 列</button>
+      <button class="btn" onclick="openColSet('fdList',fundState().seg,'资金列设置')" title="显示/隐藏列">${ICO.gear.replace('16','14')} 列</button>
       ${(st.seg==='收'||st.seg==='付')?'<button class="btn" onclick="openFundImport()">'+ICO.upload+' 导入</button>':''}
       <button class="btn" onclick="exportFund()">${ICO.xls} 导出</button>
       <button class="btn pri" id="fdAddBtn" onclick="openFundAdd()">${ICO.plus} 新增</button>`;
@@ -2193,9 +2198,8 @@ function ringDonutCore(vis,unit,money){
   const total=vis.reduce((s,x)=>s+x.v,0);
   if(!total)return '';
   const CX=115,CY=115,Ri=62,Ro=92,gap=1.7,DEG=Math.PI/180;
-  const segs=[];const labels=[];let ang=-90;
-  const showLbl=vis.length<=7;
-  vis.forEach(x=>{
+  const segs=[];let ang=-90;
+  vis.forEach((x,idx)=>{
     const sweep=x.v/total*360;
     const a1=(ang+gap)*DEG,a2=(ang+sweep-gap)*DEG;ang+=sweep;
     if(a2-a1<=0.01)return;
@@ -2204,18 +2208,13 @@ function ringDonutCore(vis,unit,money){
     const ox2=CX+Ro*Math.cos(a2),oy2=CY+Ro*Math.sin(a2);
     const ix1=CX+Ri*Math.cos(a2),iy1=CY+Ri*Math.sin(a2);
     const ix2=CX+Ri*Math.cos(a1),iy2=CY+Ri*Math.sin(a1);
-    segs.push(`<path d="M ${ox1} ${oy1} A ${Ro} ${Ro} 0 ${large} 1 ${ox2} ${oy2} L ${ix1} ${iy1} A ${Ri} ${Ri} 0 ${large} 0 ${ix2} ${iy2} Z" fill="${x.c}"><title>${esc(x.k)} ${fmtMoneyFull(x.v)}（${(x.v/total*100).toFixed(1)}%）</title></path>`);
-    if(showLbl&&(x.v/total)>=0.045){
-      const mid=(ang-sweep+sweep/2)*DEG;
-      const lr=(Ri+Ro)/2;
-      const lx=CX+lr*Math.cos(mid),ly=CY+lr*Math.sin(mid);
-      labels.push(`<text x="${lx}" y="${ly+4}" font-size="11.5" font-weight="600" fill="${x.c}" stroke="#ffffff" stroke-width="2.5" paint-order="stroke" text-anchor="middle">${(x.v/total*100).toFixed(1).replace(/\.0$/,'')}%</text>`);
-    }
+    const pct=(x.v/total*100).toFixed(1).replace(/\.0$/,'');
+    segs.push(`<path class="ring-seg" data-i="${idx}" d="M ${ox1} ${oy1} A ${Ro} ${Ro} 0 ${large} 1 ${ox2} ${oy2} L ${ix1} ${iy1} A ${Ri} ${Ri} 0 ${large} 0 ${ix2} ${iy2} Z" fill="${x.c}"><title>${esc(x.k)} ${fmtMoneyFull(x.v)} · ${pct}%</title></path>`);
   });
   const centerMain=money?fmtMoneyShort(total):String(total);
   const unitTxt=unit?('<tspan font-size="12" fill="#9aa3b5"> '+unit+'</tspan>'):'';
   const back=`<circle cx="${CX}" cy="${CY}" r="${(Ri+Ro)/2}" fill="none" stroke="#eef1f6" stroke-width="${Ro-Ri}"/>`;
-  return `<svg viewBox="0 0 230 230" width="100%" style="max-width:210px;flex:none" role="img" aria-label="占比环形图">${back}${segs.join('')}${labels.join('')}<text x="${CX}" y="${CY-12}" text-anchor="middle" font-size="12.5" fill="#9aa3b5">合计</text><text x="${CX}" y="${CY+22}" text-anchor="middle" font-size="27" font-weight="700" fill="#1c2433">${centerMain}${unitTxt}</text></svg>`;
+  return `<svg class="ringbox" viewBox="0 0 230 230" width="100%" style="max-width:210px;flex:none" role="img" aria-label="占比环形图">${back}${segs.join('')}<text x="${CX}" y="${CY-12}" text-anchor="middle" font-size="12.5" fill="#9aa3b5">合计</text><text x="${CX}" y="${CY+22}" text-anchor="middle" font-size="27" font-weight="700" fill="#1c2433">${centerMain}${unitTxt}</text></svg>`;
 }
 function ringLegend(vis,unit,money){
   const total=vis.reduce((s,x)=>s+x.v,0);
